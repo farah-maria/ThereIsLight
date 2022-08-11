@@ -30,8 +30,8 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 -----
 Happy coding!
 
-## README Table of contents
-* [Introduction](#bandersnatch)
+## Table of contents for this README 
+* [Introduction](#the-heroine's-journey)
 * [User Experience](#user-experience)
 * [Logic](#logic)
 * [Design](#design)
@@ -44,7 +44,7 @@ Happy coding!
 * [Acknowledgements](#acknowledgements)
 
 
- **Women in Coding History (WICH)**
+ **THE HEROINE'S JOURNEY (AKA "Patriarchy Sucks")**
 
 Did you know that women have been writing machine-readable code since the 1840s? And that coding used to be considered "women's work"? Yet according to a Statista poll taken in 2021, only 5% of software developers worldwide are female.
 
@@ -67,12 +67,26 @@ The greater aim is to contribute towards gender equality in the field of softwar
 * Build a simple and challenging game for users to complete.
 
 #### As a first time user:
-* Immediately be informed of the main purpose of the game and how to play.
-* Try to remember the path chosen and not to take the wrong path the next time.
+
+* I want the purpose of the game to be clear from the start. i.e. what defines success/ winning (e.g. fighting a monster and beating her/ him.) 
+
+* I want to know what the objectives of the game, in terms of the journey to the end (e.g. picking up points, or treasure, who my friends and enemies are.)
+
+* I want clarity in how to play the game, and a clear sense of the rules of the game.
+
+* I want to enjoy the adventure and get a sense of satisfaction from doing well at it.
+
+* If I lose, I want the reason for that to be clear (e.g. "You ran out of points.")
+
+* I would like there to be some friendliness to the same (e.g. be greeted as the user, and get something like a "Better luck next time and thank you for playing at the end.")
 
 #### As a returning user:
-* Choose alternative paths to see different outcomes.
-* Try to complete the game by guessing the password.
+
+* I would like to explore alternative paths through the choose your own adventure.
+* I would like to find a way of winning the game or improving on my score compared to last time.
+* For the above reason, I might like a record of my past scores to be in the game, so I can see if I did better.
+* I might like to see how other players have done, so I can compare my score.
+* Try to complete with other players and my last try at the game now that I am familiar with it.
 
 ## Logic
 * A flowchart was created to visualise the logical flow and various paths possible.
