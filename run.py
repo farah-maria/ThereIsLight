@@ -23,65 +23,71 @@ print(data)
 # Player heroine options. You get to choose which you want to be in the game.
 
 class EarthGoddess:
-    """ She's an awesome heroine, and high-energy """
-    fightingSpirit = 500
-    selfEsteem = 4000
-    energyLevels = 6000
-    intelligence = 500
-    bodyImage = 1000
-    calories = 2000
-    sleep = 8
+    """ She's an awesome heroine, with high-energy vibes """
+    def __init__(self, fightingSpirit, selfEsteem, calories, sleep):
+        self.fightingSpirit = 500
+        self.selfEsteem = 4000
+        self.calories = 2000
+        self.sleep = 8
 
 
 class WorkFiend:
     """ She's a fantastic heroine, but just a bit tired. """
-    fightingSpirit = 1000
-    selfEsteem = 30
-    energyLevels = 1000
-    intelligence = 3000
-    bodyImage = 2000
-    calories = 500
-    sleep = 5
+    def __init__(self, fightingSpirit, selfEsteem, calories, sleep):
+        self.fightingSpirit = 2000
+        self.selfEsteem = 40
+        self.calories = 2000
+        self.sleep = 5
 
 
 class NiceyNorah:
     """ Norah is a nice heroine. And niceness is underrated. """
-    fightingSpirit = 200
-    selfEsteem = 200
-    energyLevels = 1000
-    intelligence = 200
-    bodyImage = 1000
-    calories = 2000
-    sleep = 7
+    def __init__(self, fightingSpirit, selfEsteem, calories, sleep):
+        self.fightingSpirit = 12
+        self.selfEsteem = 40
+        self.calories = 700  # she's on a slimfast diet
+        self.sleep = 5  # it's tough worrying about the right thing!
 
 
 class HighPriestess:
-    " A very powerful heroine to play."
-    fightingSpirit = 3000
-    selfEsteem = 1000
-    energyLevels = 2000
-    intelligence = 500
-    bodyImage = 2000
-    calories = 2980
-    sleep = 12
+    " A very powerful heroine to play. She knows in her gut what's right."
+    def __init__(self, fightingSpirit, selfEsteem, calories, sleep):
+        self.fightingSpirit = 3000
+        self.selfEsteem = 3000
+        self.calories = 2690  # she eats cake when she WANTS to eat cake, ok?!
+        self.sleep = 12  # sleep is essential for her powers. 
 
 
-class Feminist:
-    """ Super Top Allies of the player """
-    fightingSpirit = 5000
-    selfEsteem = 3000
-    energyLevels = 4000
-    intelligence = 1000
-    bodyImage = 4000
-    calories = 3900
-    sleep = 8
+class EducatedFeminist:
+    """ A very powerful heroine with a mind that's sharp as a magical sword """
+    def __init__(self, fightingSpirit, selfEsteem, calories, sleep):
+        self.fightingSpirit = 5000
+        self.selfEsteem = 3000
+        self.calories = 3000  # fighting patriarchy takes a lot of energy
+        self.sleep = 8  
 
 # Enemies of the player!!!
 
 
-class goblin (object):
-    name = "Goblin"
+class RandomMansplainer:
+    name = "mansplainer"
     health = 20
-    strength = 2
-    defence = 2
-    loot = random.randint(0, 2)
+    strength = 20
+    defence = 9000
+    HeroinePoints = random.randint(0, 2)
+
+
+class RandomTotalSexist:
+    name = "random sexist-in-pub type"
+    health = 10
+    strength = 60
+    defence = 900
+    HeroinePoints = random.randint(0, 2)
+
+
+class TerribleManager:
+    name = "male manager from another company with no diveristy training"
+    health = 800
+    strength = 30
+    defence = 10000
+    HeroinePoints = random.randint(0, 2)
