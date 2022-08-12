@@ -17,11 +17,31 @@ SHEET = GSPREAD_CLIENT.open('HJ_Scoresheet')
 
 scores_data = SHEET.worksheet('scores_data')
 data = scores_data.get_all_values()
-print(data)
+
+# Intro to game
+
+print("This is a game where winning is hard.")
+print("When it's not hard, it can get monotonous.")
+print("When it's neither of the above...")
+print("a surprising breakthrough may be in store :)")
+answer = input("Would you like to play? (yes/no)")
+if answer.lower().strip() == "yes":
+    print("You wake up trapped in a patriarchial nightmare.")
+    print("The odds are staked against you.")
+    print("Not even in an interesting way...")
+    print("...but in a 'Ah Jesus, really?! This again?' kinda way.")
+    print("The aim is to just get through the day, really.")
+    print("There will be enemies! And they can be a drag!")
+    print("And you can score points, and maybe even win.")
+    print("You will always have 6 options, which will be explained.")
+    print("And you can pick up energy along the way from...")
+    print("...eating and sleeping. And winning fights.")
+    print("So...")
+    print("you find yourself on a bus.")
+    exit()
 
 
 # Player heroine options. You get to choose which you want to be in the game.
-
 class EarthGoddess:
     """ She's an awesome heroine, with high-energy vibes """
     def __init__(self, fighting_spirit, self_esteem, calories, sleep):
@@ -95,3 +115,5 @@ class TerribleBoss:
         strength = 30
         defence = 10000
         heroine_points = random.randint(0, 2)
+
+
