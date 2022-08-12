@@ -20,32 +20,32 @@ data = scores_data.get_all_values()
 print(data)
 
 
-# player's allies
+# Player heroine options. You get to choose which you want to be in the game.
 
-class CloseFriends:
-    """ Top helpers for the player, 2nd only to the women's support group! """
-    fightingSpirit = 20
-    selfEsteem = 20
-    energyLevels = 500
-    intelligence = 200
-    bodyImage = 500
+class EarthGoddess:
+    """ She's an awesome heroine, and high-energy """
+    fightingSpirit = 500
+    selfEsteem = 4000
+    energyLevels = 6000
+    intelligence = 500
+    bodyImage = 1000
     calories = 2000
     sleep = 8
 
 
-class CoWorkers:
-    """ Relatively weak allies for the player """
-    fightingSpirit = 5
+class WorkFiend:
+    """ She's a fantastic heroine, but just a bit tired. """
+    fightingSpirit = 1000
     selfEsteem = 30
     energyLevels = 1000
-    intelligence = 2
+    intelligence = 3000
     bodyImage = 2000
     calories = 500
     sleep = 5
 
 
-class NonToxicFamily:
-    """ These allies are nice, and even life-savers """
+class NiceyNorah:
+    """ Norah is a nice heroine. And niceness is underrated. """
     fightingSpirit = 200
     selfEsteem = 200
     energyLevels = 1000
@@ -55,8 +55,8 @@ class NonToxicFamily:
     sleep = 7
 
 
-class KindStrangers:
-    "Allies who are undercover guardian angels. Very powerful."
+class HighPriestess:
+    " A very powerful heroine to play."
     fightingSpirit = 3000
     selfEsteem = 1000
     energyLevels = 2000
@@ -66,7 +66,7 @@ class KindStrangers:
     sleep = 12
 
 
-class WomensSupportGroup:
+class Feminist:
     """ Super Top Allies of the player """
     fightingSpirit = 5000
     selfEsteem = 3000
@@ -76,4 +76,12 @@ class WomensSupportGroup:
     calories = 3900
     sleep = 8
 
-    
+# Enemies of the player!!!
+
+
+class goblin (object):
+    name = "Goblin"
+    health = 20
+    strength = 2
+    defence = 2
+    loot = random.randint(0, 2)
