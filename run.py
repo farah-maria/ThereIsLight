@@ -18,28 +18,6 @@ SHEET = GSPREAD_CLIENT.open('HJ_Scoresheet')
 scores_data = SHEET.worksheet('scores_data')
 data = scores_data.get_all_values()
 
-# Intro to game
-
-print("This is a game where winning is hard.")
-print("When it's not hard, it can get monotonous.")
-print("When it's neither of the above...")
-print("a surprising breakthrough may be in store :)")
-answer = input("Would you like to play? (yes/no)")
-if answer.lower().strip() == "yes":
-    print("You wake up trapped in a patriarchial nightmare.")
-    print("The odds are staked against you.")
-    print("Not even in an interesting way...")
-    print("...but in a 'Ah Jesus, really?! This again?' kinda way.")
-    print("The aim is to just get through the day, really.")
-    print("There will be enemies! And they can be a drag!")
-    print("And you can score points, and maybe even win.")
-    print("You will always have 6 options, which will be explained.")
-    print("And you can pick up energy along the way from...")
-    print("...eating and sleeping. And winning fights.")
-    print("So...")
-    print("you find yourself on a bus.")
-    exit()
-
 
 # Player heroine options. You get to choose which you want to be in the game.
 class EarthGoddess:
@@ -66,7 +44,7 @@ class NiceyNorah:
         self.fighting_spirit = 12
         self.self_esteem = 40
         self.calories = 700  # she's on a slimfast diet
-        self.sleep = 5  # it's tough worrying about the right thing!
+        self.sleep = 5  # it's tough worrying about doing the right thing!
 
 
 class HighPriestess:
@@ -117,3 +95,31 @@ class TerribleBoss:
         heroine_points = random.randint(0, 2)
 
 
+# Start and intro to game
+
+print("This is a game where winning is hard.")
+print("When it's not hard, it can get monotonous.")
+print("When it's neither of the above...")
+print("a surprising breakthrough may be in store :)")
+print("The situation is as follows... ")
+print("You wake up trapped in a patriarchial nightmare.")
+print("The odds are staked against you.")
+print("Not even in an interesting way...")
+print("...but in a 'Ah Jesus, really?! This again?' kinda way.")
+print("The aim is to just get through 24 hours. Not in real time.")
+print("There will be enemies! And enemies are a drag!")
+print("But you can score points, and maybe even win.")
+print("You will always have options: either y/n...")
+print("...or a number you need to select to choose a pathway.")
+print("Remember to press 'enter' afterwards, either way.")
+print("Also, you can pick up energy points through this 'adventure' from...")
+print("...eating and sleeping. And winning fights.")
+answer = input("Would you like to play? 'y' or 'n': ")
+if answer.lower().strip() == "y":
+    print("You are on a bus...")
+elif answer.lower().strip() == "n":
+    print("I don't blame you. Bye!")
+    exit()
+else:
+    print("Sorry, you have to input y or n. Try again.")
+    exit()
