@@ -95,6 +95,19 @@ class TerribleBoss:
         heroine_points = random.randint(0, 2)
 
 
+def play_or_not():
+    answer = input(" Answer 'y' or 'n': ")
+    if answer.lower().strip() == "y":
+        print("You are on a bus...")
+        # lots of code
+    elif answer.lower().strip() == "n":
+        print("I don't blame you. Bye!")
+        quit()
+    else:
+        print("Incorrect input! Try again. Just one letter and press enter.")
+        return play_or_not()
+
+
 # Start and intro to game
 
 print("This is a game where winning is hard.")
@@ -114,12 +127,5 @@ print("...or a number you need to select to choose a pathway.")
 print("Remember to press 'enter' afterwards.")
 print("Also, you can pick up energy points through this 'adventure' from...")
 print("...eating and sleeping. And winning fights.")
-answer = input("Would you like to play? 'y' or 'n': ")
-if answer.lower().strip() == "y":
-    print("You are on a bus...")
-elif answer.lower().strip() == "n":
-    print("I don't blame you. Bye!")
-    exit()
-else:
-    print("Sorry, you have to input y or n. Try again.")
-    exit()
+print("Would you like to play?")
+play_or_not()
