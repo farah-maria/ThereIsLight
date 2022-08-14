@@ -95,17 +95,52 @@ class TerribleBoss:
         heroine_points = random.randint(0, 2)
 
 
+def Heroine_Select():
+    selection = input("1. EarthGoddess \n2. WorkFiend  \n3. NiceyNorah \n4. HighPriestess \n5. CoolFeminist \n")
+    if selection == "1":
+        character = EarthGoddess
+        print ("You have selected the earth goddess...These are their stats...")
+        print ("Health - ", character.health)
+        print ("Strength - ", character.strength)
+        print ("Defence - ", character.defence)
+        print ("Magic - ", character.magic)
+        return character
+
+    elif selection == "2":
+        character = wizard
+        print ("You have selected the wizard...These are their stats...")
+        print ("Health - ", character.health)
+        print ("Strength - ", character.strength)
+        print ("Defence - ", character.defence)
+        print ("Magic - ", character.magic)
+        return character
+
+    elif selection == "3":
+        character = elf
+        print ("You have selected the elf...These are their stats...")
+        print ("Health - ", character.health)
+        print ("Strength - ", character.strength)
+        print ("Defence - ", character.defence)
+        print ("Magic - ", character.magic)
+        return character
+
+    else:
+        print("Only press 1, 2 or 3")
+        heroselect()
+
+
+
 def play_or_not():
     answer = input(" Answer 'y' or 'n': ")
     if answer.lower().strip() == "y":
-        print("You are on a bus...")
-        # lots of code
+        print("Choose which heroine you want to play as...")
+        Heroine_Select()
     elif answer.lower().strip() == "n":
         print("I don't blame you. Bye!")
         quit()
     else:
         print("Incorrect input! Try again. Just one letter and press enter.")
-        return play_or_not()
+        play_or_not()
 
 
 # Start and intro to game
