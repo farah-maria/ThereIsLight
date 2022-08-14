@@ -100,14 +100,14 @@ def Heroine_Select():
     if selection == "1":
         character = EarthGoddess
         print ("You have selected the earth goddess...These are their stats...")
-        print ("Health - ", character.health)
-        print ("Strength - ", character.strength)
-        print ("Defence - ", character.defence)
-        print ("Magic - ", character.magic)
+        print ("fighting spirit - ", character.fighting_spirit)
+        print ("self_esteem - ", character.self_esteem)
+        print ("calories to use - ", character.calories)
+        print ("hours of sleep - ", character.sleep)
         return character
 
     elif selection == "2":
-        character = wizard
+        character = 
         print ("You have selected the wizard...These are their stats...")
         print ("Health - ", character.health)
         print ("Strength - ", character.strength)
