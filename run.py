@@ -20,16 +20,21 @@ data = scores_data.get_all_values()
 
 
 # Player heroine options. You get to choose which you want to be in the game.
-class EarthGoddess:
+class EarthGoddess (object):
     """ She's an awesome heroine, with high-energy vibes """
+    fighting_spirit = 10 
+    self_esteem = 8
+    calories_to_burn = 2000 
+    hrs_of_sleep = 8
+    
     def __init__(self, fighting_spirit, self_esteem, calories, sleep):
         self.fighting_spirit = 500
         self.self_esteem = 4000
         self.calories = 2000
         self.sleep = 8
+    
 
-
-class WorkFiend:
+class OfficeChamp:
     """ She's a fantastic heroine, but just a bit tired. """
     def __init__(self, fighting_spirit, self_esteem, calories, sleep):
         self.fighting_spirit = 2000
@@ -87,7 +92,7 @@ class RandomUnWoke:
 
 
 class TerribleBoss:
-    """ Enemy who reduce player's power through the game """
+    """ Enemy who reduces player's power through the game """
     def __init__(self, strength, defence):
         name = "male boss from another company with no diverisity training"
         strength = 30
@@ -96,38 +101,38 @@ class TerribleBoss:
 
 
 def Heroine_Select():
-    selection = input("1. EarthGoddess \n2. WorkFiend  \n3. NiceyNorah \n4. HighPriestess \n5. CoolFeminist \n")
+    selection = input(
+        "1. EarthGoddess \n2. OfficeChamp  \n3. NiceyNorah \n4. HighPriestess \n5. CoolFeminist \n")
     if selection == "1":
         character = EarthGoddess
-        print ("You have selected the earth goddess...These are their stats...")
-        print ("fighting spirit - ", character.fighting_spirit)
-        print ("self_esteem - ", character.self_esteem)
-        print ("calories to use - ", character.calories)
-        print ("hours of sleep - ", character.sleep)
+        print ("You have selected the Earth Goddess...These are their stats...")
+        print ("Fighting spirit - ", character.fighting_spirit)
+        print ("Self esteem - ", character.self_esteem)
+        print ("Calories 2 burn - ", character.calories)
+        print ("Hours of sleep - ", character.sleep)
         return character
 
     elif selection == "2":
-        character = 
-        print ("You have selected the wizard...These are their stats...")
-        print ("Health - ", character.health)
-        print ("Strength - ", character.strength)
-        print ("Defence - ", character.defence)
-        print ("Magic - ", character.magic)
+        character = OfficeChamp
+        print ("You have selected the Office Champion...These are their stats...")
+        print ("Fighting spirit - ", character.fighting_spirit)
+        print ("Self esteem - ", character.self_esteem)
+        print ("Calories 2 burn - ", character.calories)
+        print ("Hours of sleep - ", character.sleep)
         return character
 
     elif selection == "3":
-        character = elf
-        print ("You have selected the elf...These are their stats...")
-        print ("Health - ", character.health)
-        print ("Strength - ", character.strength)
-        print ("Defence - ", character.defence)
-        print ("Magic - ", character.magic)
+        character = NiceyNorah
+        print ("You have selected NiceyNorah...These are their stats...")
+        print ("Fighting spirit - ", character.fighting_spirit)
+        print ("Self esteem - ", character.self_esteem)
+        print ("Calories 2 burn - ", character.calories)
+        print ("Hours of sleep - ", character.sleep)
         return character
 
     else:
-        print("Only press 1, 2 or 3")
-        heroselect()
-
+        print("Only press 1, 2 or 3 and press enter")
+        Heroine_Select()
 
 
 def play_or_not():
