@@ -39,22 +39,17 @@ class Character:
 
 EarthGoddess = Character("Earth Goddess", 80, 80, 2500, 11)
 """ She's an awesome heroine with high-energy vibes """
-EarthGoddess.printStats()
 
 OfficeFiend = Character("Office Fiend", 100, 60, 1500, 5)
 """ She's a fantastic heroine, but just a bit tired. """
-OfficeFiend.printStats()
 
 NiceyNorah = Character("Nicey Norah", 30, 40, 3, 4)
 """ Norah is a nice heroine. And niceness is underrated. """
-NiceyNorah.printStats()
 
 HighPriestess = Character("High Priestess", 100, 100, 3500, 15)
 """ A very powerful heroine to play. She knows in her gut what's right."""
-OfficeFiend.printStats()
 
 CoolFeminist = Character("Cool Feminist", 100, 120, 3000, 8)
-CoolFeminist.printStats()
 
 # Enemies of the player!!!
 
