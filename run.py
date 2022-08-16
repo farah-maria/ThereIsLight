@@ -38,19 +38,19 @@ class Heroine:
         print(f"hours of sleep - {self.hrs_of_sleep}")
 
 
-EarthGoddess = Heroine("Earth Goddess", 80, 80, 2500, 11)
+Gaia = Heroine("Gaia", 80, 80, 2500, 11)
 """ She's an awesome heroine with high-energy vibes """
 
-OfficeFiend = Heroine("Office Fiend", 100, 60, 1500, 5)
+Persephone = Heroine("Persephone", 100, 60, 1500, 5)
 """ She's a fantastic heroine, but just a bit tired. """
 
-NiceyNorah = Heroine("Nicey Norah", 30, 40, 3, 4)
+Flora = Heroine("Flora", 30, 40, 3, 4)
 """ Norah is a nice heroine. And niceness is underrated. """
 
-HighPriestess = Heroine("High Priestess", 100, 100, 3500, 15)
+Lilith = Heroine("Lilith", 100, 100, 3500, 15)
 """ A very powerful heroine to play. She knows in her gut what's right."""
 
-CoolFeminist = Heroine("Cool Feminist", 100, 120, 3000, 8)
+Nyx = Heroine("Nyx", 100, 120, 3000, 8)
 
 # Enemies of the player!!!
 
@@ -76,41 +76,41 @@ def enemySelect(MansplainingMick, UnwokeEddie, PatriarchialPete):
     enemiesList = [MansplainingMick, UnwokeEddie, PatriarchialPete]
     chance = random.randint(0, 2)
     opponent = enemiesList[chance]
-    return enemySelect
+    return opponent
 
     
 def heroine_select():
     """ Allows player to choose which heroine they play as"""
     selection = input(
-        "1. EarthGoddess \n2. OfficeFiend  \n3. NiceyNorah \n4. HighPriestess \n5. CoolFeminist \n")
+        "1. Gaia \n2. Persephone  \n3. Flora \n4. Lilith \n5. Nyx \n")
    
     if selection == "1":
-        selectedCharacter = EarthGoddess
+        selectedCharacter = Gaia
         print("You have selected the Earth Goddess. These are their stats: ")
-        EarthGoddess.printStats()
+        Gaia.printStats()
 
     elif selection == "2":
-        selectedCharacter = OfficeFiend
+        selectedCharacter = Persephone
         print("You have selected the Office Fiend. These are their stats: ")
-        OfficeFiend.printStats()
+        Persephone.printStats()
         return selectedCharacter
 
     elif selection == "3":
-        selectedCharacter = NiceyNorah
+        selectedCharacter = Flora
         print("You have selected NiceyNorah. These are their stats: ")
-        NiceyNorah.printStats()
+        Flora.printStats()
         return selectedCharacter
     
     elif selection == "4":
-        selectedCharacter = HighPriestess
+        selectedCharacter = Lilith
         print("You have selected the High Priestess. These are their stats: ")
-        HighPriestess.printStats()
+        Lilith.printStats()
         return selectedCharacter
 
     elif selection == "5":
-        selectedCharacter = CoolFeminist
+        selectedCharacter = Nyx
         print("You have selected the Cool Feminist. These are their stats: ")
-        CoolFeminist.printStats()
+        Nyx.printStats()
         return selectedCharacter
 
     else:
@@ -141,7 +141,7 @@ print("The situation is as follows... ")
 print("You wake up trapped in a patriarchial nightmare.")
 print("The odds are staked against you.")
 print("Not even in an interesting way...")
-print("...but in a 'Ah Jesus, really?! This again?' kinda way.")
+print("...but in a 'Meh, really?! This again?' kinda way.")
 print("The aim is to just get through a morning. Not in real time.")
 print("There will be enemies! And enemies are a drag!")
 print("But you can score points, and maybe even win.")
