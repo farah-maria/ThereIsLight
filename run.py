@@ -39,16 +39,12 @@ class Heroine:
 
 
 Demeter = Heroine("Demeter", 80, 80, 2500, 11)
-""" She's an awesome heroine with high-energy vibes """
 
 Persephone = Heroine("Persephone", 100, 60, 1500, 5)
-""" She's a fantastic heroine, but just a bit tired. """
 
 Athena = Heroine("Athena", 30, 40, 3, 4)
-""" Norah is a nice heroine. And niceness is underrated. """
 
 Lilith = Heroine("Lilith", 100, 100, 3500, 15)
-""" A very powerful heroine to play. She knows in her gut what's right."""
 
 Roe = Heroine("Roe", 100, 120, 3000, 8)
 
@@ -86,30 +82,25 @@ def heroine_select():
    
     if selection == "1":
         selectedCharacter = Demeter
-        print("You have selected Demeter. These are their stats: ")
         Demeter.printStats()
 
     elif selection == "2":
         selectedCharacter = Persephone
-        print("You have selected Persephone. These are their stats: ")
         Persephone.printStats()
         return selectedCharacter
 
     elif selection == "3":
         selectedCharacter = Athena
-        print("You have selected Athena. These are their stats: ")
         Athena.printStats()
         return selectedCharacter
     
     elif selection == "4":
         selectedCharacter = Lilith
-        print("You have selected Lilith. These are their stats: ")
         Lilith.printStats()
         return selectedCharacter
 
     elif selection == "5":
         selectedCharacter = Roe
-        print("You have selected Roe. These are their stats: ")
         Roe.printStats()
         return selectedCharacter
 
