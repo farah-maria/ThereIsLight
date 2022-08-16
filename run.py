@@ -38,19 +38,19 @@ class Heroine:
         print(f"hours of sleep - {self.hrs_of_sleep}")
 
 
-Gaia = Heroine("Gaia", 80, 80, 2500, 11)
+Demeter = Heroine("Demeter", 80, 80, 2500, 11)
 """ She's an awesome heroine with high-energy vibes """
 
 Persephone = Heroine("Persephone", 100, 60, 1500, 5)
 """ She's a fantastic heroine, but just a bit tired. """
 
-Flora = Heroine("Flora", 30, 40, 3, 4)
+Athena = Heroine("Athena", 30, 40, 3, 4)
 """ Norah is a nice heroine. And niceness is underrated. """
 
 Lilith = Heroine("Lilith", 100, 100, 3500, 15)
 """ A very powerful heroine to play. She knows in her gut what's right."""
 
-Nyx = Heroine("Nyx", 100, 120, 3000, 8)
+Roe = Heroine("Roe", 100, 120, 3000, 8)
 
 # Enemies of the player!!!
 
@@ -63,54 +63,54 @@ class Enemy:
         self.calories_to_burn = calories_to_burn
 
 
-MansplainingMick = Enemy("MansplainingMick", 40, 2500)
+Kavanaugh = Enemy("Kavanaugh", 40, 2500)
 heroine_points = random.randint(0, 2)
-UnwokeEddie = Enemy("UnwokeEddie", 60, 3000)
+Wade = Enemy("Wade", 60, 3000)
 heroine_points = random.randint(0, 2)
-PatriarchialPete = Enemy("PatriarchialPete", 100, 3500)
+Trump = Enemy("Trump", 100, 3500)
 heroine_points = random.randint(0, 2)
 
 
-def enemySelect(MansplainingMick, UnwokeEddie, PatriarchialPete):
+def enemySelect(Kavanaugh, Wade, Trump):
     """ Randomly chooses one of the three enemies to fight player"""
-    enemiesList = [MansplainingMick, UnwokeEddie, PatriarchialPete]
+    enemiesList = [Kavanaugh, Wade, Trump]
     chance = random.randint(0, 2)
     opponent = enemiesList[chance]
     return opponent
 
-    
+
 def heroine_select():
     """ Allows player to choose which heroine they play as"""
     selection = input(
         "1. Gaia \n2. Persephone  \n3. Flora \n4. Lilith \n5. Nyx \n")
    
     if selection == "1":
-        selectedCharacter = Gaia
+        selectedCharacter = Demeter
         print("You have selected the Earth Goddess. These are their stats: ")
-        Gaia.printStats()
+        Demeter.printStats()
 
     elif selection == "2":
         selectedCharacter = Persephone
-        print("You have selected the Office Fiend. These are their stats: ")
+        print("You have selected Persephone. These are their stats: ")
         Persephone.printStats()
         return selectedCharacter
 
     elif selection == "3":
-        selectedCharacter = Flora
-        print("You have selected NiceyNorah. These are their stats: ")
-        Flora.printStats()
+        selectedCharacter = Athena
+        print("You have selected Athena. These are their stats: ")
+        Athena.printStats()
         return selectedCharacter
     
     elif selection == "4":
         selectedCharacter = Lilith
-        print("You have selected the High Priestess. These are their stats: ")
+        print("You have selected Lilith. These are their stats: ")
         Lilith.printStats()
         return selectedCharacter
 
     elif selection == "5":
-        selectedCharacter = Nyx
+        selectedCharacter = Roe
         print("You have selected the Cool Feminist. These are their stats: ")
-        Nyx.printStats()
+        Roe.printStats()
         return selectedCharacter
 
     else:
