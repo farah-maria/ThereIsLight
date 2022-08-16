@@ -68,7 +68,14 @@ UnwokeEddie = Enemy("UnwokeEddie", 60, 3000)
 heroine_points = random.randint(0, 2)
 PatriarchialPete = Enemy("PatriarchialPete", 100, 3500)
 heroine_points = random.randint(0, 2)
-    
+
+
+def enemySelect(MansplainingMick, UnwokeEddie, PatriarchialPete):
+    enemiesList = [MansplainingMick, UnwokeEddie, PatriarchialPete]
+    chance = random.randint(0, 2)
+    opponent = enemiesList[chance]
+    return enemySelect
+
     
 def heroine_select():
     selection = input(
