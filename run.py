@@ -54,36 +54,29 @@ CoolFeminist = Character("Cool Feminist", 100, 120, 3000, 8)
 # Enemies of the player!!!
 
 
-class RandomMansplainer(object):
+class Enemy:
     """ Enemy who reduces player's power through the game """
-    name = "mansplainer"
-    strength = 20
-    defence = 9000
-    heroine_points = random.randint(0, 2)
+    def __init__(self, name, fighting_spirit, calories_to_burn):
+        self.name = name
+        self.fighting_spirit = fighting_spirit 
+        self.calories_to_burn = calories_to_burn
 
 
-class RandomUnWoke(object):
-    """ Enemy who reduces player's power through the game """
-    name = "random sexist-in-pub type"
-    strength = 60
-    defence = 900
-    heroine_points = random.randint(0, 2)
-
-
-class TerribleBoss(object):
-    """ Enemy who reduces player's power through the game """
-    name = "male boss from another company with no diverisity training"
-    strength = 30
-    defence = 10000
-    heroine_points = random.randint(0, 2)
-
-
+MansplainingMick = Enemy("MansplainingMick", 40, 2500)
+heroine_points = random.randint(0, 2)
+UnwokeEddie = Enemy("UnwokeEddie", 60, 3000)
+heroine_points = random.randint(0, 2)
+PatriarchialPete = Enemy("PatriarchialPete", 100, 3500)
+heroine_points = random.randint(0, 2)
+    
+    
 def heroine_select():
     selection = input(
         "1. EarthGoddess \n2. OfficeFiend  \n3. NiceyNorah \n4. HighPriestess \n5. CoolFeminist \n")
    
     if selection == "1":
         selectedCharacter = EarthGoddess
+        print("You have selected the Earth Goddess. These are their stats: ")
         EarthGoddess.printStats()
 
     elif selection == "2":
