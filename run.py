@@ -148,7 +148,7 @@ print("But you can score points, and maybe even win.")
 print("You will always have options: either y/n...")
 print("...or a number you need to select to choose a pathway.")
 print("Remember to press 'enter' afterwards.")
-print("Also, you can pick up points which increase your score...")
+print("Also, you can pick up points, which increases your score...")
 print("... by eating cake and winning fights.")
 print("Would you like to play?")
 
