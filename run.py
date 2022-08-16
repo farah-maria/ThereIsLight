@@ -20,7 +20,7 @@ data = scores_data.get_all_values()
 
 
 # Player heroine options. You get to choose which you want to be in the game.
-class Character:
+class Heroine:
     """ Character for user to be through the game """
     def __init__(self, name, fighting_spirit, self_esteem, calories_to_burn, hrs_of_sleep):
         self.name = name
@@ -30,6 +30,7 @@ class Character:
         self.hrs_of_sleep = hrs_of_sleep
 
     def printStats(self):
+        """ Calls the stats on the choice of Heroine  """
         print(f"You have selected {self.name}. These are their stats: ")
         print(f"fighting spirit - {self.fighting_spirit}")
         print(f"self esteem - {self.self_esteem}")
@@ -37,19 +38,19 @@ class Character:
         print(f"hours of sleep - {self.hrs_of_sleep}")
 
 
-EarthGoddess = Character("Earth Goddess", 80, 80, 2500, 11)
+EarthGoddess = Heroine("Earth Goddess", 80, 80, 2500, 11)
 """ She's an awesome heroine with high-energy vibes """
 
-OfficeFiend = Character("Office Fiend", 100, 60, 1500, 5)
+OfficeFiend = Heroine("Office Fiend", 100, 60, 1500, 5)
 """ She's a fantastic heroine, but just a bit tired. """
 
-NiceyNorah = Character("Nicey Norah", 30, 40, 3, 4)
+NiceyNorah = Heroine("Nicey Norah", 30, 40, 3, 4)
 """ Norah is a nice heroine. And niceness is underrated. """
 
-HighPriestess = Character("High Priestess", 100, 100, 3500, 15)
+HighPriestess = Heroine("High Priestess", 100, 100, 3500, 15)
 """ A very powerful heroine to play. She knows in her gut what's right."""
 
-CoolFeminist = Character("Cool Feminist", 100, 120, 3000, 8)
+CoolFeminist = Heroine("Cool Feminist", 100, 120, 3000, 8)
 
 # Enemies of the player!!!
 
@@ -71,6 +72,7 @@ heroine_points = random.randint(0, 2)
 
 
 def enemySelect(MansplainingMick, UnwokeEddie, PatriarchialPete):
+    """ Randomly chooses one of the three enemies to fight player"""
     enemiesList = [MansplainingMick, UnwokeEddie, PatriarchialPete]
     chance = random.randint(0, 2)
     opponent = enemiesList[chance]
@@ -78,6 +80,7 @@ def enemySelect(MansplainingMick, UnwokeEddie, PatriarchialPete):
 
     
 def heroine_select():
+    """ Allows player to choose which heroine they play as"""
     selection = input(
         "1. EarthGoddess \n2. OfficeFiend  \n3. NiceyNorah \n4. HighPriestess \n5. CoolFeminist \n")
    
