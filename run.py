@@ -65,15 +65,15 @@ class Enemy:
 
 Kavanaugh = Enemy("Kavanaugh", 40, 2500)
 heroine_points = random.randint(0, 2)
-Wade = Enemy("Wade", 60, 3000)
+Schlafly = Enemy("Schlafly", 60, 3000)
 heroine_points = random.randint(0, 2)
 Trump = Enemy("Trump", 100, 3500)
 heroine_points = random.randint(0, 2)
 
 
-def enemySelect(Kavanaugh, Wade, Trump):
+def enemySelect(Kavanaugh, Schlafly, Trump):
     """ Randomly chooses one of the three enemies to fight player"""
-    enemiesList = [Kavanaugh, Wade, Trump]
+    enemiesList = [Kavanaugh, Schlafly, Trump]
     chance = random.randint(0, 2)
     opponent = enemiesList[chance]
     return opponent
@@ -82,11 +82,11 @@ def enemySelect(Kavanaugh, Wade, Trump):
 def heroine_select():
     """ Allows player to choose which heroine they play as"""
     selection = input(
-        "1. Gaia \n2. Persephone  \n3. Flora \n4. Lilith \n5. Nyx \n")
+        "1. Demeter \n2. Persephone  \n3. Flora \n4. Lilith \n5. Roe \n")
    
     if selection == "1":
         selectedCharacter = Demeter
-        print("You have selected the Earth Goddess. These are their stats: ")
+        print("You have selected Demeter. These are their stats: ")
         Demeter.printStats()
 
     elif selection == "2":
@@ -109,7 +109,7 @@ def heroine_select():
 
     elif selection == "5":
         selectedCharacter = Roe
-        print("You have selected the Cool Feminist. These are their stats: ")
+        print("You have selected Roe. These are their stats: ")
         Roe.printStats()
         return selectedCharacter
 
@@ -148,8 +148,8 @@ print("But you can score points, and maybe even win.")
 print("You will always have options: either y/n...")
 print("...or a number you need to select to choose a pathway.")
 print("Remember to press 'enter' afterwards.")
-print("Also, you can pick up energy points through this 'adventure' from...")
-print("...eating and sleeping. And winning fights.")
+print("Also, you can pick up points which increase your score...")
+print("... by eating cake and winning fights.")
 print("Would you like to play?")
 
 play_or_not()
