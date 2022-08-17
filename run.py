@@ -79,6 +79,14 @@ def perk_effect(perk_appear, Heroine):
         print("It's boosted your fighting spirit by 10 points! :) ")
         print(f"Your new fighting spirit score is {Heroine.fighting_spirit}")
         return Heroine
+    
+    elif perk_appear == "anti_patriarchial_zapper":
+        Heroine.fighting_spirit + 30
+        print("You pick up an extra powerful anti-patriarchial zapper!")
+        print("It summons the spirits of all great activists, past & present.")
+        print("It's boosted your fighting spirit by 30 points :) ")
+        print(f"Your new fighting spirit score is {Heroine.fighting_spirit}")
+        return Heroine
 
 
 def enemySelect(Kavanaugh, Schlafly, Trump):
