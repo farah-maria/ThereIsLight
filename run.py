@@ -106,16 +106,16 @@ def Bus_Fight():
     print("...blocking your way out into the aisle.")
     print("Hello', she says. 'My name's Schlafley...")
     print("'I don't think you should be going to work,' she continues...") 
-    print("... as she draws a tiny gun from the pocket of her cardigan.")
+    print("as she draws a tiny gun from the pocket of her cardigan.")
     print("You have two choices: ")
     choice = input("1. Use your injustice_zapper \n2. Push her and run!")
     if choice == "1":
         print("You point the anti-injustice zapper at Schlafley.")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 5:
-            print("Schlafley knocks it out of your hands... ")
+            print("Schlafly knocks it out of your hands... ")
             print("... and shoots you.")
-            print("Oh dear. You're dead. You'll never get to the office, now.")
+            print("Oh dear. You're dead. You'll never get to work, now.")
             print("Game over. Sorry!")
             exit()
         elif defeat_chance < 6:
