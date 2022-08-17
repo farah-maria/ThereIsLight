@@ -69,34 +69,10 @@ Trump = Enemy("Trump", 100, 3500)
 
 
 def perks_select():
-    perks_list = ["coffee", "injustice_zapper", "cake"]
-    perk_rand = random.randint(0, 2)
+    perks_list = ["coffee", "coffee AND cake"]
+    perk_rand = random.randint(0, 1)
     perk = perks_list[perk_rand]
-    return perk
-
-
-def perk_effect(perk, Heroine):
-    if perk == "coffee":
-        Heroine.fighting_spirit += 10 
-        print("You drink the super-strong, delicious coffee.")
-        print("It's boosted your fighting spirit by 10 points! :) ")
-        print(f"Your new fighting spirit score is {Heroine.fighting_spirit}")
-        return Heroine
-    
-    elif perk == "injustice_zapper":
-        Heroine.self_esteem += 30
-        print("You pick up an extra powerful zapper that quashes injustice!")
-        print("It runs on the power of all great activists, past & present.")
-        print("It's boosted your self-esteem by 30 points :) ")
-        print(f"Your new self-esteem score is {Heroine.self_esteem}")
-        return Heroine
-
-    elif perk == "cake":
-        Heroine.calories_to_burn += 300
-        print("You pick up the most delicious slice of cake! You eat it.")
-        print("You now have more calories to help you fight baddies!")
-        print(f"Calories now in your arsenal: {Heroine.calories_to_burn}")
-        return Heroine
+    print(perk)
 
 
 def Bus_Fight():
@@ -121,13 +97,17 @@ def Bus_Fight():
         elif defeat_chance < 6:
             Schlafly.fighting_spirit -= 40 
             print("You managed to stun her. She falls to the ground.")
-            print(
-                f"Her fighting spirit is down 40 points \
-                    to {Schlafly.fighting_spirit}.")
+            print("Her fighting spirit has been knocked by 40 points...")
+            print(f"and is now down to just {Schlafly.fighting_spirit}.")
             print("She'll have less energy to pester other people, now :)")
-            print("Well done :)")
-            exit()
-
+            print("Well done!")
+            print("The bus stops near the office and you get off.")
+            print("You decide to flip a coin...")
+            print("If it's heads, you grab a coffee from the cafe opposite.")
+            print("If it's tails, you get coffee AND cake.")
+            print("You flip the coin and get: ")
+            perks_select()
+        
 
 def heroine_select():
     """ Allows player to choose which heroine they play as"""
