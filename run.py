@@ -22,31 +22,27 @@ data = scores_data.get_all_values()
 # Player heroine options. You get to choose which you want to be in the game.
 class Heroine:
     """ Character for user to be through the game """
-    def __init__(self, name, fighting_spirit, self_esteem, calories_to_burn, hrs_of_sleep):
+    def __init__(self, name, fighting_spirit, self_esteem, calories_to_burn):
         self.name = name
         self.fighting_spirit = fighting_spirit
         self.self_esteem = self_esteem
-        self.calories_to_burn = calories_to_burn
-        self.hrs_of_sleep = hrs_of_sleep
 
     def printStats(self):
         """ Calls the stats on the choice of Heroine  """
         print(f"You have selected {self.name}. These are their stats: ")
         print(f"fighting spirit - {self.fighting_spirit}")
         print(f"self esteem - {self.self_esteem}")
-        print(f"calories to burn - {self.calories_to_burn}")
-        print(f"hours of sleep - {self.hrs_of_sleep}")
 
 
-Demeter = Heroine("Demeter", 80, 80, 2500, 11)
+Demeter = Heroine("Demeter", 80, 80, 2500)
 
-Persephone = Heroine("Persephone", 100, 60, 1500, 5)
+Persephone = Heroine("Persephone", 100, 60, 1500)
 
-Athena = Heroine("Athena", 30, 40, 3, 4)
+Athena = Heroine("Athena", 30, 40, 3)
 
-Lilith = Heroine("Lilith", 100, 100, 3500, 15)
+Lilith = Heroine("Lilith", 100, 100, 3500)
 
-Roe = Heroine("Roe", 100, 120, 3000, 8)
+Roe = Heroine("Roe", 100, 120, 3000)
 
 # Enemies of the player!!!
 
@@ -125,17 +121,13 @@ def play_or_not():
 # Start and intro to game
 
 print("This is a game where winning is hard.")
-print("When it's not hard, it can get monotonous.")
-print("When it's neither of the above...")
-print("a surprising breakthrough may be in store :)")
 print("The situation is as follows... ")
 print("You wake up trapped in a patriarchial nightmare.")
 print("The odds are staked against you.")
 print("Not even in an interesting way...")
-print("...but in a 'Meh, really' kinda way.")
-print("The aim is to get through a morning. Not in real time.")
+print("...but in a 'Meh, really? Pfft.' kinda way.")
+print("The aim is to get to work. Not in real time.")
 print("There will be enemies! And enemies are a drag!")
-print("But you can score points, and maybe even win.")
 print("You will always have options: either y/n...")
 print("...or a number you need to select to choose a pathway.")
 print("Remember to press 'enter' afterwards.")
