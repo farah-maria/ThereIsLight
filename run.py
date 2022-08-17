@@ -89,18 +89,18 @@ def perk_effect(perk_appear, Heroine):
         return Heroine
 
     elif perk_appear == "cake":
-        Heroine.fighting_spirit + 30
+        Heroine.calories_to_burn + 300
         print("You pick up the most delicious slice of cake! You eat it.")
-        print("You now have more calories to help you fight baddies! :)")
+        print("You now have more calories to help you fight baddies!")
         print(f"Calories now in your arsenal: {Heroine.calories_to_burn} :)")
         return Heroine
 
 
-def enemySelect(Kavanaugh, Schlafly, Trump):
+def opponent_select(Kavanaugh, Schlafly, Trump):
     """ Randomly chooses one of the three enemies to fight player"""
-    enemiesList = [Kavanaugh, Schlafly, Trump]
+    opponent_list = [Kavanaugh, Schlafly, Trump]
     chance = random.randint(0, 2)
-    opponent = enemiesList[chance]
+    opponent = opponent_list[chance]
     return opponent
 
 
@@ -169,3 +169,14 @@ print("... by eating cake and winning fights.")
 print("Would you like to play?")
 
 play_or_not()
+
+
+def fight(points):
+    opponent = opponent_select(Kavanaugh, Schlafly, Trump)
+    print(f"A dangerous enemy called {opponent.name} steps onto your path.")
+    print("You have three choices...")
+    while opponent.calories_to_burn > 0:
+        choice = input("1. Use your injustice_zapper \n2. Run!")
+
+        if choice == "1":
+            print(f"You point the anti-injustice zapper at {opponent.name}.")
