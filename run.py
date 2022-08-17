@@ -26,23 +26,25 @@ class Heroine:
         self.name = name
         self.fighting_spirit = fighting_spirit
         self.self_esteem = self_esteem
+        self.calories_to_burn = calories_to_burn
 
     def printStats(self):
         """ Calls the stats on the choice of Heroine  """
         print(f"You have selected {self.name}. These are their stats: ")
         print(f"fighting spirit - {self.fighting_spirit}")
         print(f"self esteem - {self.self_esteem}")
+        print(f"calories to burn - {self.calories_to_burn}")
 
 
-Demeter = Heroine("Demeter", 80, 80, 2500)
+Demeter = Heroine("Demeter", 80, 80, 2800)
 
-Persephone = Heroine("Persephone", 100, 60, 1500)
+Persephone = Heroine("Persephone", 90, 50, 1500)
 
-Athena = Heroine("Athena", 30, 40, 3)
+Athena = Heroine("Athena", 100, 90, 2000)
 
-Lilith = Heroine("Lilith", 100, 100, 3500)
+Lilith = Heroine("Lilith", 75, 40, 3500)
 
-Roe = Heroine("Roe", 100, 120, 3000)
+Roe = Heroine("Roe", 100, 95, 3000)
 
 # Enemies of the player!!!
 
@@ -70,7 +72,14 @@ def heroine_perks():
     return perk_appear
 
 
-def perk_effect(perk_appear, Heroine)
+def perk_effect(perk_appear, Heroine):
+    if perk_appear == "coffee":
+        Heroine.fighting_spirit + 10
+        print("You drink the super-strong, delicious coffee.")
+        print("It's boosted your fighting spirit by 10 points! :) ")
+        print(f"Your new fighting spirit score is {Heroine.fighting_spirit}")
+        return Heroine
+
 
 def enemySelect(Kavanaugh, Schlafly, Trump):
     """ Randomly chooses one of the three enemies to fight player"""
