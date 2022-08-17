@@ -66,7 +66,7 @@ Trump = Enemy("Trump", 100, 3500)
 
 
 def heroine_perks():
-    heroine_perks = ["coffee", "anti_patriarchial_zapper", "cake"]
+    heroine_perks = ["coffee", "injustice_zapper", "cake"]
     perk_rand_select = random.randint(0, 2)
     perk_appear = heroine_perks[perk_rand_select]
     return perk_appear
@@ -80,12 +80,19 @@ def perk_effect(perk_appear, Heroine):
         print(f"Your new fighting spirit score is {Heroine.fighting_spirit}")
         return Heroine
     
-    elif perk_appear == "anti_patriarchial_zapper":
+    elif perk_appear == "injustice_zapper":
         Heroine.fighting_spirit + 30
-        print("You pick up an extra powerful anti-patriarchial zapper!")
-        print("It summons the spirits of all great activists, past & present.")
+        print("You pick up an extra powerful zapper that quashes injustice!")
+        print("It runs on the power of all great activists, past & present.")
         print("It's boosted your fighting spirit by 30 points :) ")
         print(f"Your new fighting spirit score is {Heroine.fighting_spirit}")
+        return Heroine
+
+    elif perk_appear == "cake":
+        Heroine.fighting_spirit + 30
+        print("You pick up the most delicious slice of cake! You eat it.")
+        print("You now have more calories to help you fight baddies! :)")
+        print(f"Calories now in your arsenal: {Heroine.calories_to_burn} :)")
         return Heroine
 
 
