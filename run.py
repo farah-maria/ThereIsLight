@@ -104,17 +104,17 @@ def Bus_Fight():
     print("Just as you get your book out of your bag...")
     print("a dangerous enemy sits next to you...")
     print("...blocking your way out into the aisle.")
-    print("Hello', she says. 'My name's Schlafley...")
+    print("Hello', she says. 'My name's Schlafly...")
     print("'I don't think you should be going to work,' she continues...") 
     print("as she draws a tiny gun from the pocket of her cardigan.")
     print("You have two choices: ")
     choice = input("1. Use your injustice_zapper \n2. Push her and run!")
     if choice == "1":
-        print("You point the anti-injustice zapper at Schlafley.")
+        print("You point the anti-injustice zapper at Schlafly.")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 5:
-            print("Schlafly knocks it out of your hands... ")
-            print("... and shoots you.")
+            print("Schlafly knocks the zapper out of your hands... ")
+            print("and shoots you.")
             print("Oh dear. You're dead. You'll never get to work, now.")
             print("Game over. Sorry!")
             exit()
@@ -123,7 +123,9 @@ def Bus_Fight():
             print("You managed to stun her. She falls to the ground.")
             print(
                 f"Her fighting spirit is down 40 points \
-                    to {Schlafly.fighting_spirit}")
+                    to {Schlafly.fighting_spirit}.")
+            print("She'll have less energy to pester other people, now :)")
+            print("Well done :)")
             exit()
 
 
