@@ -68,39 +68,38 @@ Trump = Enemy("Trump", 100, 3500)
 def heroine_perks():
     heroine_perks = ["coffee", "injustice_zapper", "cake"]
     perk_rand_select = random.randint(0, 2)
-    perk_appear = heroine_perks[perk_rand_select]
-    return perk_appear
+    perk = heroine_perks[perk_rand_select]
+    return perk
 
 
 def perk_effect(perk_appear, Heroine):
     if perk_appear == "coffee":
-        Heroine.fighting_spirit + 10
+        Heroine.fighting_spirit = Heroine.fighting_spirit + 10
         print("You drink the super-strong, delicious coffee.")
         print("It's boosted your fighting spirit by 10 points! :) ")
         print(f"Your new fighting spirit score is {Heroine.fighting_spirit}")
         return Heroine
     
     elif perk_appear == "injustice_zapper":
-        Heroine.fighting_spirit + 30
+        Heroine.self_esteem = Heroine.self_esteem + 30
         print("You pick up an extra powerful zapper that quashes injustice!")
         print("It runs on the power of all great activists, past & present.")
-        print("It's boosted your fighting spirit by 30 points :) ")
-        print(f"Your new fighting spirit score is {Heroine.fighting_spirit}")
+        print("It's boosted your self-esteem by 30 points :) ")
+        print(f"Your new self-esteem score is {Heroine.self_esteem}")
         return Heroine
 
     elif perk_appear == "cake":
-        Heroine.calories_to_burn + 300
+        Heroine.calories_to_burn = Heroine.calories_to_burn + 300
         print("You pick up the most delicious slice of cake! You eat it.")
         print("You now have more calories to help you fight baddies!")
         print(f"Calories now in your arsenal: {Heroine.calories_to_burn} :)")
         return Heroine
 
 
-def opponent_select(Kavanaugh, Schlafly, Trump):
-    """ Randomly chooses one of the three enemies to fight player"""
-    opponent_list = [Kavanaugh, Schlafly, Trump]
-    chance = random.randint(0, 2)
-    opponent = opponent_list[chance]
+def opponent_select():
+    opp_list = ['Kavanaugh', 'Schlafly', 'Trump']
+    rand = random.randint(0, 2)
+    opponent = opp_list[rand]
     return opponent
 
 
@@ -157,11 +156,8 @@ print("This is a game where winning is hard.")
 print("The situation is as follows... ")
 print("You wake up trapped in a patriarchial nightmare.")
 print("The odds are staked against you.")
-print("Not even in an interesting way...")
-print("...but in a 'Meh, really? Pfft.' kinda way.")
-print("The aim is to get to work. Not in real time.")
 print("There will be enemies! And enemies are a drag!")
-print("You will always have options: either y/n...")
+print("But you will always have options: either y/n...")
 print("...or a number you need to select to choose a pathway.")
 print("Remember to press 'enter' afterwards.")
 print("Also, you can pick up points, which increases your score...")
@@ -171,12 +167,17 @@ print("Would you like to play?")
 play_or_not()
 
 
-def fight(points):
-    opponent = opponent_select(Kavanaugh, Schlafly, Trump)
-    print(f"A dangerous enemy called {opponent.name} steps onto your path.")
-    print("You have three choices...")
+def Fight(points):
+    enemy = opponent_select()
+    return enemy
+    
+    print(f"A dangerous {Enemy.name} steps onto your path.")
+    print("You have two choices...")
     while opponent.calories_to_burn > 0:
         choice = input("1. Use your injustice_zapper \n2. Run!")
 
         if choice == "1":
-            print(f"You point the anti-injustice zapper at {opponent.name}.")
+            print(f"You point the anti-injustice zapper at {Enemy.name}.")
+            defeat_chance = random.randint(0, 10)
+            if defeat_chance > 5:
+                Enemy.calories_to_burn = Enemy.calories_to_burn - Heroine.calories_to_burn 
