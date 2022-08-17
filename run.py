@@ -34,6 +34,9 @@ class Heroine:
         print(f"fighting spirit - {self.fighting_spirit}")
         print(f"self esteem - {self.self_esteem}")
         print(f"calories to burn - {self.calories_to_burn}")
+        Bus_Fight()
+
+# the actual Heroine choices & their stats:
 
 
 Demeter = Heroine("Demeter", 80, 80, 2800)
@@ -65,42 +68,63 @@ Schlafly = Enemy("Schlafly", 60, 3000)
 Trump = Enemy("Trump", 100, 3500)
 
 
-def heroine_perks():
-    heroine_perks = ["coffee", "injustice_zapper", "cake"]
-    perk_rand_select = random.randint(0, 2)
-    perk = heroine_perks[perk_rand_select]
+def perks_select():
+    perks_list = ["coffee", "injustice_zapper", "cake"]
+    perk_rand = random.randint(0, 2)
+    perk = perks_list[perk_rand]
     return perk
 
 
-def perk_effect(perk_appear, Heroine):
-    if perk_appear == "coffee":
-        Heroine.fighting_spirit = Heroine.fighting_spirit + 10
+def perk_effect(perk, Heroine):
+    if perk == "coffee":
+        Heroine.fighting_spirit += 10 
         print("You drink the super-strong, delicious coffee.")
         print("It's boosted your fighting spirit by 10 points! :) ")
         print(f"Your new fighting spirit score is {Heroine.fighting_spirit}")
         return Heroine
     
-    elif perk_appear == "injustice_zapper":
-        Heroine.self_esteem = Heroine.self_esteem + 30
+    elif perk == "injustice_zapper":
+        Heroine.self_esteem += 30
         print("You pick up an extra powerful zapper that quashes injustice!")
         print("It runs on the power of all great activists, past & present.")
         print("It's boosted your self-esteem by 30 points :) ")
         print(f"Your new self-esteem score is {Heroine.self_esteem}")
         return Heroine
 
-    elif perk_appear == "cake":
-        Heroine.calories_to_burn = Heroine.calories_to_burn + 300
+    elif perk == "cake":
+        Heroine.calories_to_burn += 300
         print("You pick up the most delicious slice of cake! You eat it.")
         print("You now have more calories to help you fight baddies!")
-        print(f"Calories now in your arsenal: {Heroine.calories_to_burn} :)")
+        print(f"Calories now in your arsenal: {Heroine.calories_to_burn}")
         return Heroine
 
 
-def opponent_select():
-    opp_list = ['Kavanaugh', 'Schlafly', 'Trump']
-    rand = random.randint(0, 2)
-    opponent = opp_list[rand]
-    return opponent
+def Bus_Fight():
+    print("You get on a bus. It is 8am. You have 20mins to read before work.")
+    print("Just as you get your book out of your bag...")
+    print("a dangerous enemy sits next to you...")
+    print("...blocking your way out into the aisle.")
+    print("Hello', she says. 'My name's Schlafley...")
+    print("'I don't think you should be going to work,' she continues...") 
+    print("... as she draws a tiny gun from the pocket of her cardigan.")
+    print("You have two choices: ")
+    choice = input("1. Use your injustice_zapper \n2. Push her and run!")
+    if choice == "1":
+        print("You point the anti-injustice zapper at Schlafley.")
+        defeat_chance = random.randint(0, 10)
+        if defeat_chance > 5:
+            print("Schlafley knocks it out of your hands... ")
+            print("... and shoots you.")
+            print("Oh dear. You're dead. You'll never get to the office, now.")
+            print("Game over. Sorry!")
+            exit()
+        elif defeat_chance < 6:
+            Schlafly.fighting_spirit -= 40 
+            print("You managed to stun her. She falls to the ground.")
+            print(
+                f"Her fighting spirit is down 40 points \
+                    to {Schlafly.fighting_spirit}")
+            exit()
 
 
 def heroine_select():
@@ -111,27 +135,23 @@ def heroine_select():
     if selection == "1":
         selectedCharacter = Demeter
         Demeter.printStats()
-
+        return selectedCharacter
     elif selection == "2":
         selectedCharacter = Persephone
         Persephone.printStats()
         return selectedCharacter
-
     elif selection == "3":
         selectedCharacter = Athena
         Athena.printStats()
         return selectedCharacter
-    
     elif selection == "4":
         selectedCharacter = Lilith
         Lilith.printStats()
         return selectedCharacter
-
     elif selection == "5":
         selectedCharacter = Roe
         Roe.printStats()
         return selectedCharacter
-
     else:
         print("Error! Only press 1, 2, 3, 4 or 5 and press enter")
         heroine_select()
@@ -164,20 +184,4 @@ print("Also, you can pick up points, which increases your score...")
 print("... by eating cake and winning fights.")
 print("Would you like to play?")
 
-play_or_not()
-
-
-def Fight(points):
-    enemy = opponent_select()
-    return enemy
-    
-    print(f"A dangerous {Enemy.name} steps onto your path.")
-    print("You have two choices...")
-    while opponent.calories_to_burn > 0:
-        choice = input("1. Use your injustice_zapper \n2. Run!")
-
-        if choice == "1":
-            print(f"You point the anti-injustice zapper at {Enemy.name}.")
-            defeat_chance = random.randint(0, 10)
-            if defeat_chance > 5:
-                Enemy.calories_to_burn = Enemy.calories_to_burn - Heroine.calories_to_burn 
+play_or_not()        
