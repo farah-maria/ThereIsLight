@@ -53,15 +53,24 @@ class Enemy:
         self.name = name
         self.fighting_spirit = fighting_spirit 
         self.calories_to_burn = calories_to_burn
+    heroine_perks = random.randint(0, 2)
 
 
 Kavanaugh = Enemy("Kavanaugh", 40, 2500)
-heroine_points = random.randint(0, 2)
-Schlafly = Enemy("Schlafly", 60, 3000)
-heroine_points = random.randint(0, 2)
-Trump = Enemy("Trump", 100, 3500)
-heroine_points = random.randint(0, 2)
 
+Schlafly = Enemy("Schlafly", 60, 3000)
+
+Trump = Enemy("Trump", 100, 3500)
+
+
+def heroine_perks():
+    heroine_perks = ["coffee", "anti_patriarchial_zapper", "cake"]
+    perk_rand_select = random.randint(0, 2)
+    perk_appear = heroine_perks[perk_rand_select]
+    return perk_appear
+
+
+def perk_effect(perk_appear, Heroine)
 
 def enemySelect(Kavanaugh, Schlafly, Trump):
     """ Randomly chooses one of the three enemies to fight player"""
