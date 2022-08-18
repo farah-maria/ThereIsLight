@@ -74,20 +74,104 @@ Schlafly = Enemy("Schlafly", 60, 3000)
 
 Trump = Enemy("Trump", 100, 3500)
 
+# PART SEVEN: Time to go to work!
 
-# random functions sprinkled through game to help player
+
+
+
+
+# PART SIX: Player's treat if they defeat Trump & are still alive
 
 
 def treats():
-    treats_list = ["coffee", "coffee & cake", "coffee & a pain au chocolat"]
+    treats_list = ["coffee", "smoothie", "valium"]
     treat_rand = random.randint(0, 2)
     treat = treats_list[treat_rand]
     print(treat)
     print("Nice! :)")
+    Office()
+    """ Time to go to work!"
+
+
+# PART FIVE - if survived bus fight, it's time to fight Trump!
+selectedCharacter = {}
+
+
+def Fight_Trump():
+    global selectedCharacter
+    """a fight for medical care"""
+    print("You're feeling pretty damn good about yourself...")
+    print("and you cross the road to a tall, glass building.")
+    print("These are the offices where you work.")
+    print("With a coffee still in one hand, you push at the revolving door...")
+    print("And bang your face. Someone pushed it in the opposite direction...")
+    print("... because they were on their phone & didn't see you.")
+    print("Blood streams from your nose. It might be broken.")
+    print("Holding your nose, you run to the hospital.") 
+    print("It's only a block away... and work would make you go anyway.")
+    print("But at the main entrance to the emergency department...")
+    print("stands a squarish, tanned man shaking his head.")
+    print(f"'No free medical care for you, {selectedCharacter.name}.")
+    print("'I've called the cops on you. Your insurance ran out years ago.'")
+    print("Three black vans pull up by the hospital gate.")
+    print("The men who get out...")
+    print("They don't look like police officers, more like private security.")
+    print("You have three options... ")
+    choice = input(
+        "1. Use your injustice_zapper \n2. Run! \n3. Call the police.")
+    if choice == "1":
+        print("You point the anti-injustice zapper at Trump.")
+        defeat_chance = random.randint(0, 10)
+        if defeat_chance > 3:
+            print("But Trump's men get to you before you zapp anyone... ")
+            print("They bundle you into the back of a van.")
+            print("Oh dear.")
+            print("Game over.")
+            exit()
+        elif defeat_chance < 4:
+            Trump.fighting_spirit -= 90 
+            print("You manage to stun him, then turn and zapp all the others.")
+            print("Trump's fighting spirit has been knocked by 90 points...")
+            print(f"and is now down to just {Trump.fighting_spirit}.")
+            print("It'll be a while before he poses a problem again...")
+            print("Though, most likely he'll be back. Well done, anyway.")
+            print("You get the medical treatment you need...")
+            print("and are able to return to work.")
+            print("You decide to flip a coin...")
+            print("If it's heads, you grab a coffee.")
+            print("If it's tails, you get a smoothie.")
+            print("And if the coin falls out of your hand...")
+            print("you can have some valium. (You probably need it).")
+            print("You flip the coin and you get... ")
+            treats()
+            """ treats for if you beat Trump """
+ 
+    elif choice == 2:
+        print("You run, and slip on your own blood.")
+        print("A black van drives straight into you.")
+        print("Sorry. You died.")
+        print("Game over.")
+    else:
+        print("The police don't arrive for another hour.")
+        print("But...")
+        print("You didn't need them. Some medical staff run out the building.")
+        print("A nurse gets Trump in the neck with a needle...")
+        print("The security men scatter.")
+        print("You get the care you need, and everyone is smiling.")
+        print("You decide to flip a coin...")
+        print("If it's heads, you grab a coffee.")
+        print("If it's tails, you get a smoothie.")
+        print("And if the coin falls out of your hand...")
+        print("you can have some valium. (You probably need it).")
+        print("You flip the coin and you get... ")
+        treats()
+        """Treats for if you beat Trump"""
+
+# PART FOUR - if survived bus fight, go to cafe!
 
 
 def perks_select():
-    """ heroine gets a perk that raises score """
+    """ heroine gets a perk that raises score after defeating Schlafly """
     global selectedCharacter
     perk_chance = random.randint(0, 10)
     if perk_chance > 5:
@@ -104,11 +188,16 @@ def perks_select():
         print("& your self-esteem has gone up by 200pts")
         print(f"to: {selectedCharacter.self_esteem}.")
 
+        Fight_Trump()
+        """ Onto the next scene to fight Trump! """
     elif perk_chance < 6:
         print("Heads!")
         selectedCharacter.fighting_spirit += 50
         print("You grab a coffee. Caffiene boosts your fighting spirit...")
         print(f"by 50 points, to {selectedCharacter.fighting_spirit} :)")
+
+        Fight_Trump()
+        """ Onto the next scene to fight Trump! """
                 
 
 # PART THREE: The bus fight! first part of real story
