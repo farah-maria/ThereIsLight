@@ -4,6 +4,7 @@ import random
 import gspread
 from google.oauth2.service_account import Credentials
 
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -106,26 +107,30 @@ def treats():
 
 
 #def perks_select():
-    #perk_chance = random.randint(0, 10)
-    #if perk_chance > 5:
-        #print("Tails!")
-        #print("You get a large coffee AND a big slice of chocolate cake.")
-        #Heroine.fighting_spirit += 100
-        #Heroine.calories_to_burn += 300
-        #Heroine.self_esteem += 200
-        #print(f"Your fighting spirit goes up to {Heroine.fighting_spirit},")
-        #print(f"your calories for fighting: {Heroine.calories_to_burn},")
-        #print(f"& your self-esteem has gone up to {Heroine.self_esteem}.")
+#    perk_chance = random.randint(0, 10)
+#    if perk_chance > 5:
+#        print("Tails!")
+#        print("You get a large coffee AND a big slice of chocolate cake.")
+#        selectedCharacter.fighting_spirit += 100
+#        selectedCharacter.calories_to_burn += 300
+#        selectedCharacter.self_esteem += 200
+#        print("Your fighting spirit increases by 100pts...")
+#        print(
+#            f"to {selectedCharacter.fighting_spirit}.")
+#        print("Your calories to use for fighting increase by 200,") 
+#        print(f"to {selectedCharacter.calories_to_burn}.")
+#        print("& your self-esteem has gone up by 200pts")
+#        print(f"to: {selectedCharacter.self_esteem}.")
 
-    #elif perk_chance < 6:
-        #print("Heads!")
-        #Heroine.fighting_spirit += 50
-        #print("You grab a coffee. Caffiene boosts your fighting spirit.")
-        #print(f"It's gone up 50 points to {Heroine.fighting_spirit} :)")
+#    elif perk_chance < 6:
+#        print("Heads!")
+#        selectedCharacter.fighting_spirit += 50
+#        print("You grab a coffee. Caffiene boosts your fighting spirit...")
+#        print(f"by 50 points, to {selectedCharacter.fighting_spirit} :)")
         
-    #else:
-        #print("Error! That wasn't supposed to happen.")
-        #exit()
+#    else:
+#        print("Error! That wasn't supposed to happen.")
+#        exit()
         
 
 def Bus_Fight():
