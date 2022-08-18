@@ -21,7 +21,8 @@ data = scores_data.get_all_values()
 selectedCharacter = {}
 
 
-# PART EIGHT of EIGHT: FIGHTING KAVANAUGH IN THE OFFICE. THE END
+# PART EIGHT of EIGHT: FIGHTING KAVANAUGH AT WORK. THE OFFICE IS UNSAFE!
+
 selectedCharacter = {}
 
 
@@ -144,7 +145,7 @@ def Fight_Trump():
         """Treats for if you beat Trump"""
 
 
-# PART FIVE - IF BEAT SCHLAFLY, GO TO CAFE & GET READY TO FIGHT TRUMP! :) 
+# PART FIVE - IF BEAT SCHLAFLY, GO TO CAFE & GET READY TO FIGHT TRUMP!
 
 
 def perks_select():
@@ -177,8 +178,7 @@ def perks_select():
         """ Onto the next scene to fight Trump! """
                 
 
-# PART FOUR: A BUS FIGHT WITH SCHLAFLY! First part of real story
-
+# PART FOUR: A BUS FIGHT WITH SCHLAFLY!
 
 def Bus_Fight():
     global selectedCharacter
