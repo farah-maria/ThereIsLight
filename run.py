@@ -110,7 +110,7 @@ def treats():
 #        exit()
         
 
-# PART THREE: FIRST PART OF REAL STORY! A bus fight!
+# PART THREE: The bus fight! first part of real story
 
 def Bus_Fight():
     """ First battle of heroine Vs opponent """
@@ -150,10 +150,10 @@ def Bus_Fight():
             exit()
 
 
-# PART TWO: A) User chooses to play game or quit
-    # B) If choose to play, they select a character & move to a bus fight
+# PART TWO: a) User chooses to play game or quit
+    # b) If choose to play, they select a character & move to a bus fight
 
-# Section B
+# b)
 def heroine_select():
     """ Allows player to choose which heroine they play as"""
     selection = input(
@@ -188,7 +188,7 @@ def heroine_select():
         heroine_select()
 
 
-# Section A
+# a)
 def play_or_not():
     """ player chooses to continue to game or quit """
     answer = input(" Answer 'y' or 'n': ")
