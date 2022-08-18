@@ -39,6 +39,7 @@ Happy coding!
 * [Technologies Used](#technologies-used)
 * [Testing](#testing)
 * [Bugs](#bugs)
+* [Future Improments](#future-improvements)
 * [Deployment](#deployment)
 * [Credits](#credits)
 * [Acknowledgements](#acknowledgements)

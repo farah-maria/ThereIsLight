@@ -1,9 +1,8 @@
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
 """ These modules allow for random selection and scores record """
 import random
 import gspread
 from google.oauth2.service_account import Credentials
-
+import stats
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -20,61 +19,9 @@ scores_data = SHEET.worksheet('scores_data')
 data = scores_data.get_all_values()
 
 selectedCharacter = {}
-# Pre-action definitions... Heroine info (player chooses which to play):
 
 
-class Heroine:
-    """ Character for user to be through the game """
-    def __init__(self, name, fighting_spirit, self_esteem, calories_to_burn):
-        self.name = name
-        self.fighting_spirit = fighting_spirit
-        self.self_esteem = self_esteem
-        self.calories_to_burn = calories_to_burn
-
-    def printStats_and_start(self):
-        global selectedCharacter
-        """ Calls stats on choice of Heroine, & starts story (bus fight)"""
-        print(f"You have selected {self.name}. These are their stats: ")
-        print(f"fighting spirit - {self.fighting_spirit}")
-        print(f"self esteem - {self.self_esteem}")
-        print(f"calories to burn - {self.calories_to_burn}")  
-        Bus_Fight()
-        """Heroine is taken to first part of the story"""
-
-
-# heroine stats:
-
-
-Demeter = Heroine("Demeter", 80, 80, 2800)
-
-Persephone = Heroine("Persephone", 90, 50, 1500)
-
-Athena = Heroine("Athena", 100, 90, 2000)
-
-Lilith = Heroine("Lilith", 75, 40, 3500)
-
-Roe = Heroine("Roe", 100, 95, 3000)
-
-
-# opponents who appear in battles:
-
-class Enemy:
-    """ Enemy who reduces player's power through the game """
-    def __init__(self, name, fighting_spirit, calories_to_burn):
-        self.name = name
-        self.fighting_spirit = fighting_spirit 
-        self.calories_to_burn = calories_to_burn
-
-# enemy stats
-
-
-Kavanaugh = Enemy("Kavanaugh", 40, 2500)
-
-Schlafly = Enemy("Schlafly", 60, 3000)
-
-Trump = Enemy("Trump", 100, 3500)
-
-# PART SEVEN of SEVEN: Time to go to work. THE END
+# PART EIGHT of EIGHT: FIGHTING KAVANAUGH IN THE OFFICE. THE END
 selectedCharacter = {}
 
 
@@ -109,7 +56,7 @@ def Office():
     exit()
 
 
-# PART SIX: Player's treat if they defeat Trump & are still alive
+# PART SEVEN: IF PLAYER BEAT TRUMP, TREATS!! AND TIME TO GO TO WORK.
 
 
 def treats():
@@ -122,7 +69,7 @@ def treats():
     """ Time to go to work!"""
 
 
-# PART FIVE - if survived bus fight, it's time to fight Trump!
+# PART SIX - FIGHT TRUMP, OR NO FREE MEDICAL TREATMENT!
 selectedCharacter = {}
 
 
@@ -196,7 +143,8 @@ def Fight_Trump():
         treats()
         """Treats for if you beat Trump"""
 
-# PART FOUR - if survived bus fight, go to cafe!
+
+# PART FIVE - IF BEAT SCHLAFLY, GO TO CAFE & GET READY TO FIGHT TRUMP! :) 
 
 
 def perks_select():
@@ -229,7 +177,7 @@ def perks_select():
         """ Onto the next scene to fight Trump! """
                 
 
-# PART THREE: The bus fight! first part of real story
+# PART FOUR: A BUS FIGHT WITH SCHLAFLY! First part of real story
 
 
 def Bus_Fight():
@@ -275,10 +223,8 @@ def Bus_Fight():
         print("Sorry. She won. You died.")
         print("Game over.")
 
-# PART TWO: a) User chooses to play game or quit
-    # b) If choose to play, they select a character & move to a bus fight
 
-# b)
+# PART THREE: If 'Y', choose a character & move to a bus fight!!
 
 
 def heroine_select():
@@ -317,7 +263,7 @@ def heroine_select():
         heroine_select()
 
 
-# a)
+# PART TWO - WANNA PLAY OR NOT?
 characterSelect = None
 
 
@@ -336,7 +282,7 @@ def play_or_not():
         play_or_not()
 
 
-# PART ONE: start and intro to game
+# PART ONE: Intro to game. Takes player to decision: play or not 
 
 print("This is a game where winning is hard.")
 print("The situation is as follows... ")
