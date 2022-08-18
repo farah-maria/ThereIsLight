@@ -49,78 +49,6 @@ Lilith = Heroine("Lilith", 75, 40, 3500)
 
 Roe = Heroine("Roe", 100, 95, 3000)
 
-# Enemies of the player!!!
-
-
-class Enemy:
-    """ Enemy who reduces player's power through the game """
-    def __init__(self, name, fighting_spirit, calories_to_burn):
-        self.name = name
-        self.fighting_spirit = fighting_spirit 
-        self.calories_to_burn = calories_to_burn
-    heroine_perks = random.randint(0, 2)
-
-
-Kavanaugh = Enemy("Kavanaugh", 40, 2500)
-
-Schlafly = Enemy("Schlafly", 60, 3000)
-
-Trump = Enemy("Trump", 100, 3500)
-
-
-def perks_select():
-    perks_list = ["coffee", "coffee AND cake"]
-    perk_rand = random.randint(0, 1)
-    perk = perks_list[perk_rand]
-    print(perk)
-    return perk
-    if perk = "coffee":
-        Heroine.fighting_spirit += 50
-        print("You grab a coffee. Caffiene boosts your fighting spirit.")
-        print(f"It's gone up 50 points to {Heroine.fighting_spirit}.")
-    if perk = "coffee AND cake":
-        Heroine.fighting_spirit += 100
-        Heroine.calories_to_burn += 300
-        Heroine.self_esteem += 200
-        print("You grab a coffee and a delicious slice of chocolate cake.")
-        print(f"Mmmm. Your fighting spirit goes up to {Heroine.fighting_spirit},")
-        print(f"your calories for fighting baddies is up to {Heroine.calories_to_burn},")
-        print(f"and your self-esteem has gone up 200 pts to {Heroine.self_esteem}.")
-
-
-def Bus_Fight():
-    print("You get on a bus. It is 8am. You have 20mins to read before work.")
-    print("Just as you get your book out of your bag...")
-    print("a dangerous enemy sits next to you...")
-    print("...blocking your way out into the aisle.")
-    print("Hello', she says. 'My name's Schlafly...")
-    print("'I don't think you should be going to work,' she continues...") 
-    print("as she draws a tiny gun from the pocket of her cardigan.")
-    print("You have two choices: ")
-    choice = input("1. Use your injustice_zapper \n2. Push her and run!")
-    if choice == "1":
-        print("You point the anti-injustice zapper at Schlafly.")
-        defeat_chance = random.randint(0, 10)
-        if defeat_chance > 5:
-            print("Schlafly knocks the zapper out of your hands... ")
-            print("and shoots you.")
-            print("Oh dear. You're dead. You'll never get to work, now.")
-            print("Game over. Sorry!")
-            exit()
-        elif defeat_chance < 6:
-            Schlafly.fighting_spirit -= 40 
-            print("You managed to stun her. She falls to the ground.")
-            print("Her fighting spirit has been knocked by 40 points...")
-            print(f"and is now down to just {Schlafly.fighting_spirit}.")
-            print("She'll have less energy to pester other people, now :)")
-            print("Well done!")
-            print("The bus stops near the office and you get off.")
-            print("You decide to flip a coin...")
-            print("If it's heads, you grab a coffee from the cafe opposite.")
-            print("If it's tails, you get coffee AND cake.")
-            print("You flip the coin and get: ")
-            perks_select()
-            
 
 def heroine_select():
     """ Allows player to choose which heroine they play as"""
@@ -151,6 +79,87 @@ def heroine_select():
         print("Error! Only press 1, 2, 3, 4 or 5 and press enter")
         heroine_select()
 
+# Enemies of the player!!!
+
+
+class Enemy:
+    """ Enemy who reduces player's power through the game """
+    def __init__(self, name, fighting_spirit, calories_to_burn):
+        self.name = name
+        self.fighting_spirit = fighting_spirit 
+        self.calories_to_burn = calories_to_burn
+
+
+Kavanaugh = Enemy("Kavanaugh", 40, 2500)
+
+Schlafly = Enemy("Schlafly", 60, 3000)
+
+Trump = Enemy("Trump", 100, 3500)
+
+
+def treats():
+    treats_list = ["coffee", "coffee AND cake", "cake"]
+    treat_rand = random.randint(0, 2)
+    treat = treats_list[treat_rand]
+    print(treat)
+
+
+#def perks_select():
+    #perk_chance = random.randint(0, 10)
+    #if perk_chance > 5:
+        #print("Tails!")
+        #print("You get a large coffee AND a big slice of chocolate cake.")
+        #Heroine.fighting_spirit += 100
+        #Heroine.calories_to_burn += 300
+        #Heroine.self_esteem += 200
+        #print(f"Your fighting spirit goes up to {Heroine.fighting_spirit},")
+        #print(f"your calories for fighting: {Heroine.calories_to_burn},")
+        #print(f"& your self-esteem has gone up to {Heroine.self_esteem}.")
+
+    #elif perk_chance < 6:
+        #print("Heads!")
+        #Heroine.fighting_spirit += 50
+        #print("You grab a coffee. Caffiene boosts your fighting spirit.")
+        #print(f"It's gone up 50 points to {Heroine.fighting_spirit} :)")
+        
+    #else:
+        #print("Error! That wasn't supposed to happen.")
+        #exit()
+        
+
+def Bus_Fight():
+    print("You get on a bus. It is 8am. You have 20mins to read before work.")
+    print("Just as you get your book out of your bag...")
+    print("a dangerous enemy sits next to you...")
+    print("...blocking your way out into the aisle.")
+    print("Hello', she says. 'My name's Schlafly...")
+    print("'I don't think you should be going to work,' she continues...") 
+    print("as she draws a tiny gun from the pocket of her cardigan.")
+    print("You have two choices: ")
+    choice = input("1. Use your injustice_zapper \n2. Push her and run!")
+    if choice == "1":
+        print("You point the anti-injustice zapper at Schlafly.")
+        defeat_chance = random.randint(0, 10)
+        if defeat_chance > 5:
+            print("Schlafly knocks the zapper out of your hands... ")
+            print("and shoots you.")
+            print("Oh dear. You're dead. You'll never get to work, now.")
+            print("Game over. Sorry!")
+            exit()
+        elif defeat_chance < 6:
+            Schlafly.fighting_spirit -= 40 
+            print("You managed to stun her. She falls to the ground.")
+            print("Her fighting spirit has been knocked by 40 points...")
+            print(f"and is now down to just {Schlafly.fighting_spirit}.")
+            print("She'll have less energy to pester other people, now :)")
+            print("Well done!")
+            print("The bus stops near the office and you get off.")
+            #print("You decide to flip a coin...")
+            #print("If it's heads, you grab a coffee from the cafe opposite.")
+            #print("If it's tails, you get coffee AND cake.")
+            #print("You flip the coin and get: ")
+            #perks_select()
+    
 
 def play_or_not():
     answer = input(" Answer 'y' or 'n': ")
