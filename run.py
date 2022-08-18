@@ -74,10 +74,39 @@ Schlafly = Enemy("Schlafly", 60, 3000)
 
 Trump = Enemy("Trump", 100, 3500)
 
-# PART SEVEN: Time to go to work!
+# PART SEVEN of SEVEN: Time to go to work. THE END
+selectedCharacter = {}
 
 
-
+def Office():
+    global selectedCharacter
+    print("You walk to work carefully...")
+    print("go through the revolving doors and into the office.")
+    print("Your colleagues look nervous as they look up to greet you.")
+    print(f"Someone whispers, '{selectedCharacter.name}...'")
+    print("'We've got a new boss!'")
+    print("'But what happened to our old one?', you ask.")
+    print("'She got voted out in some kind of horrible takeover!'")
+    print("'It all happened last night....'")
+    print("Everyone looks down as a man approaches.")
+    print("He looks polite, and smiles kindly.")
+    print(f"'Hi, {selectedCharacter.name}, my name is Kavanaugh...'")
+    print("'I'm sorry, but you don't work here anymore.'")
+    print("'But why?!' You ask. 'I went through hell to get here!!!'")
+    print("He smiles nicely. 'Because my people like to get what they want,'")
+    print("'... and boys will be boys. There's no point arguing.'")
+    print("At this point, your workmate Kevin stands up...")
+    print("and throws a stapler at Kavanaugh's head.")
+    print("Others do the same. Your desk-neighbour Paul throws a book at him.")
+    print("And that was how the revolution started...")
+    print("You won. Well done.")
+    print("Have a great day, and stand up for yourself.")
+    print("In the words of Charles Bukowski...")
+    print("'There is a light somewhere.")
+    print("'it may not be much light but '")
+    print("'it beats the darkness.'")
+    print("Game over")
+    exit()
 
 
 # PART SIX: Player's treat if they defeat Trump & are still alive
@@ -90,7 +119,7 @@ def treats():
     print(treat)
     print("Nice! :)")
     Office()
-    """ Time to go to work!"
+    """ Time to go to work!"""
 
 
 # PART FIVE - if survived bus fight, it's time to fight Trump!
