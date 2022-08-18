@@ -19,6 +19,7 @@ SHEET = GSPREAD_CLIENT.open('HJ_Scoresheet')
 scores_data = SHEET.worksheet('scores_data')
 data = scores_data.get_all_values()
 
+selectedCharacter = {}
 # Pre-action definitions... Heroine info (player chooses which to play):
 
 
@@ -31,6 +32,7 @@ class Heroine:
         self.calories_to_burn = calories_to_burn
 
     def printStats_and_start(self):
+        global selectedCharacter
         """ Calls stats on choice of Heroine, & starts story (bus fight)"""
         print(f"You have selected {self.name}. These are their stats: ")
         print(f"fighting spirit - {self.fighting_spirit}")
@@ -84,9 +86,6 @@ def treats():
     print("Nice! :)")
 
 
-selectedCharacter = None
-
-
 def perks_select():
     """ heroine gets a perk that raises score """
     global selectedCharacter
@@ -113,11 +112,10 @@ def perks_select():
                 
 
 # PART THREE: The bus fight! first part of real story
-selectedCharacter = None
 
 
 def Bus_Fight():
-    global characterSelect
+    global selectedCharacter
     """ First battle of heroine Vs opponent """
     print("You get on a bus. It is 8am. You have 20mins to read before work.")
     print("Just as you get your book out of your bag...")
@@ -151,6 +149,7 @@ def Bus_Fight():
             print("And if the coin falls out of your hand...")
             print("you can have a coffee and a pain au chocolate")
             print("You flip the coin and you get... ")
+            
             perks_select()
 
 
@@ -159,12 +158,10 @@ def Bus_Fight():
 
 # b)
 
-characterSelect = None
-
 
 def heroine_select():
     """ Allows player to choose which heroine they play as"""
-    global characterSelect
+    global selectedCharacter
     selection = input(
         "1. Demeter \n2. Persephone  \n3. Flora \n4. Lilith \n5. Roe \n")
    
@@ -199,8 +196,11 @@ def heroine_select():
 
 
 # a)
+characterSelect = None
+
 
 def play_or_not():
+    global characterSelect
     """ player chooses to continue to game or quit """
     answer = input(" Answer 'y' or 'n': ")
     if answer.lower().strip() == "y":
@@ -228,5 +228,5 @@ print("Also, you can pick up points, which increases your score...")
 print("... by eating cake and winning fights.")
 print("Would you like to play?")
 
-
+characterSelect = None
 play_or_not()        
