@@ -19,8 +19,9 @@ SHEET = GSPREAD_CLIENT.open('HJ_Scoresheet')
 scores_data = SHEET.worksheet('scores_data')
 data = scores_data.get_all_values()
 
+# Pre-action definitions... Heroine info (player chooses which to play):
 
-# Player heroine options. You get to choose which you want to be in the game.
+
 class Heroine:
     """ Character for user to be through the game """
     def __init__(self, name, fighting_spirit, self_esteem, calories_to_burn):
@@ -30,14 +31,16 @@ class Heroine:
         self.calories_to_burn = calories_to_burn
 
     def printStats(self):
-        """ Calls the stats on the choice of Heroine  """
+        """ Calls the stats on the choice of Heroine, & starts story"""
+        """ (bus fight is first part of story) """
         print(f"You have selected {self.name}. These are their stats: ")
         print(f"fighting spirit - {self.fighting_spirit}")
         print(f"self esteem - {self.self_esteem}")
         print(f"calories to burn - {self.calories_to_burn}")
         Bus_Fight()
+        """Heroine is taken to first part of the story"""
 
-# the actual Heroine choices & their stats:
+# heroine stats:
 
 
 Demeter = Heroine("Demeter", 80, 80, 2800)
@@ -51,37 +54,7 @@ Lilith = Heroine("Lilith", 75, 40, 3500)
 Roe = Heroine("Roe", 100, 95, 3000)
 
 
-def heroine_select():
-    """ Allows player to choose which heroine they play as"""
-    selection = input(
-        "1. Demeter \n2. Persephone  \n3. Flora \n4. Lilith \n5. Roe \n")
-   
-    if selection == "1":
-        selectedCharacter = Demeter
-        Demeter.printStats()
-        return selectedCharacter
-    elif selection == "2":
-        selectedCharacter = Persephone
-        Persephone.printStats()
-        return selectedCharacter
-    elif selection == "3":
-        selectedCharacter = Athena
-        Athena.printStats()
-        return selectedCharacter
-    elif selection == "4":
-        selectedCharacter = Lilith
-        Lilith.printStats()
-        return selectedCharacter
-    elif selection == "5":
-        selectedCharacter = Roe
-        Roe.printStats()
-        return selectedCharacter
-    else:
-        print("Error! Only press 1, 2, 3, 4 or 5 and press enter")
-        heroine_select()
-
-# Enemies of the player!!!
-
+# opponents who appear in battles:
 
 class Enemy:
     """ Enemy who reduces player's power through the game """
@@ -90,12 +63,16 @@ class Enemy:
         self.fighting_spirit = fighting_spirit 
         self.calories_to_burn = calories_to_burn
 
+# enemy stats
+
 
 Kavanaugh = Enemy("Kavanaugh", 40, 2500)
 
 Schlafly = Enemy("Schlafly", 60, 3000)
 
 Trump = Enemy("Trump", 100, 3500)
+
+# random functions sprinkled through game to help player
 
 
 def treats():
@@ -106,7 +83,7 @@ def treats():
     print("Nice! :)")
 
 
-#def perks_select():
+# def perks_select():
 #    perk_chance = random.randint(0, 10)
 #    if perk_chance > 5:
 #        print("Tails!")
@@ -133,7 +110,10 @@ def treats():
 #        exit()
         
 
+# PART THREE: FIRST PART OF REAL STORY! A bus fight!
+
 def Bus_Fight():
+    """ First battle of heroine Vs opponent """
     print("You get on a bus. It is 8am. You have 20mins to read before work.")
     print("Just as you get your book out of your bag...")
     print("a dangerous enemy sits next to you...")
@@ -168,9 +148,49 @@ def Bus_Fight():
             print("You flip the coin and you get... ")
             treats()
             exit()
-    
 
+
+# PART TWO: A) User chooses to play game or quit
+    # B) If choose to play, they select a character & move to a bus fight
+
+# Section B
+def heroine_select():
+    """ Allows player to choose which heroine they play as"""
+    selection = input(
+        "1. Demeter \n2. Persephone  \n3. Flora \n4. Lilith \n5. Roe \n")
+   
+    if selection == "1":
+        selectedCharacter = Demeter
+        Demeter.printStats()
+        return selectedCharacter
+    elif selection == "2":
+        selectedCharacter = Persephone
+        Persephone.printStats()
+        return selectedCharacter
+        
+    elif selection == "3":
+        selectedCharacter = Athena
+        Athena.printStats()
+        return selectedCharacter
+        Bus_Fight()
+    elif selection == "4":
+        selectedCharacter = Lilith
+        Lilith.printStats()
+        return selectedCharacter
+        Bus_Fight()
+    elif selection == "5":
+        selectedCharacter = Roe
+        Roe.printStats()
+        return selectedCharacter
+        Bus_Fight()
+    else:
+        print("Error! Only press 1, 2, 3, 4 or 5 and press enter")
+        heroine_select()
+
+
+# Section A
 def play_or_not():
+    """ player chooses to continue to game or quit """
     answer = input(" Answer 'y' or 'n': ")
     if answer.lower().strip() == "y":
         print("Choose which heroine you want to play as...")
@@ -183,7 +203,7 @@ def play_or_not():
         play_or_not()
 
 
-# Start and intro to game
+# PART ONE: start and intro to game
 
 print("This is a game where winning is hard.")
 print("The situation is as follows... ")
@@ -196,5 +216,6 @@ print("Remember to press 'enter' afterwards.")
 print("Also, you can pick up points, which increases your score...")
 print("... by eating cake and winning fights.")
 print("Would you like to play?")
+
 
 play_or_not()        
