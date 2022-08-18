@@ -98,10 +98,11 @@ Trump = Enemy("Trump", 100, 3500)
 
 
 def treats():
-    treats_list = ["coffee", "coffee AND cake", "cake"]
+    treats_list = ["coffee", "coffee & cake", "coffee & pain au chocolat"]
     treat_rand = random.randint(0, 2)
     treat = treats_list[treat_rand]
     print(treat)
+    print("Nice! :)")
 
 
 #def perks_select():
@@ -154,11 +155,14 @@ def Bus_Fight():
             print("She'll have less energy to pester other people, now :)")
             print("Well done!")
             print("The bus stops near the office and you get off.")
-            #print("You decide to flip a coin...")
-            #print("If it's heads, you grab a coffee from the cafe opposite.")
-            #print("If it's tails, you get coffee AND cake.")
-            #print("You flip the coin and get: ")
-            #perks_select()
+            print("You decide to flip a coin...")
+            print("If it's heads, you grab a coffee from the cafe opposite.")
+            print("If it's tails, you get coffee AND cake.")
+            print("And if the coin falls out of your hand...")
+            print("you can have a coffee and a pain au chocolate")
+            print("You flip the coin and you get... ")
+            treats()
+            exit()
     
 
 def play_or_not():
