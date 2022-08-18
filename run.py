@@ -151,7 +151,11 @@ def Bus_Fight():
             print("You flip the coin and you get... ")
             
             perks_select()
-
+    else:
+        print("Schlafly gets right back up...")
+        print("... and shoots you in the back as you try to run.")
+        print("Sorry. She won. You died.")
+        print("Game over.")
 
 # PART TWO: a) User chooses to play game or quit
     # b) If choose to play, they select a character & move to a bus fight
