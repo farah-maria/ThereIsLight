@@ -73,6 +73,19 @@ def perks_select():
     perk_rand = random.randint(0, 1)
     perk = perks_list[perk_rand]
     print(perk)
+    return perk
+    if perk = "coffee":
+        Heroine.fighting_spirit += 50
+        print("You grab a coffee. Caffiene boosts your fighting spirit.")
+        print(f"It's gone up 50 points to {Heroine.fighting_spirit}.")
+    if perk = "coffee AND cake":
+        Heroine.fighting_spirit += 100
+        Heroine.calories_to_burn += 300
+        Heroine.self_esteem += 200
+        print("You grab a coffee and a delicious slice of chocolate cake.")
+        print(f"Mmmm. Your fighting spirit goes up to {Heroine.fighting_spirit},")
+        print(f"your calories for fighting baddies is up to {Heroine.calories_to_burn},")
+        print(f"and your self-esteem has gone up 200 pts to {Heroine.self_esteem}.")
 
 
 def Bus_Fight():
@@ -107,7 +120,7 @@ def Bus_Fight():
             print("If it's tails, you get coffee AND cake.")
             print("You flip the coin and get: ")
             perks_select()
-        
+            
 
 def heroine_select():
     """ Allows player to choose which heroine they play as"""
