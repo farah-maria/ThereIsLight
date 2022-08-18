@@ -30,15 +30,15 @@ class Heroine:
         self.self_esteem = self_esteem
         self.calories_to_burn = calories_to_burn
 
-    def printStats(self):
-        """ Calls the stats on the choice of Heroine, & starts story"""
-        """ (bus fight is first part of story) """
+    def printStats_and_start(self):
+        """ Calls stats on choice of Heroine, & starts story (bus fight)"""
         print(f"You have selected {self.name}. These are their stats: ")
         print(f"fighting spirit - {self.fighting_spirit}")
         print(f"self esteem - {self.self_esteem}")
-        print(f"calories to burn - {self.calories_to_burn}")
+        print(f"calories to burn - {self.calories_to_burn}")  
         Bus_Fight()
         """Heroine is taken to first part of the story"""
+
 
 # heroine stats:
 
@@ -72,6 +72,7 @@ Schlafly = Enemy("Schlafly", 60, 3000)
 
 Trump = Enemy("Trump", 100, 3500)
 
+
 # random functions sprinkled through game to help player
 
 
@@ -83,36 +84,40 @@ def treats():
     print("Nice! :)")
 
 
-# def perks_select():
-#    perk_chance = random.randint(0, 10)
-#    if perk_chance > 5:
-#        print("Tails!")
-#        print("You get a large coffee AND a big slice of chocolate cake.")
-#        selectedCharacter.fighting_spirit += 100
-#        selectedCharacter.calories_to_burn += 300
-#        selectedCharacter.self_esteem += 200
-#        print("Your fighting spirit increases by 100pts...")
-#        print(
-#            f"to {selectedCharacter.fighting_spirit}.")
-#        print("Your calories to use for fighting increase by 200,") 
-#        print(f"to {selectedCharacter.calories_to_burn}.")
-#        print("& your self-esteem has gone up by 200pts")
-#        print(f"to: {selectedCharacter.self_esteem}.")
+selectedCharacter = None
 
-#    elif perk_chance < 6:
-#        print("Heads!")
-#        selectedCharacter.fighting_spirit += 50
-#        print("You grab a coffee. Caffiene boosts your fighting spirit...")
-#        print(f"by 50 points, to {selectedCharacter.fighting_spirit} :)")
-        
-#    else:
-#        print("Error! That wasn't supposed to happen.")
-#        exit()
-        
+
+def perks_select():
+    """ heroine gets a perk that raises score """
+    global selectedCharacter
+    perk_chance = random.randint(0, 10)
+    if perk_chance > 5:
+        print("Tails!")
+        print("You get a large coffee AND a big slice of chocolate cake.")
+        selectedCharacter.fighting_spirit += 100
+        selectedCharacter.calories_to_burn += 300
+        selectedCharacter.self_esteem += 200
+        print("Your fighting spirit increases by 100pts...")
+        print(
+            f"to {selectedCharacter.fighting_spirit}.")
+        print("Your calories to use for fighting increase by 200,") 
+        print(f"to {selectedCharacter.calories_to_burn}.")
+        print("& your self-esteem has gone up by 200pts")
+        print(f"to: {selectedCharacter.self_esteem}.")
+
+    elif perk_chance < 6:
+        print("Heads!")
+        selectedCharacter.fighting_spirit += 50
+        print("You grab a coffee. Caffiene boosts your fighting spirit...")
+        print(f"by 50 points, to {selectedCharacter.fighting_spirit} :)")
+                
 
 # PART THREE: The bus fight! first part of real story
+selectedCharacter = None
+
 
 def Bus_Fight():
+    global characterSelect
     """ First battle of heroine Vs opponent """
     print("You get on a bus. It is 8am. You have 20mins to read before work.")
     print("Just as you get your book out of your bag...")
@@ -146,49 +151,55 @@ def Bus_Fight():
             print("And if the coin falls out of your hand...")
             print("you can have a coffee and a pain au chocolate")
             print("You flip the coin and you get... ")
-            treats()
-            exit()
+            perks_select()
 
 
 # PART TWO: a) User chooses to play game or quit
     # b) If choose to play, they select a character & move to a bus fight
 
 # b)
+
+characterSelect = None
+
+
 def heroine_select():
     """ Allows player to choose which heroine they play as"""
+    global characterSelect
     selection = input(
         "1. Demeter \n2. Persephone  \n3. Flora \n4. Lilith \n5. Roe \n")
    
     if selection == "1":
         selectedCharacter = Demeter
-        Demeter.printStats()
+        Demeter.printStats_and_start()
         return selectedCharacter
+        """Heroine is taken to first part of the story"""
     elif selection == "2":
         selectedCharacter = Persephone
-        Persephone.printStats()
+        Persephone.printStats_and_start()
         return selectedCharacter
-        
     elif selection == "3":
         selectedCharacter = Athena
-        Athena.printStats()
+        Athena.printStats_and_start()
         return selectedCharacter
-        Bus_Fight()
+        """Heroine is taken to first part of the story"""
     elif selection == "4":
         selectedCharacter = Lilith
-        Lilith.printStats()
+        Lilith.printStats_and_start()
         return selectedCharacter
-        Bus_Fight()
+        """Heroine is taken to first part of the story"""
     elif selection == "5":
         selectedCharacter = Roe
-        Roe.printStats()
+        Roe.printStats_and_start()
+        """Heroine is taken to first part of the story"""
         return selectedCharacter
-        Bus_Fight()
+        """Heroine is taken to first part of the story"""
     else:
         print("Error! Only press 1, 2, 3, 4 or 5 and press enter")
         heroine_select()
 
 
 # a)
+
 def play_or_not():
     """ player chooses to continue to game or quit """
     answer = input(" Answer 'y' or 'n': ")
