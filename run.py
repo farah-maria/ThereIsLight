@@ -98,7 +98,7 @@ Trump = Enemy("Trump", 100, 3500)
 
 
 def treats():
-    treats_list = ["coffee", "coffee & cake", "coffee & pain au chocolat"]
+    treats_list = ["coffee", "coffee & cake", "coffee & a pain au chocolat"]
     treat_rand = random.randint(0, 2)
     treat = treats_list[treat_rand]
     print(treat)
@@ -135,7 +135,7 @@ def Bus_Fight():
     print("...blocking your way out into the aisle.")
     print("Hello', she says. 'My name's Schlafly...")
     print("'I don't think you should be going to work,' she continues...") 
-    print("as she draws a tiny gun from the pocket of her cardigan.")
+    print("She draws a tiny gun from the pocket of her cardigan.")
     print("You have two choices: ")
     choice = input("1. Use your injustice_zapper \n2. Push her and run!")
     if choice == "1":
