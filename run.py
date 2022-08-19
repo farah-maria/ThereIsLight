@@ -4,6 +4,7 @@ import colorama
 import gspread
 import time
 from colorama import Fore
+from time import sleep
 from google.oauth2.service_account import Credentials
 
 SCOPE = [
