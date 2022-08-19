@@ -245,8 +245,8 @@ def Bus_Fight():
     print("Hello', she says. 'My name's Schlafly...")
     print("'I don't think you should be going to work,' she continues...") 
     print("She draws a tiny gun from the pocket of her cardigan.")
-    print(F"{Fore.BLUE}You have two choices: ")
-    choice = input("1. Use your injustice_zapper \n2. Push her and run!")
+    print(F"{Fore.GREEN}You have two choices: ")
+    choice = input(F"{Fore.BLUE}1. Use your injustice_zapper \n2. Push her and run!")
     if choice == "1":
         print("You point the anti-injustice zapper at Schlafly.")
         defeat_chance = random.randint(0, 10)
@@ -317,7 +317,7 @@ def heroine_select():
 
 def play_or_not():
     """ player chooses to continue to game or quit """
-    answer = input(F"{Fore.GREEN}Answer 'y' or 'n': ")
+    answer = input(F"{Fore.BLUE}Answer 'y' or 'n': ")
     if answer.lower().strip() == "y":
         print(F"{Fore.WHITE}Choose which heroine you want to play as...")
         heroine_select()
@@ -332,7 +332,25 @@ def play_or_not():
 
 # PART ONE: LOGO. Intro to game. Takes player to decision: play or not
 
-print("{title_art}")
+print("""
+╔╦╗╦ ╦╔═╗╦═╗╔═╗  ╦╔═╗  ╦  ╦╔═╗╦ ╦╔╦╗
+ ║ ╠═╣║╣ ╠╦╝║╣   ║╚═╗  ║  ║║ ╦╠═╣ ║ 
+ ╩ ╩ ╩╚═╝╩╚═╚═╝  ╩╚═╝  ╩═╝╩╚═╝╩ ╩ ╩                                                       
+""")
+
+
+# Mini by Glenn Chappell 4/93
+# Includes ISO Latin-1
+# figlet release 2.1 -- 12 Aug 1994
+# Permission is hereby given to modify this font, as long as the
+# modifier's name is placed on a comment line.
+
+# Modified by Paul Burton <solution@earthlink.net> 12/96 to include new parameter
+# supported by FIGlet and FIGWin.  May also be slightly modified for better use
+# of new full-width/kern/smush alternatives, but default output is NOT changed.
+
+# from https://patorjk.com/
+
 print("This is a game where winning is hard.")
 print("The situation is as follows... ")
 print("You wake up trapped in a patriarchial nightmare.")
