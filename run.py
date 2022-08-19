@@ -17,9 +17,7 @@ SHEET = GSPREAD_CLIENT.open('HJ_Scoresheet')
 scores_data = SHEET.worksheet('scores_data')
 data = scores_data.get_all_values()
 ##############################################################
-# (pre-story set up of code)
-
-selectedCharacter = {}
+# (pre-story set up of code
 
 
 class Heroine:
@@ -34,7 +32,7 @@ class Heroine:
         # STARTS THE GAME AFTER PLAYER CHOOSES 'Y' (in PART 1)
         """ Calls stats on player's choice of Heroine,""" 
         """ & starts the story (with a bus fight!)"""
-        global selectedCharacter
+        global heroine
         print(f"You have selected {self.name}. These are their stats: ")
         print(f"fighting spirit - {self.fighting_spirit}")
         print(f"self esteem - {self.self_esteem}")
@@ -80,27 +78,24 @@ Trump = Enemy("Trump", 100, 3500)
 
 # PART EIGHT of EIGHT: FIGHTING KAVANAUGH AT WORK. THE OFFICE IS UNSAFE!
 
-selectedCharacter = {}
-
 
 def Office():
-    global selectedCharacter
+    global heroine
     print("You walk to work carefully...")
     print("go through the revolving doors and into the office.")
     print("Your colleagues look nervous as they look up to greet you.")
-    print(f"Someone whispers, '{selectedCharacter.name}...'")
+    print(f"Someone whispers, '{heroine.name}...'")
     print("'We've got a new boss!'")
     print("'But what happened to our old one?', you ask.")
     print("'She got voted out in some kind of horrible takeover!'")
     print("'It all happened last night....'")
     print("Everyone looks down as a man approaches.")
     print("He looks polite, and smiles kindly.")
-    print(f"'Hi, {selectedCharacter.name}, my name is Kavanaugh...'")
+    print(f"'Hi, {heroine.name}, my name is Kavanaugh...'")
     print("'I'm sorry, but you don't work here anymore.'")
     print("'But why?!' You ask. 'I went through hell to get here!!!'")
     print("He smiles nicely. 'Because my people like to get what they want,'")
-    print("'... and boys will be boys. There's no point arguing.'")
-    print("At this point, your workmate Kevin stands up...")
+    print("At this point, your workmate Conor stands up...")
     print("and throws a stapler at Kavanaugh's head.")
     print("Others do the same. Your desk-neighbour Paul throws a book at him.")
     print("And that was how the revolution started.")
@@ -127,11 +122,10 @@ def treats():
 
 
 # PART SIX - FIGHT TRUMP, OR NO FREE MEDICAL TREATMENT!
-selectedCharacter = {}
 
 
 def Fight_Trump():
-    global selectedCharacter
+    global heroine
     """a fight for medical care"""
     print("You're feeling pretty damn good about yourself...")
     print("and you cross the road to a tall, glass building.")
@@ -143,7 +137,7 @@ def Fight_Trump():
     print("It's only a block away... and work would make you go anyway.")
     print("But at the main entrance to the emergency department...")
     print("stands a squarish, tanned man shaking his head.")
-    print(f"'No free medical care for you, {selectedCharacter.name}.")
+    print(f"'No free medical care for you, {heroine.name}.")
     print("'I've called the cops on you. Your insurance ran out years ago.'")
     print("Three black vans pull up by the hospital gate.")
     print("The men who get out...")
@@ -185,9 +179,8 @@ def Fight_Trump():
         print("Game over.")
         exit()
     else:
-        print("The police don't arrive for another hour.")
-        print("But...")
-        print("You didn't need them. Some medical staff run out the building.")
+        print("The police don't arrive in time.")
+        print("But some medical staff run out the building.")
         print("A nurse gets Trump in the neck with a needle...")
         print("The security men scatter.")
         print("You get the care you need, and everyone is smiling.")
@@ -206,29 +199,29 @@ def Fight_Trump():
 
 def perks_select():
     """ heroine gets a perk that raises score after defeating Schlafly """
-    global selectedCharacter
+    global heroine
     perk_chance = random.randint(0, 10)
     if perk_chance > 5:
         print("Tails!")
         print("You get a large coffee AND a big slice of chocolate cake.")
-        selectedCharacter.fighting_spirit += 100
-        selectedCharacter.calories_to_burn += 300
-        selectedCharacter.self_esteem += 200
+        heroine.fighting_spirit += 100
+        heroine.calories_to_burn += 300
+        heroine.self_esteem += 200
         print("Your fighting spirit increases by 100pts...")
         print(
-            f"to {selectedCharacter.fighting_spirit}.")
+            f"to {heroine.fighting_spirit}.")
         print("Your calories to use for fighting increase by 200,") 
-        print(f"to {selectedCharacter.calories_to_burn}.")
+        print(f"to {heroine.calories_to_burn}.")
         print("& your self-esteem has gone up by 200pts")
-        print(f"to: {selectedCharacter.self_esteem}.")
+        print(f"to: {heroine.self_esteem}.")
 
         Fight_Trump()
         """ Onto the next scene to fight Trump! """
     elif perk_chance < 6:
         print("Heads!")
-        selectedCharacter.fighting_spirit += 50
+        heroine.fighting_spirit += 50
         print("You grab a coffee. Caffiene boosts your fighting spirit...")
-        print(f"by 50 points, to {selectedCharacter.fighting_spirit} :)")
+        print(f"by 50 points, to {heroine.fighting_spirit} :)")
 
         Fight_Trump()
         """ Onto the next scene to fight Trump! """
@@ -237,7 +230,7 @@ def perks_select():
 # PART FOUR: A BUS FIGHT WITH SCHLAFLY!
 
 def Bus_Fight():
-    global selectedCharacter
+    global heroine
     """ First battle of heroine Vs opponent """
     print("You get on a bus. It is 8am. You have 20mins to read before work.")
     print("Just as you get your book out of your bag...")
@@ -285,47 +278,38 @@ def Bus_Fight():
 
 
 def heroine_select():
+    global heroine
     """ Allows player to choose which heroine they play as"""
-    global selectedCharacter
     selection = input(
         "1. Demeter \n2. Persephone  \n3. Flora \n4. Lilith \n5. Roe \n")
    
     if selection == "1":
-        selectedCharacter = Demeter
-        Demeter.printStats_and_start()
-        return selectedCharacter
+        heroine = Demeter
+        heroine.printStats_and_start()
         """Heroine is taken to first part of the story"""
     elif selection == "2":
-        selectedCharacter = Persephone
-        Persephone.printStats_and_start()
-        return selectedCharacter
+        heroine = Persephone
+        heroine.printStats_and_start()
     elif selection == "3":
-        selectedCharacter = Athena
-        Athena.printStats_and_start()
-        return selectedCharacter
+        heroine = Athena
+        heroine.printStats_and_start()
         """Heroine is taken to first part of the story"""
     elif selection == "4":
-        selectedCharacter = Lilith
-        Lilith.printStats_and_start()
-        return selectedCharacter
+        heroine = Lilith
+        heroine.printStats_and_start()
         """Heroine is taken to first part of the story"""
     elif selection == "5":
-        selectedCharacter = Roe
-        Roe.printStats_and_start()
-        """Heroine is taken to first part of the story"""
-        return selectedCharacter
-        """Heroine is taken to first part of the story"""
+        heroine = Roe
+        heroine.printStats_and_start()
     else:
         print("Error! Only press 1, 2, 3, 4 or 5 and press enter")
         heroine_select()
 
 
 # PART TWO - WANNA PLAY OR NOT?
-characterSelect = None
 
 
 def play_or_not():
-    global characterSelect
     """ player chooses to continue to game or quit """
     answer = input(" Answer 'y' or 'n': ")
     if answer.lower().strip() == "y":
@@ -353,5 +337,4 @@ print("Also, you can pick up points, which increases your score...")
 print("... by eating cake and winning fights.")
 print("Would you like to play?")
 
-characterSelect = {}
 play_or_not()       
