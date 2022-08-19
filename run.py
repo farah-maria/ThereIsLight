@@ -86,7 +86,7 @@ Trump = Enemy("Trump", 100, 3500)
 
 def Office():
     global heroine
-    print("You walk to work carefully...")
+    print(F"{Fore.WHITE}You walk to work carefully...")
     print("go through the revolving doors and into the office.")
     print("Your colleagues look nervous as they look up to greet you.")
     print(f"Someone whispers, '{heroine.name}...'")
@@ -105,11 +105,11 @@ def Office():
     print("Others do the same. Your desk-neighbour Paul throws a book at him.")
     print("And that was how the revolution started.")
     print("Have a great day, and stand up for yourself.")
-    print("In the words of Charles Bukowski:")
-    print("'There is a light somewhere.")
+    print(F"{Fore.LIGHTBLUE_EX}In the words of Charles Bukowski:")
+    print(F"{Fore.LIGHTGREEN_EX}'There is a light somewhere...")
     print("it may not be much light but")
     print("it beats the darkness.'")
-    print(F"{Fore.RED}Game over.")
+    print(F"{Fore.GREEN}THE END.")
     exit()
 
 
@@ -117,11 +117,11 @@ def Office():
 
 
 def treats():
-    treats_list = ["coffee", "smoothie", "valium"]
+    treats_list = [F{Fore.MAGENTA}"coffee", "smoothie", "valium"]
     treat_rand = random.randint(0, 2)
     treat = treats_list[treat_rand]
     print(treat)
-    print("Nice! :)")
+    print(F"{Fore.MAGENTA}Nice! :)")
     Office()
     """ Time to go to work!"""
 
@@ -132,10 +132,10 @@ def treats():
 def Fight_Trump():
     global heroine
     """a fight for medical care"""
-    print("You're feeling pretty damn good about yourself...")
+    print(F"{Fore.WHITE}You're feeling pretty damn good about yourself...")
     print("and you cross the road to a tall, glass building.")
     print("These are the offices where you work.")
-    print("With a coffee still in one hand, you push at the revolving door...")
+    print("You push at the revolving door...")
     print("And bang your face. Someone pushed it in the opposite direction...")
     print("Blood streams from your nose. It feels broken.")
     print("Holding your nose, you run to the hospital.") 
@@ -147,33 +147,33 @@ def Fight_Trump():
     print("Three black vans pull up by the hospital gate.")
     print("The men who get out...")
     print("They don't look like police officers, more like private security.")
-    print("You have three options... ")
+    print(F"{Fore.GREEN}You have three options... ")
     choice = input(
-        "1. Use your injustice_zapper \n2. Run! \n3. Call the police.")
+        F"{Fore.BLUE}1. Use your injustice_zapper \n2. Run! \n3. Call the police.")
     if choice == "1":
-        print("You point the anti-injustice zapper at Trump.")
+        print(F"{Fore.WHITE}You point the zapper at Trump.")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 3:
-            print("But Trump's men get to you before you zapp anyone... ")
+            print("But his men get to you before you zapp... ")
             print("They bundle you into the back of a van.")
-            print("Oh dear.")
+            print("Oh dear...")
             (F"{Fore.RED}Game over.")
             exit()
         elif defeat_chance < 4:
             Trump.fighting_spirit -= 90 
-            print("You manage to stun him, then turn and zapp all the others.")
+            print(F"{Fore.WHITE}You stun him, then turn and zapp the others.")
             print("Trump's fighting spirit has been knocked by 90 points...")
             print(f"and is now down to just {Trump.fighting_spirit}.")
             print("It'll be a while before he poses a problem again...")
-            print("Though, most likely he'll be back. Well done, anyway.")
+            print("Well done :)")
             print("You get the medical treatment you need...")
             print("and are able to return to work.")
-            print("You decide to flip a coin...")
+            print(F"{Fore.GREEN}You decide to flip a coin...")
             print("If it's heads, you grab a coffee.")
             print("If it's tails, you get a smoothie.")
             print("And if the coin falls out of your hand...")
             print("you can have some valium. (You probably need it).")
-            print("You flip the coin and you get... ")
+            print(F"{Fore.BLUE}You flip the coin and you get... ")
             treats()
             """ treats for if you beat Trump """
  
@@ -207,7 +207,7 @@ def perks_select():
     global heroine
     perk_chance = random.randint(0, 10)
     if perk_chance > 5:
-        print("Tails!")
+        print(F"{Fore.LIGHTYELLOW_EX}Tails!")
         print("You get a large coffee AND a big slice of chocolate cake.")
         heroine.fighting_spirit += 100
         heroine.calories_to_burn += 300
@@ -223,7 +223,7 @@ def perks_select():
         Fight_Trump()
         """ Onto the next scene to fight Trump! """
     elif perk_chance < 6:
-        print("Heads!")
+        print(F"{Fore.LIGHTYELLOW_EX}Heads!")
         heroine.fighting_spirit += 50
         print("You grab a coffee. Caffiene boosts your fighting spirit...")
         print(f"by 50 points, to {heroine.fighting_spirit} :)")
