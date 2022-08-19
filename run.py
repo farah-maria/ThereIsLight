@@ -5,7 +5,6 @@ import gspread
 import time
 from colorama import Fore
 from google.oauth2.service_account import Credentials
-from lettering import title_art
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -88,28 +87,29 @@ def Office():
     global heroine
     print(F"{Fore.WHITE}You walk to work carefully...")
     print("go through the revolving doors and into the office.")
-    print("Your colleagues look nervous as they look up to greet you.")
+    print(F"{Fore.LIGHTRED_EX}Your colleagues look nervous as they look up.")
     print(f"Someone whispers, '{heroine.name}...'")
     print("'We've got a new boss!'")
     print("'But what happened to our old one?', you ask.")
     print("'She got voted out in some kind of horrible takeover!'")
     print("'It all happened last night....'")
-    print("Everyone looks down as a man approaches.")
+    print(F"{Fore.YELLOW}Everyone looks down as a man approaches.")
     print("He looks polite, and smiles kindly.")
     print(f"'Hi, {heroine.name}, my name is Kavanaugh...'")
     print("'I'm sorry, but you don't work here anymore.'")
-    print("'But why?!' You ask. 'I went through hell to get here!!!'")
+    print(F"{Fore.LIGHTWHITE_EX}'But why?!' You ask.")
+    print("'I went through hell to get here!!!'")
     print("He smiles nicely. 'Because my people like to get what they want,'")
-    print("At this point, your workmate Conor stands up...")
+    print(F"{Fore.LIGHTCYAN_EX}Suddenly, your workmate Conor stands up...")
     print("and throws a stapler at Kavanaugh's head.")
     print("Others do the same. Your desk-neighbour Paul throws a book at him.")
-    print("And that was how the revolution started.")
+    print(F"{Fore.LIGHTGREEN_EX}And that was how the revolution started.")
     print("Have a great day, and stand up for yourself.")
     print(F"{Fore.LIGHTBLUE_EX}In the words of Charles Bukowski:")
-    print(F"{Fore.LIGHTGREEN_EX}'There is a light somewhere...")
+    print(F"{Fore.YELLOW}'There is a light somewhere...")
     print("it may not be much light but")
     print("it beats the darkness.'")
-    print(F"{Fore.GREEN}THE END.")
+    print(F"{Fore.RED}THE END.")
     exit()
 
 
@@ -117,7 +117,9 @@ def Office():
 
 
 def treats():
-    treats_list = [F{Fore.MAGENTA}"coffee", "smoothie", "valium"]
+    treats_list = [
+        F"{Fore.MAGENTA}coffee", 
+        F"{Fore.MAGENTA}smoothie", F"{Fore.MAGENTA}valium"]
     treat_rand = random.randint(0, 2)
     treat = treats_list[treat_rand]
     print(treat)
@@ -137,7 +139,7 @@ def Fight_Trump():
     print("These are the offices where you work.")
     print("You push at the revolving door...")
     print("And bang your face. Someone pushed it in the opposite direction...")
-    print("Blood streams from your nose. It feels broken.")
+    print(F"{Fore.LIGHTRED_EX}Blood streams from your nose. It feels broken.")
     print("Holding your nose, you run to the hospital.") 
     print("It's only a block away... and work would make you go anyway.")
     print("But at the main entrance to the emergency department...")
@@ -149,7 +151,7 @@ def Fight_Trump():
     print("They don't look like police officers, more like private security.")
     print(F"{Fore.GREEN}You have three options... ")
     choice = input(
-        F"{Fore.BLUE}1. Use your injustice_zapper \n2. Run! \n3. Call the police.")
+        F"{Fore.BLUE}1. Use injustice_zapper \n2. Run! \n3. Call cops.")
     if choice == "1":
         print(F"{Fore.WHITE}You point the zapper at Trump.")
         defeat_chance = random.randint(0, 10)
@@ -237,16 +239,17 @@ def perks_select():
 def Bus_Fight():
     global heroine
     """ First battle of heroine Vs opponent """
-    print(F"{Fore.WHITE}You get on a bus. It is 8am.")
+    print(F"{Fore.LIGHTYELLOW_EX}You get on a bus. It is 8am.")
     print("You have 20mins to read before work.")
     print("Just as you get your book out of your bag...")
-    print("a dangerous enemy sits next to you...")
+    print(F"{Fore.LIGHTRED_EX}a dangerous enemy sits next to you...")
     print("...blocking your way out into the aisle.")
     print("Hello', she says. 'My name's Schlafly...")
     print("'I don't think you should be going to work,' she continues...") 
     print("She draws a tiny gun from the pocket of her cardigan.")
     print(F"{Fore.GREEN}You have two choices: ")
-    choice = input(F"{Fore.BLUE}1. Use your injustice_zapper \n2. Push her and run!")
+    choice = input(
+        F"{Fore.BLUE}1. Use injustice_zapper \n2. Push her and run!")
     if choice == "1":
         print(F"{Fore.WHITE}You point the anti-injustice zapper at Schlafly.")
         defeat_chance = random.randint(0, 10)
@@ -345,7 +348,8 @@ print("""
 # Permission is hereby given to modify this font, as long as the
 # modifier's name is placed on a comment line.
 
-# Modified by Paul Burton <solution@earthlink.net> 12/96 to include new parameter
+# Modified by Paul Burton <solution@earthlink.net> 12/96 to include 
+# new parameter
 # supported by FIGlet and FIGWin.  May also be slightly modified for better use
 # of new full-width/kern/smush alternatives, but default output is NOT changed.
 
@@ -361,6 +365,6 @@ print("...or a number you need to select to choose a pathway.")
 print("Remember to press 'enter' afterwards.")
 print("Also, you can pick up points, which increases your score...")
 print("... by eating cake and winning fights.")
-print(F"{Fore.GREEN}1Would you like to play?")
+print(F"{Fore.GREEN}Would you like to play?")
 
 play_or_not()       
