@@ -87,31 +87,64 @@ Trump = Enemy("Trump", 100, 3500)
 
 def Office():
     global heroine
+    time.sleep(2)
     print(F"{Fore.WHITE}You walk to work carefully...")
+    time.sleep(2)
     print("go through the revolving doors and into the office.")
+    time.sleep(2)
     print(F"{Fore.LIGHTRED_EX}Your colleagues look nervous as they look up.")
+    time.sleep(2)
     print(f"Someone whispers, '{heroine.name}...'")
+    time.sleep(2)
     print("'We've got a new boss!'")
+    time.sleep(2)
     print("'But what happened to our old one?', you ask.")
+    time.sleep(2)
     print("'She got voted out in some kind of horrible takeover!'")
+    time.sleep(2)
     print("'It all happened last night....'")
+    time.sleep(2)
     print(F"{Fore.YELLOW}Everyone looks down as a man approaches.")
+    time.sleep(2)
+    time.sleep(2)
     print("He looks polite, and smiles kindly.")
+    time.sleep(2)
     print(f"'Hi, {heroine.name}, my name is Kavanaugh...'")
+    time.sleep(2)
     print("'I'm sorry, but you don't work here anymore.'")
-    print(F"{Fore.LIGHTWHITE_EX}'But why?!' You ask.")
+    time.sleep(2)
+    print("'But why?!' You ask.")
+    time.sleep(2)
     print("'I went through hell to get here!!!'")
+    time.sleep(2)
     print("He smiles nicely. 'Because my people like to get what they want,'")
+    time.sleep(2)
     print(F"{Fore.LIGHTCYAN_EX}Suddenly, your workmate Conor stands up...")
     print("and throws a stapler at Kavanaugh's head.")
+    time.sleep(2)
     print("Others join in. Your desk-neighbour Quinn throws a book at him...")
+    time.sleep(2)
     print("(it's a copy of Tom Paine's 'The Rights of Man', of course)")
+    time.sleep(2)
     print(F"{Fore.LIGHTGREEN_EX}And that was how the revolution started.")
+    time.sleep(2)
     print(F"{Fore.LIGHTBLUE_EX}In the words of Charles Bukowski:")
-    print(F"{Fore.YELLOW}'There is a light somewhere...")
+    time.sleep(2)
+    print(F"{Fore.WHITE}'There is a light somewhere...")
+    time.sleep(2)
     print("it may not be much light but")
+    time.sleep(2)
     print("it beats the darkness.'")
-    print(F"{Fore.RED}THE END.")
+
+    print("""
+    ______ _                             
+   (_) |  | |                         |  
+       |  | |     _     _   _  _    __|  
+     _ |  |/ \   |/    |/  / |/ |  /  |  
+    (_/   |   |_/|__/  |__/  |  |_/\_/|_/                            
+                                       
+    """)
+    
     exit()
 
 
@@ -136,69 +169,109 @@ def treats():
 def Fight_Trump():
     global heroine
     """a fight for medical care"""
+    time.sleep(2)
     print(F"{Fore.WHITE}You're feeling pretty damn good about yourself...")
+    time.sleep(2)
     print("and you cross the road to a tall, glass building.")
+    time.sleep(2)
     print("These are the offices where you work.")
+    time.sleep(2)
     print("You push at the revolving door...")
+    time.sleep(2)
     print("And bang your face. Someone pushed it in the opposite direction...")
+    time.sleep(2)
     print(F"{Fore.LIGHTRED_EX}Blood streams from your nose. It feels broken.")
-    print("Holding your nose, you run to the hospital.") 
+    time.sleep(2)
+    print("Holding your nose, you run to the hospital.")
+    time.sleep(2) 
     print("It's only a block away... and work would make you go anyway.")
+    time.sleep(2)
     print("But at the main entrance to the emergency department...")
+    time.sleep(2)
     print("stands a squarish, tanned man shaking his head.")
+    time.sleep(2)
     print(f"'No free medical care for you, {heroine.name}.")
+    time.sleep(2)
     print("'I've called the cops on you. Your insurance ran out years ago.'")
+    time.sleep(2)
     print("Three black vans pull up by the hospital gate.")
+    time.sleep(2)
     print("The men who get out...")
+    time.sleep(2)
     print("They don't look like police officers, more like private security.")
+    time.sleep(2)
     print(F"{Fore.GREEN}You have three options... ")
+    time.sleep(2)
     choice = input(
         F"{Fore.BLUE}1. Use injustice_zapper \n2. Run! \n3. Call cops.")
     if choice == "1":
+        time.sleep(2)
         print(F"{Fore.WHITE}You point the zapper at Trump.")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 3:
+            time.sleep(2)
             print("But his men get to you before you zapp... ")
+            time.sleep(2)
             print("They bundle you into the back of a van.")
+            time.sleep(2)
             print("Oh dear...")
+            time.sleep(2)
             (F"{Fore.RED}Game over.")
             exit()
         elif defeat_chance < 4:
-            Trump.fighting_spirit -= 90 
+            Trump.fighting_spirit -= 90
+            time.sleep(2) 
             print(F"{Fore.WHITE}You stun him, then turn and zapp the others.")
+            time.sleep(2)
             print("Trump's fighting spirit has been knocked by 90 points...")
+            time.sleep(2)
             print(f"and is now down to just {Trump.fighting_spirit}.")
+            time.sleep(2)
             print("It'll be a while before he poses a problem again...")
             print("Well done :)")
+            time.sleep(3)
             print("You get the medical treatment you need...")
+            time.sleep(1)
             print("and are able to return to work.")
+            time.sleep(2)
             print(F"{Fore.GREEN}You decide to flip a coin...")
+            time.sleep(2)
             print("If it's heads, you grab a coffee.")
+            time.sleep(2)
             print("If it's tails, you get a smoothie.")
+            time.sleep(2)
             print("And if the coin falls out of your hand...")
+            time.sleep(2)
             print("you can have some valium. (You probably need it).")
+            time.sleep(2)
             print(F"{Fore.BLUE}You flip the coin and you get... ")
             treats()
             """ treats for if you beat Trump """
  
     elif choice == 2:
         print("You run, and slip on your own blood.")
+        time.sleep(2)
         print("A black van drives straight into you.")
+        time.sleep(2)
         print("Sorry. You died.")
+        time.sleep(2)
         (F"{Fore.RED}Game over.")
         exit()
     else:
-        print("The police don't arrive in time.")
-        print("But some medical staff run out the building.")
-        print("A nurse gets Trump in the neck with a needle...")
-        print("The security men scatter.")
-        print("You get the care you need, and everyone is smiling.")
-        print("You decide to flip a coin...")
-        print("If it's heads, you grab a coffee.")
-        print("If it's tails, you get a smoothie.")
-        print("And if the coin falls out of your hand...")
-        print("you can have some valium. (You probably need it).")
-        print("You flip the coin and you get... ")
+        police = """The police don't arrive in time.
+        But some medical staff run out of the building.
+        A nurse gets Trump in the neck with a needle...
+        The security men scatter.
+        You get the care you need, and everyone is smiling.
+        You decide to flip a coin...
+        If it's heads, you grab a coffee.
+        If it's tails, you get a smoothie."
+        And if the coin falls out of your hand...
+        you can have some valium from the nurse. (You probably need it).
+        You flip the coin and you get..."""
+        for line in police.splitlines():
+            print(line)
+            sleep(1) 
         treats()
         """Treats for if you beat Trump"""
 
@@ -247,15 +320,15 @@ def perks_select():
 def Bus_Fight():
     global heroine
     """ First battle of heroine Vs opponent """
-    time.sleep(1.5)
+    time.sleep(2)
     print(F"{Fore.LIGHTYELLOW_EX}You get on a bus. It is 8am.")
-    time.sleep(1)
+    time.sleep(2)
     print("You have 20mins to read before work.")
-    time.sleep(0.5)
+    time.sleep(2)
     print("Just as you get your book out of your bag...")
-    time.sleep(1)
+    time.sleep(2)
     print("a dangerous enemy sits next to you...")
-    time.sleep(0.5)
+    time.sleep(2)
     bus_description = """...blocking your way out into the aisle.
     "Hello', she says. 'My name's Schlafly...'
     'I don't think you should be going to work,' she continues... 
@@ -266,14 +339,14 @@ def Bus_Fight():
         time.sleep(2)
 
     print(F"{Fore.GREEN}You have two choices: ")
-    time.sleep(1)
+    time.sleep(2)
     choice = input(
         F"{Fore.BLUE}1. Use injustice_zapper \n2. Push her and run!")
     if choice == "1":
         print(F"{Fore.WHITE}You point the anti-injustice zapper at Schlafly.")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 7:
-            time.sleep(1)
+            time.sleep(2)
             print(F"{Fore.WHITE}Schlafly knocks the zapper out of your hands")
             time.sleep(1)
             print("and shoots you. You die.")
