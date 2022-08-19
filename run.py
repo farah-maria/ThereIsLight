@@ -34,7 +34,7 @@ class Heroine:
         self.calories_to_burn = calories_to_burn
 
     def printStats_and_start(self): 
-        # STARTS THE GAME AFTER PLAYER CHOOSES 'Y' (in PART 1)
+        # STARTS THE GAME AFTER PLAYER CHOOSES 'Y' (in PART 3, line 408)
         """ Calls stats on player's choice of Heroine,""" 
         """ & starts the story (with a bus fight!)"""
         global heroine
@@ -407,7 +407,8 @@ def Bus_Fight():
 
 def heroine_select():
     global heroine
-    """ Allows player to choose which heroine they play as"""
+    """ Allows player to choose which heroine they play as.
+    Go to line 32 if need to read the printStats function """
     selection = input(
         "1. Demeter \n2. Persephone  \n3. Flora \n4. Lilith \n5. Roe \n")
    
