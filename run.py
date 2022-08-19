@@ -76,7 +76,7 @@ Trump = Enemy("Trump", 100, 3500)
 
 ###################################################################
 # STORY: start at the bottom of the page for part 1 and move up.
-
+###################################################################
 
 # PART EIGHT of EIGHT: FIGHTING KAVANAUGH AT WORK. THE OFFICE IS UNSAFE!
 
@@ -103,14 +103,13 @@ def Office():
     print("At this point, your workmate Kevin stands up...")
     print("and throws a stapler at Kavanaugh's head.")
     print("Others do the same. Your desk-neighbour Paul throws a book at him.")
-    print("And that was how the revolution started...")
-    print("You won. Well done.")
+    print("And that was how the revolution started.")
     print("Have a great day, and stand up for yourself.")
-    print("In the words of Charles Bukowski...")
+    print("In the words of Charles Bukowski:")
     print("'There is a light somewhere.")
-    print("'it may not be much light but '")
-    print("'it beats the darkness.'")
-    print("Game over")
+    print("it may not be much light but")
+    print("it beats the darkness.'")
+    print("Game over.")
     exit()
 
 
@@ -139,8 +138,7 @@ def Fight_Trump():
     print("These are the offices where you work.")
     print("With a coffee still in one hand, you push at the revolving door...")
     print("And bang your face. Someone pushed it in the opposite direction...")
-    print("... because they were on their phone & didn't see you.")
-    print("Blood streams from your nose. It might be broken.")
+    print("Blood streams from your nose. It feels broken.")
     print("Holding your nose, you run to the hospital.") 
     print("It's only a block away... and work would make you go anyway.")
     print("But at the main entrance to the emergency department...")
@@ -185,6 +183,7 @@ def Fight_Trump():
         print("A black van drives straight into you.")
         print("Sorry. You died.")
         print("Game over.")
+        exit()
     else:
         print("The police don't arrive for another hour.")
         print("But...")
@@ -252,13 +251,13 @@ def Bus_Fight():
     if choice == "1":
         print("You point the anti-injustice zapper at Schlafly.")
         defeat_chance = random.randint(0, 10)
-        if defeat_chance > 5:
+        if defeat_chance > 7:
             print("Schlafly knocks the zapper out of your hands... ")
             print("and shoots you.")
             print("Oh dear. You're dead. You'll never get to work, now.")
             print("Game over. Sorry!")
             exit()
-        elif defeat_chance < 6:
+        elif defeat_chance < 8:
             Schlafly.fighting_spirit -= 40 
             print("You managed to stun her. She falls to the ground.")
             print("Her fighting spirit has been knocked by 40 points...")
@@ -279,6 +278,7 @@ def Bus_Fight():
         print("... and shoots you in the back as you try to run.")
         print("Sorry. She won. You died.")
         print("Game over.")
+        exit()
 
 
 # PART THREE: If 'Y', choose a character & move to a bus fight!!
@@ -333,7 +333,7 @@ def play_or_not():
         heroine_select()
     elif answer.lower().strip() == "n":
         print("I don't blame you. Bye!")
-        quit()
+        exit()
     else:
         print("Incorrect input! Try again. Just one letter and press enter.")
         play_or_not()
@@ -353,5 +353,5 @@ print("Also, you can pick up points, which increases your score...")
 print("... by eating cake and winning fights.")
 print("Would you like to play?")
 
-characterSelect = None
-play_or_not()        
+characterSelect = {}
+play_or_not()       
