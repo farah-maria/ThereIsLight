@@ -5,6 +5,7 @@ import gspread
 import time
 from colorama import Fore
 from google.oauth2.service_account import Credentials
+from lettering import title_art
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -329,7 +330,9 @@ def play_or_not():
         play_or_not()
 
 
-# PART ONE: Intro to game. Takes player to decision: play or not 
+# PART ONE: LOGO. Intro to game. Takes player to decision: play or not
+
+print("{title_art}")
 print("This is a game where winning is hard.")
 print("The situation is as follows... ")
 print("You wake up trapped in a patriarchial nightmare.")
