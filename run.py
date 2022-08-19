@@ -109,7 +109,7 @@ def Office():
     print("'There is a light somewhere.")
     print("it may not be much light but")
     print("it beats the darkness.'")
-    print("Game over.")
+    print(F"{Fore.RED}Game over.")
     exit()
 
 
@@ -157,7 +157,7 @@ def Fight_Trump():
             print("But Trump's men get to you before you zapp anyone... ")
             print("They bundle you into the back of a van.")
             print("Oh dear.")
-            print("Game over.")
+            (F"{Fore.RED}Game over.")
             exit()
         elif defeat_chance < 4:
             Trump.fighting_spirit -= 90 
@@ -181,7 +181,7 @@ def Fight_Trump():
         print("You run, and slip on your own blood.")
         print("A black van drives straight into you.")
         print("Sorry. You died.")
-        print("Game over.")
+        (F"{Fore.RED}Game over.")
         exit()
     else:
         print("The police don't arrive in time.")
@@ -248,13 +248,13 @@ def Bus_Fight():
     print(F"{Fore.GREEN}You have two choices: ")
     choice = input(F"{Fore.BLUE}1. Use your injustice_zapper \n2. Push her and run!")
     if choice == "1":
-        print("You point the anti-injustice zapper at Schlafly.")
+        print(F"{Fore.WHITE}You point the anti-injustice zapper at Schlafly.")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 7:
             print(F"{Fore.WHITE}Schlafly knocks the zapper out of your hands")
             print("and shoots you.")
             print("Oh dear. You're dead. You'll never get to work, now.")
-            print("Game over. Sorry!")
+            (F"{Fore.RED}Game over. Sorry!")
             exit()
         elif defeat_chance < 8:
             Schlafly.fighting_spirit -= 40 
@@ -276,7 +276,7 @@ def Bus_Fight():
         print(F"{Fore. WHITE}Schlafly gets right back up...")
         print("... and shoots you in the back as you try to run.")
         print("Sorry. She won. You died.")
-        print("Game over.")
+        (F"{Fore.RED}Game over.")
         exit()
 
 
