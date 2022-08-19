@@ -41,7 +41,8 @@ class Heroine:
         print(f"You have selected {self.name}. These are their stats: ")
         print(f"fighting spirit - {self.fighting_spirit}")
         print(f"self esteem - {self.self_esteem}")
-        print(f"calories to burn - {self.calories_to_burn}")  
+        print(f"calories to burn - {self.calories_to_burn}")
+        time.sleep(1.5)  
         Bus_Fight()
         """Heroine is taken to first part of the story"""
 
@@ -211,11 +212,14 @@ def perks_select():
     perk_chance = random.randint(0, 10)
     if perk_chance > 5:
         print(F"{Fore.LIGHTYELLOW_EX}Tails!")
+        time.sleep(1)
         print("You get a large coffee AND a big slice of chocolate cake.")
         heroine.fighting_spirit += 100
         heroine.calories_to_burn += 300
         heroine.self_esteem += 200
+        time.sleep(1)
         print("Your fighting spirit increases by 100pts...")
+        time.sleep(1)
         print(
             f"to {heroine.fighting_spirit}.")
         print("Your calories to use for fighting increase by 200,") 
@@ -226,9 +230,12 @@ def perks_select():
         Fight_Trump()
         """ Onto the next scene to fight Trump! """
     elif perk_chance < 6:
+        time.sleep(1)
         print(F"{Fore.LIGHTYELLOW_EX}Heads!")
         heroine.fighting_spirit += 50
+        time.sleep(1)
         print("You grab a coffee. Caffiene boosts your fighting spirit...")
+        time.sleep(1)
         print(f"by 50 points, to {heroine.fighting_spirit} :)")
 
         Fight_Trump()
@@ -240,47 +247,71 @@ def perks_select():
 def Bus_Fight():
     global heroine
     """ First battle of heroine Vs opponent """
+    time.sleep(1.5)
     print(F"{Fore.LIGHTYELLOW_EX}You get on a bus. It is 8am.")
+    time.sleep(1)
     print("You have 20mins to read before work.")
+    time.sleep(0.5)
     print("Just as you get your book out of your bag...")
-    print(F"{Fore.LIGHTRED_EX}a dangerous enemy sits next to you...")
-    print("...blocking your way out into the aisle.")
-    print("Hello', she says. 'My name's Schlafly...")
-    print("'I don't think you should be going to work,' she continues...") 
-    print("She draws a tiny gun from the pocket of her cardigan.")
+    time.sleep(1)
+    print("a dangerous enemy sits next to you...")
+    time.sleep(0.5)
+    bus_description = """...blocking your way out into the aisle.
+    "Hello', she says. 'My name's Schlafly...'
+    'I don't think you should be going to work,' she continues... 
+    as she draws a tiny gun from the pocket of her cardigan."""
+
+    for line in bus_description.splitlines():
+        print(line)
+        time.sleep(2)
+
     print(F"{Fore.GREEN}You have two choices: ")
+    time.sleep(1)
     choice = input(
         F"{Fore.BLUE}1. Use injustice_zapper \n2. Push her and run!")
     if choice == "1":
         print(F"{Fore.WHITE}You point the anti-injustice zapper at Schlafly.")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 7:
+            time.sleep(1)
             print(F"{Fore.WHITE}Schlafly knocks the zapper out of your hands")
-            print("and shoots you.")
-            print("Oh dear. You're dead. You'll never get to work, now.")
-            (F"{Fore.RED}Game over. Sorry!")
+            time.sleep(1)
+            print("and shoots you. You die.")
+            time.sleep(0.5)
+            print("You'll never get to work, now.")
+            time.sleep(0.5)
+            print(F"{Fore.RED}Game over. Sorry :(")
+
             exit()
         elif defeat_chance < 8:
             Schlafly.fighting_spirit -= 40 
             print(F"{Fore. WHITE}You managed to stun her. She falls.")
+            time.sleep(1)
             print("Her fighting spirit has been knocked by 40 points...")
             print(f"and is now down to just {Schlafly.fighting_spirit}.")
-            print("She'll have less energy to pester other people, now :)")
-            print("Well done!")
-            print("The bus stops near the office and you get off.")
-            print("You decide to flip a coin...")
-            print("If it's heads, you grab a coffee from the cafe opposite.")
-            print("If it's tails, you get coffee AND cake.")
-            print("And if the coin falls out of your hand...")
-            print("you can have a coffee and a pain au chocolate")
-            print("You flip the coin and you get... ")
+            prize = """She'll have less energy to pester other people, now :)
+            Well done!
+            The bus stops near the office and you get off.
+            You decide to flip a coin...
+            If it's heads, you'll grab a coffee from the cafe opposite.
+            If it's tails, you get coffee AND cake.
+            And if the coin falls out of your hand...
+            you can have a coffee and a pain au chocolate.
+            You flip the coin and you get... """
+
+            for line in prize.splitlines():
+                print(line)
+                sleep(1) 
             
             perks_select()
     else:
         print(F"{Fore. WHITE}Schlafly gets right back up...")
+        time.sleep(1)
         print("... and shoots you in the back as you try to run.")
+        time.sleep(1)
         print("Sorry. She won. You died.")
-        (F"{Fore.RED}Game over.")
+        time.sleep(2)
+        print(F"{Fore.RED}Game over.")
         exit()
 
 
@@ -355,7 +386,7 @@ print("""
 # of new full-width/kern/smush alternatives, but default output is NOT changed.
 
 # from https://patorjk.com/
-
+time.sleep(1)
 intro = """This is a game where winning is hard.
 The situation is as follows... 
 You wake up trapped in a patriarchial nightmare.
@@ -363,7 +394,7 @@ The odds are staked against you.
 There will be enemies! And enemies are a drag!
 But you will always have options: either y/n...
 ...or a number you need to select to choose a pathway.
-Remember to press 'enter' after your selection.
+(Remember to press 'enter' after your selection.)
 Also, you can pick up points, which increases your score...
 ... by eating cake and winning fights :) """
 
