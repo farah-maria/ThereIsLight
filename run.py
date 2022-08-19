@@ -356,16 +356,21 @@ print("""
 
 # from https://patorjk.com/
 
-print("This is a game where winning is hard.")
-print("The situation is as follows... ")
-print("You wake up trapped in a patriarchial nightmare.")
-print("The odds are staked against you.")
-print("There will be enemies! And enemies are a drag!")
-print("But you will always have options: either y/n...")
-print("...or a number you need to select to choose a pathway.")
-print("Remember to press 'enter' afterwards.")
-print("Also, you can pick up points, which increases your score...")
-print("... by eating cake and winning fights.")
+intro = """This is a game where winning is hard.
+The situation is as follows... 
+You wake up trapped in a patriarchial nightmare.
+The odds are staked against you.
+There will be enemies! And enemies are a drag!
+But you will always have options: either y/n...
+...or a number you need to select to choose a pathway.
+Remember to press 'enter' after your selection.
+Also, you can pick up points, which increases your score...
+... by eating cake and winning fights :) """
+
+for line in intro.splitlines():
+    print(line)
+    sleep(2)
+
 print(F"{Fore.GREEN}Would you like to play?")
 
 play_or_not()       
