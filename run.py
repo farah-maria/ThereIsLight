@@ -16,6 +16,7 @@ SHEET = GSPREAD_CLIENT.open('HJ_Scoresheet')
 
 scores_data = SHEET.worksheet('scores_data')
 data = scores_data.get_all_values()
+
 ##############################################################
 # (pre-story set up of code
 
