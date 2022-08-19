@@ -1,6 +1,9 @@
-""" These modules allow for random selection and scores record """
+""" Modules allow random selection, colour, time delay and scores record """
 import random
+import colorama
 import gspread
+import time
+from colorama import Fore
 from google.oauth2.service_account import Credentials
 
 SCOPE = [
@@ -233,27 +236,28 @@ def perks_select():
 def Bus_Fight():
     global heroine
     """ First battle of heroine Vs opponent """
-    print("You get on a bus. It is 8am. You have 20mins to read before work.")
+    print(F"{Fore.WHITE}You get on a bus. It is 8am.")
+    print("You have 20mins to read before work.")
     print("Just as you get your book out of your bag...")
     print("a dangerous enemy sits next to you...")
     print("...blocking your way out into the aisle.")
     print("Hello', she says. 'My name's Schlafly...")
     print("'I don't think you should be going to work,' she continues...") 
     print("She draws a tiny gun from the pocket of her cardigan.")
-    print("You have two choices: ")
+    print(F"{Fore.BLUE}You have two choices: ")
     choice = input("1. Use your injustice_zapper \n2. Push her and run!")
     if choice == "1":
         print("You point the anti-injustice zapper at Schlafly.")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 7:
-            print("Schlafly knocks the zapper out of your hands... ")
+            print(F"{Fore.WHITE}Schlafly knocks the zapper out of your hands")
             print("and shoots you.")
             print("Oh dear. You're dead. You'll never get to work, now.")
             print("Game over. Sorry!")
             exit()
         elif defeat_chance < 8:
             Schlafly.fighting_spirit -= 40 
-            print("You managed to stun her. She falls to the ground.")
+            print(F"{Fore. WHITE}You managed to stun her. She falls.")
             print("Her fighting spirit has been knocked by 40 points...")
             print(f"and is now down to just {Schlafly.fighting_spirit}.")
             print("She'll have less energy to pester other people, now :)")
@@ -268,7 +272,7 @@ def Bus_Fight():
             
             perks_select()
     else:
-        print("Schlafly gets right back up...")
+        print(F"{Fore. WHITE}Schlafly gets right back up...")
         print("... and shoots you in the back as you try to run.")
         print("Sorry. She won. You died.")
         print("Game over.")
@@ -303,7 +307,7 @@ def heroine_select():
         heroine = Roe
         heroine.printStats_and_start()
     else:
-        print("Error! Only press 1, 2, 3, 4 or 5 and press enter")
+        print(F"{Fore.RED}Error! Only press 1, 2, 3, 4 or 5 and press enter")
         heroine_select()
 
 
@@ -312,20 +316,20 @@ def heroine_select():
 
 def play_or_not():
     """ player chooses to continue to game or quit """
-    answer = input(" Answer 'y' or 'n': ")
+    answer = input(F"{Fore.GREEN}Answer 'y' or 'n': ")
     if answer.lower().strip() == "y":
-        print("Choose which heroine you want to play as...")
+        print(F"{Fore.WHITE}Choose which heroine you want to play as...")
         heroine_select()
     elif answer.lower().strip() == "n":
-        print("I don't blame you. Bye!")
+        print(F"{Fore.WHITE}I don't blame you. Bye!")
         exit()
     else:
-        print("Incorrect input! Try again. Just one letter and press enter.")
+        print(F"{Fore.RED}Incorrect input!")
+        print("Try again. Just one letter and press enter.")
         play_or_not()
 
 
 # PART ONE: Intro to game. Takes player to decision: play or not 
-
 print("This is a game where winning is hard.")
 print("The situation is as follows... ")
 print("You wake up trapped in a patriarchial nightmare.")
@@ -336,6 +340,6 @@ print("...or a number you need to select to choose a pathway.")
 print("Remember to press 'enter' afterwards.")
 print("Also, you can pick up points, which increases your score...")
 print("... by eating cake and winning fights.")
-print("Would you like to play?")
+print(F"{Fore.GREEN}1Would you like to play?")
 
 play_or_not()       
