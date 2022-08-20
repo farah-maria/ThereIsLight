@@ -311,13 +311,16 @@ def Fight_Trump():
 
 
 def perks_select():
+    print()
+    slow_read(F"{Fore.MAGENTA}...CHAPTER TWO\n")
     """ heroine gets a perk that raises score after defeating Schlafly """
     global heroine
     perk_chance = random.randint(0, 10)
     if perk_chance > 5:
-        slow_read(F"{Fore.BLUE}Tails!")
+        print(F"{Fore.GREEN}Tails!\n")
         time.sleep(2)
-        print("You get a large coffee AND a big slice of chocolate cake.")
+        slow_read(
+            F"{Fore.BLUE}You get a large coffee AND a big slice of cake.\n")
         heroine.fighting_spirit += 100
         heroine.calories_to_burn += 300
         heroine.self_esteem += 200
@@ -330,17 +333,18 @@ def perks_select():
         slow_read(f"to {heroine.calories_to_burn}.")
         slow_read("& your self-esteem has gone up by 200pts")
         slow_read(f"to: {heroine.self_esteem}.")
-
+        sleep(2)
         Fight_Trump()
         """ Onto the next scene to fight Trump! """
     elif perk_chance < 6:
         time.sleep(1)
-        print(F"{Fore.LIGHTYELLOW_EX}Heads!")
+        print(F"{Fore.GREEN}Heads!")
         heroine.fighting_spirit += 50
         time.sleep(1)
-        print("You grab a coffee. Caffiene boosts your fighting spirit...")
+        slow_read(
+            F"{Fore.BLUE}You grab coffee. Caffiene ups your fighting spirit")
         time.sleep(1)
-        print(f"by 50 points, to {heroine.fighting_spirit} :)")
+        slow_read(f"by 50 points, to {heroine.fighting_spirit} :)")
 
         Fight_Trump()
         """ Onto the next scene to fight Trump! """
