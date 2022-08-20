@@ -22,7 +22,7 @@ scores_data = SHEET.worksheet('scores_data')
 data = scores_data.get_all_values()
 
 ##############################################################
-# (pre-story set up of code
+# (pre-story set up of code, & support for some functions
 
 
 class Heroine:
@@ -34,7 +34,7 @@ class Heroine:
         self.calories_to_burn = calories_to_burn
 
     def printStats_and_start(self): 
-        # STARTS THE GAME AFTER PLAYER CHOOSES 'Y' (in PART 3, line 408)
+        # STARTS THE GAME AFTER PLAYER CHOOSES 'Y' in PART 3, line 408)
         """ Calls stats on player's choice of Heroine,""" 
         """ & starts the story (with a bus fight!)"""
         global heroine
@@ -79,10 +79,10 @@ Schlafly = Enemy("Schlafly", 60, 3000)
 Trump = Enemy("Trump", 100, 3500)
 
 ###################################################################
-# STORY: start at the bottom of the page for part 1 and move up.
+# STORY: start at the bottom of the page for part 1, & move up.
 ###################################################################
 
-# PART EIGHT of EIGHT: FIGHTING KAVANAUGH AT WORK. THE OFFICE IS UNSAFE!
+# PART EIGHT of EIGHT: FIGHT KAVANAUGH AT WORK. THE OFFICE IS UNSAFE!. THE END.
 
 
 def Office():
@@ -290,7 +290,7 @@ def Fight_Trump():
         """Treats for if you beat Trump"""
 
 
-# PART FIVE - IF BEAT SCHLAFLY, GO TO CAFE & GET READY TO FIGHT TRUMP!
+# PART FIVE - IF PLAYER BEAT SCHLAFLY, GO TO CAFE & GET READY TO FIGHT TRUMP!
 
 
 def perks_select():
@@ -329,7 +329,7 @@ def perks_select():
         """ Onto the next scene to fight Trump! """
                 
 
-# PART FOUR: A BUS FIGHT WITH SCHLAFLY!
+# PART FOUR: A BUS FIGHT WITH SCHLAFLY! 1st PART OF REAL STORY.
 
 def Bus_Fight():
     global heroine
@@ -402,7 +402,7 @@ def Bus_Fight():
         exit()
 
 
-# PART THREE: If 'Y', choose a character & move to a bus fight!!
+# PART THREE: If 'Y', CHOOSE A HEROINE & move to a bus fight!!
 
 
 def heroine_select():
@@ -453,7 +453,7 @@ def play_or_not():
         play_or_not()
 
 
-# PART ONE: LOGO. Intro to game. Takes player to decision: play or not
+# PART ONE: LOGO. INTRO to game. Takes goes to decision function: play or not
 
 print("""
 ╔╦╗╦ ╦╔═╗╦═╗╔═╗  ╦╔═╗  ╦  ╦╔═╗╦ ╦╔╦╗
