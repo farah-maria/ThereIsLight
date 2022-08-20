@@ -3,6 +3,7 @@ import random
 import colorama
 import gspread
 import time
+import sys
 from colorama import Fore
 from time import sleep
 from google.oauth2.service_account import Credentials
@@ -38,11 +39,15 @@ class Heroine:
         """ Calls stats on player's choice of Heroine,""" 
         """ & starts the story (with a bus fight!)"""
         global heroine
-        print(f"You have selected {self.name}. These are their stats: ")
-        print(f"fighting spirit - {self.fighting_spirit}")
-        print(f"self esteem - {self.self_esteem}")
-        print(f"calories to burn - {self.calories_to_burn}")
-        time.sleep(1.5)  
+        slow_read(f"\nYou have selected {self.name}.\n") 
+        print()
+        slow_read(F"{Fore.GREEN}These are your stats: \n")
+        print()
+        slow_read(f"\nfighting spirit - {self.fighting_spirit}")
+        slow_read(f"\nself esteem - {self.self_esteem}")
+        slow_read(f"\ncalories to burn - {self.calories_to_burn}\n \n")
+        print()
+        time.sleep(5)  
         Bus_Fight()
         """Heroine is taken to first part of the story"""
 
@@ -77,6 +82,16 @@ Kavanaugh = Enemy("Kavanaugh", 40, 2500)
 Schlafly = Enemy("Schlafly", 60, 3000)
 
 Trump = Enemy("Trump", 100, 3500)
+
+# # # 
+
+
+def slow_read(string):
+    """ allows text to appear letter by letter in console """
+    for x in string:
+        sys.stdout.write(x)
+        sys.stdout.flush()
+        time.sleep(0.2)
 
 ###################################################################
 # STORY: start at the bottom of the page for part 1, & move up.
@@ -230,7 +245,7 @@ def Fight_Trump():
             time.sleep(2)
             print("Oh dear...")
             time.sleep(2)
-            (F"{Fore.RED}Game over.")
+            slow_read(F"{Fore.RED}Game over.")
             exit()
         elif defeat_chance < 4:
             Trump.fighting_spirit -= 90
@@ -269,7 +284,7 @@ def Fight_Trump():
         time.sleep(2)
         print("Sorry. You died.")
         time.sleep(2)
-        (F"{Fore.RED}Game over.")
+        slow_read(F"{Fore.RED}Game over.")
         exit()
     else:
         police = """The police don't arrive in time.
@@ -334,28 +349,29 @@ def perks_select():
 def Bus_Fight():
     global heroine
     """ First battle of heroine Vs opponent """
+    time.sleep(0.5)
+    slow_read(F"{Fore.MAGENTA}CHAPTER ONE:\n \n")
+    slow_read(F"{Fore.WHITE}You get on a bus. It is 8am.\n")
     time.sleep(2)
-    print(F"{Fore.LIGHTYELLOW_EX}You get on a bus. It is 8am.")
+    slow_read("You have 20mins to read before work.\n")
     time.sleep(2)
-    print("You have 20mins to read before work.")
+    slow_read("Just as you get your book out of your bag...\n")
     time.sleep(2)
-    print("Just as you get your book out of your bag...")
+    slow_read("a dangerous enemy sits next to you...\n")
     time.sleep(2)
-    print("a dangerous enemy sits next to you...")
-    time.sleep(2)
-    bus_description = """...blocking your way out into the aisle.
-    "Hello', she says. 'My name's Schlafly...'
-    'I don't think you should be going to work,' she continues... 
-    as she draws a tiny gun from the pocket of her cardigan."""
+    bus_description = """blocking your way out into the aisle.
+"Hello', she says. 'My name's Schlafly...'
+'I don't think you should be going to work,' she continues... 
+as she draws a tiny gun from the pocket of her cardigan.\n \n"""
 
     for line in bus_description.splitlines():
         print(line)
         time.sleep(2)
 
-    print(F"{Fore.GREEN}You have two choices: ")
+    print(F"{Fore.GREEN}You have two choices: \n")
     time.sleep(2)
     choice = input(
-        F"{Fore.BLUE}1. Use injustice_zapper \n2. Push her and run!")
+        F"{Fore.BLUE}1. Use injustice_zapper \n \n2. Push her and run! \n")
     if choice == "1":
         print(F"{Fore.WHITE}You point the anti-injustice zapper at Schlafly.")
         defeat_chance = random.randint(0, 10)
@@ -367,7 +383,7 @@ def Bus_Fight():
             time.sleep(0.5)
             print("You'll never get to work, now.")
             time.sleep(0.5)
-            print(F"{Fore.RED}Game over. Sorry :(")
+            slow_read(F"{Fore.RED}Game over. Sorry :(")
 
             exit()
         elif defeat_chance < 8:
@@ -398,7 +414,7 @@ def Bus_Fight():
         time.sleep(1)
         print("Sorry. She won. You died.")
         time.sleep(2)
-        print(F"{Fore.RED}Game over.")
+        slow_read(F"{Fore.RED}Game over.")
         exit()
 
 
@@ -410,7 +426,7 @@ def heroine_select():
     """ Allows player to choose which heroine they play as.
     Go to line 32 if need to read the printStats function """
     selection = input(
-        "1. Demeter \n2. Persephone  \n3. Flora \n4. Lilith \n5. Roe \n")
+        "\n1. Demeter \n2. Persephone  \n3. Athena \n4. Lilith \n5. Roe \n")
    
     if selection == "1":
         heroine = Demeter
@@ -431,8 +447,9 @@ def heroine_select():
         heroine = Roe
         heroine.printStats_and_start()
     else:
-        print(F"{Fore.RED}Error! Only press 1, 2, 3, 4 or 5 and press enter")
-        heroine_select()
+        slow_read(F"{Fore.RED}Error!")
+        slow_read("Only press 1, 2, 3, 4 or 5 and press enter")
+        heroine_select()  # This function is defined on line 37.
 
 
 # PART TWO - WANNA PLAY OR NOT?
@@ -440,16 +457,18 @@ def heroine_select():
 
 def play_or_not():
     """ player chooses to continue to game or quit """
-    answer = input(F"{Fore.BLUE}Answer 'y' or 'n': ")
+    answer = input(F"\n\n{Fore.BLUE}Answer 'y' or 'n': ")
     if answer.lower().strip() == "y":
-        print(F"{Fore.WHITE}Choose which heroine you want to play as...")
+        slow_read(F"\n{Fore.WHITE}Great! ") 
+        slow_read("Choose which heroine you want to play as...")
+        print()
         heroine_select()
     elif answer.lower().strip() == "n":
         print(F"{Fore.WHITE}I don't blame you. Bye!")
         exit()
     else:
-        print(F"{Fore.RED}Incorrect input!")
-        print("Try again. Just one letter and press enter.")
+        slow_read(F"\n{Fore.RED}Incorrect input!")
+        slow_read("\n\nTry again. Just one letter and press enter.")
         play_or_not()
 
 
@@ -475,7 +494,7 @@ of new full-width/kern/smush alternatives, but default output is NOT changed.
 
 from https://patorjk.com/"""
 
-time.sleep(1)
+time.sleep(2)
 intro = """This is a game where winning is hard.
 The situation is as follows... 
 You wake up trapped in a patriarchial nightmare.
@@ -491,6 +510,6 @@ for line in intro.splitlines():
     print(line)
     sleep(2)
 
-print(F"{Fore.GREEN}Would you like to play?")
+slow_read(F"\n{Fore.GREEN}Would you like to play?")
 
 play_or_not()       
