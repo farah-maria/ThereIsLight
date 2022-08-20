@@ -315,21 +315,21 @@ def perks_select():
     global heroine
     perk_chance = random.randint(0, 10)
     if perk_chance > 5:
-        print(F"{Fore.LIGHTYELLOW_EX}Tails!")
-        time.sleep(1)
+        slow_read(F"{Fore.BLUE}Tails!")
+        time.sleep(2)
         print("You get a large coffee AND a big slice of chocolate cake.")
         heroine.fighting_spirit += 100
         heroine.calories_to_burn += 300
         heroine.self_esteem += 200
         time.sleep(1)
-        print("Your fighting spirit increases by 100pts...")
-        time.sleep(1)
-        print(
+        slow_read("Your fighting spirit increases by 100pts...")
+        time.sleep(1.5)
+        slow_read(
             f"to {heroine.fighting_spirit}.")
-        print("Your calories to use for fighting increase by 200,") 
-        print(f"to {heroine.calories_to_burn}.")
-        print("& your self-esteem has gone up by 200pts")
-        print(f"to: {heroine.self_esteem}.")
+        slow_read("Your calories to use for fighting increase by 200,") 
+        slow_read(f"to {heroine.calories_to_burn}.")
+        slow_read("& your self-esteem has gone up by 200pts")
+        slow_read(f"to: {heroine.self_esteem}.")
 
         Fight_Trump()
         """ Onto the next scene to fight Trump! """
@@ -363,7 +363,7 @@ def Bus_Fight():
     bus_description = """blocking your way out into the aisle.
 'Hello', she says. 'My name's Schlafly...'
 'I don't think you should be going to work,' she continues...  
-\n \n"""
+\n"""
 
     for line in bus_description.splitlines():
         print(line)
@@ -381,7 +381,7 @@ def Bus_Fight():
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 7:
             time.sleep(2)
-            slow_read(
+            print(
                 F"\n{Fore.WHITE}Schlafly knocks the zapper out of your hands")
             time.sleep(1)
             print("\nand shoots you. You die.\n")
