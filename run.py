@@ -41,13 +41,15 @@ class Heroine:
         global heroine
         slow_read(f"\nYou have selected {self.name}.\n") 
         print()
-        slow_read(F"{Fore.GREEN}These are your stats: \n")
+        sleep(1)
+        print(F"{Fore.BLUE}These are your stats: \n")
         print()
-        slow_read(f"\nfighting spirit - {self.fighting_spirit}")
-        slow_read(f"\nself esteem - {self.self_esteem}")
-        slow_read(f"\ncalories to burn - {self.calories_to_burn}\n \n")
+        sleep(1)
+        print(f"\nfighting spirit - {self.fighting_spirit}")
+        print(f"\nself esteem - {self.self_esteem}")
+        print(f"\ncalories to burn - {self.calories_to_burn}\n \n")
         print()
-        time.sleep(5)  
+        time.sleep(2)  
         Bus_Fight()
         """Heroine is taken to first part of the story"""
 
@@ -235,7 +237,7 @@ def Fight_Trump():
         F"{Fore.BLUE}1. Use injustice_zapper \n2. Run! \n3. Call cops.")
     if choice == "1":
         time.sleep(2)
-        print(F"{Fore.WHITE}You point the zapper at Trump.")
+        slow_read(F"{Fore.WHITE}You point the zapper at Trump.")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 3:
             time.sleep(2)
@@ -349,7 +351,6 @@ def perks_select():
 def Bus_Fight():
     global heroine
     """ First battle of heroine Vs opponent """
-    time.sleep(0.5)
     slow_read(F"{Fore.MAGENTA}CHAPTER ONE:\n \n")
     slow_read(F"{Fore.WHITE}You get on a bus. It is 8am.\n")
     time.sleep(2)
@@ -360,60 +361,64 @@ def Bus_Fight():
     slow_read("a dangerous enemy sits next to you...\n")
     time.sleep(2)
     bus_description = """blocking your way out into the aisle.
-"Hello', she says. 'My name's Schlafly...'
-'I don't think you should be going to work,' she continues... 
-as she draws a tiny gun from the pocket of her cardigan.\n \n"""
+'Hello', she says. 'My name's Schlafly...'
+'I don't think you should be going to work,' she continues...  
+\n \n"""
 
     for line in bus_description.splitlines():
         print(line)
         time.sleep(2)
+    
+    slow_read("she draws a tiny gun from the pocket of her cardigan.\n")
 
-    print(F"{Fore.GREEN}You have two choices: \n")
+    print(F"\n{Fore.GREEN}You have two choices: \n")
     time.sleep(2)
     choice = input(
         F"{Fore.BLUE}1. Use injustice_zapper \n \n2. Push her and run! \n")
     if choice == "1":
-        print(F"{Fore.WHITE}You point the anti-injustice zapper at Schlafly.")
+        slow_read(
+            F"{Fore.WHITE}You point the anti-injustice zapper at Schlafly.")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 7:
             time.sleep(2)
-            print(F"{Fore.WHITE}Schlafly knocks the zapper out of your hands")
+            slow_read(
+                F"\n{Fore.WHITE}Schlafly knocks the zapper out of your hands")
             time.sleep(1)
-            print("and shoots you. You die.")
+            print("\nand shoots you. You die.\n")
             time.sleep(0.5)
-            print("You'll never get to work, now.")
+            print("You'll never get to work, now.\n")
             time.sleep(0.5)
             slow_read(F"{Fore.RED}Game over. Sorry :(")
 
             exit()
         elif defeat_chance < 8:
             Schlafly.fighting_spirit -= 40 
-            print(F"{Fore. WHITE}You managed to stun her. She falls.")
+            print(F"\n{Fore. WHITE}You manage to stun her. She falls.")
             time.sleep(1)
-            print("Her fighting spirit has been knocked by 40 points...")
-            print(f"and is now down to just {Schlafly.fighting_spirit}.")
+            slow_read("\nHer fighting spirit has been knocked by 40 points...")
+            print(f"\nand is now down to just {Schlafly.fighting_spirit}.")
             prize = """She'll have less energy to pester other people, now :)
-            Well done!
-            The bus stops near the office and you get off.
-            You decide to flip a coin...
-            If it's heads, you'll grab a coffee from the cafe opposite.
-            If it's tails, you get coffee AND cake.
-            And if the coin falls out of your hand...
-            you can have a coffee and a pain au chocolate.
-            You flip the coin and you get... """
+Well done!
+The bus stops near the office and you get off.
+You decide to flip a coin...
+If it's heads, you'll grab a coffee from the cafe opposite.
+If it's tails, you get coffee AND cake.
+And if the coin falls out of your hand...
+you can have a coffee and a pain au chocolate.
+You flip the coin and you get... """
 
             for line in prize.splitlines():
                 print(line)
-                sleep(1) 
+                sleep(1.5) 
             
             perks_select()
     else:
-        print(F"{Fore. WHITE}Schlafly gets right back up...")
+        print(F"\n{Fore. WHITE}Schlafly gets right back up...")
         time.sleep(1)
-        print("... and shoots you in the back as you try to run.")
-        time.sleep(1)
-        print("Sorry. She won. You died.")
-        time.sleep(2)
+        print("\n... and shoots you in the back as you try to run.")
+        time.sleep(1.5)
+        print("\nSorry. She won. You died.\n \n")
+        time.sleep(1.5)
         slow_read(F"{Fore.RED}Game over.")
         exit()
 
