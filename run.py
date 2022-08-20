@@ -107,7 +107,7 @@ def Office():
     global heroine
     time.sleep(2)
     print()
-    slow_read(F"{Fore.MAGENTA}...CHAPTER FOUR.\n")
+    slow_read(F"{Fore.MAGENTA}...CHAPTER FOUR. The Last Battle.\n")
     slow_read(F"{Fore.WHITE}You walk to work carefully... \n")
     slow_read("go through the revolving doors and into the office.\n")
     slow_read("Your colleagues look nervous as they look up.")
@@ -242,7 +242,16 @@ def Fight_Trump():
             print("Oh dear...")
             time.sleep(2)
             slow_read(F"{Fore.RED}Game over.")
+
+            print("""
+                ____ ____ _  _ ____    ____ _  _ ____ ____ 
+                | __ |__| |\/| |___    |  | |  | |___ |__/ 
+                |__] |  | |  | |___    |__|  \/  |___ |  \ 
+                                           
+            """)
+
             exit()
+
         elif defeat_chance < 4:
             Trump.fighting_spirit -= 90
             time.sleep(2) 
@@ -283,7 +292,15 @@ def Fight_Trump():
         print("Sorry. You died.")
         time.sleep(2)
         slow_read(F"{Fore.RED}Game over.")
+        print("""
+                ____ ____ _  _ ____    ____ _  _ ____ ____ 
+                | __ |__| |\/| |___    |  | |  | |___ |__/ 
+                |__] |  | |  | |___    |__|  \/  |___ |  \ 
+                                           
+            """)
+
         exit()
+
     else:
         police = """The police don't arrive in time.
         But some medical staff run out of the building.
@@ -381,16 +398,23 @@ def Bus_Fight():
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 7:
             time.sleep(2)
+            print()
             print(
-                F"\n{Fore.WHITE}Schlafly knocks the zapper out of your hands")
+                F"{Fore.WHITE}Schlafly knocks the zapper out of your hands")
             time.sleep(1)
             print("\nand shoots you. You die.\n")
             time.sleep(0.5)
-            print("You'll never get to work, now.\n")
+            slow_read(F"{Fore.RED}You'll never get to work, now. Sorry!\n")
             time.sleep(0.5)
-            slow_read(F"{Fore.RED}Game over. Sorry :(")
+            print("""
+                ____ ____ _  _ ____    ____ _  _ ____ ____ 
+                | __ |__| |\/| |___    |  | |  | |___ |__/ 
+                |__] |  | |  | |___    |__|  \/  |___ |  \ 
+                                           
+            """)
 
             exit()
+
         elif defeat_chance < 8:
             Schlafly.fighting_spirit -= 40 
             print(F"\n{Fore. WHITE}You manage to stun her. She falls.")
@@ -417,9 +441,15 @@ You flip the coin and you get... """
         time.sleep(1)
         print("\n... and shoots you in the back as you try to run.")
         time.sleep(1.5)
-        print("\nSorry. She won. You died.\n \n")
+        slow_read(F"\n{Fore.RED}Sorry. She won. You died.\n \n")
         time.sleep(1.5)
-        slow_read(F"{Fore.RED}Game over.")
+        print("""
+                ____ ____ _  _ ____    ____ _  _ ____ ____ 
+                | __ |__| |\/| |___    |  | |  | |___ |__/ 
+                |__] |  | |  | |___    |__|  \/  |___ |  \ 
+                                           
+            """)        
+
         exit()
 
 
