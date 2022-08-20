@@ -244,12 +244,16 @@ def Fight_Trump():
             slow_read(F"{Fore.RED}Game over.")
 
             print("""
-                ____ ____ _  _ ____    ____ _  _ ____ ____ 
-                | __ |__| |\/| |___    |  | |  | |___ |__/ 
-                |__] |  | |  | |___    |__|  \/  |___ |  \ 
+            
+╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
+║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
+╚═╝┴ ┴┴ ┴└─┘  └─┘ └┘ └─┘┴└─
                                            
             """)
+# https://web.archive.org/web/20120819044459/http://www.roysac.com/thedrawfonts-tdf.asp
 
+# FIGFont created with: http://patorjk.com/figfont-editor
+        
             exit()
 
         elif defeat_chance < 4:
@@ -289,14 +293,14 @@ def Fight_Trump():
         time.sleep(2)
         print("A black van drives straight into you.")
         time.sleep(2)
-        print("Sorry. You died.")
+        slow_read(F"{Fore.RED}Sorry. You died.")
         time.sleep(2)
-        slow_read(F"{Fore.RED}Game over.")
         print("""
-                ____ ____ _  _ ____    ____ _  _ ____ ____ 
-                | __ |__| |\/| |___    |  | |  | |___ |__/ 
-                |__] |  | |  | |___    |__|  \/  |___ |  \ 
-                                           
+        
+╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
+║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
+╚═╝┴ ┴┴ ┴└─┘  └─┘ └┘ └─┘┴└─                         
+                              
             """)
 
         exit()
@@ -407,10 +411,12 @@ def Bus_Fight():
             slow_read(F"{Fore.RED}You'll never get to work, now. Sorry!\n")
             time.sleep(0.5)
             print("""
-                ____ ____ _  _ ____    ____ _  _ ____ ____ 
-                | __ |__| |\/| |___    |  | |  | |___ |__/ 
-                |__] |  | |  | |___    |__|  \/  |___ |  \ 
-                                           
+            
+╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
+║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
+╚═╝┴ ┴┴ ┴└─┘  └─┘ └┘ └─┘┴└─
+
+   
             """)
 
             exit()
@@ -444,11 +450,12 @@ You flip the coin and you get... """
         slow_read(F"\n{Fore.RED}Sorry. She won. You died.\n \n")
         time.sleep(1.5)
         print("""
-                ____ ____ _  _ ____    ____ _  _ ____ ____ 
-                | __ |__| |\/| |___    |  | |  | |___ |__/ 
-                |__] |  | |  | |___    |__|  \/  |___ |  \ 
-                                           
-            """)        
+        
+╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
+║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
+╚═╝┴ ┴┴ ┴└─┘  └─┘ └┘ └─┘┴└─
+     
+              """)        
 
         exit()
 
