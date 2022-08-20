@@ -328,10 +328,22 @@ def Fight_Trump():
 
 
 def perks_select():
-    print()
     slow_read(F"{Fore.MAGENTA}...CHAPTER TWO\n")
     """ heroine gets a perk that raises score after defeating Schlafly """
     global heroine
+    prize = """
+    The bus stops near the office and you get off. \n
+    You decide to flip a coin...\n
+    If it's heads, you'll grab a coffee from the cafe opposite.\n
+    If it's tails, you get coffee AND cake.\n
+    And if the coin falls out of your hand...\n
+    you can have a coffee and a pain au chocolate.\n
+    You flip the coin and you get...\n """
+
+    for line in prize.splitlines():
+        print(line)
+        sleep(1.5) 
+
     perk_chance = random.randint(0, 10)
     if perk_chance > 5:
         print(F"{Fore.GREEN}Tails!\n")
@@ -427,21 +439,10 @@ def Bus_Fight():
             time.sleep(1)
             slow_read("\nHer fighting spirit has been knocked by 40 points...")
             print(f"\nand is now down to just {Schlafly.fighting_spirit}.")
-            prize = """She'll have less energy to pester other people, now :)
-Well done!
-The bus stops near the office and you get off.
-You decide to flip a coin...
-If it's heads, you'll grab a coffee from the cafe opposite.
-If it's tails, you get coffee AND cake.
-And if the coin falls out of your hand...
-you can have a coffee and a pain au chocolate.
-You flip the coin and you get... """
-
-            for line in prize.splitlines():
-                print(line)
-                sleep(1.5) 
-            
+            print(
+                "She'll have less energy to pester other people, now :)")
             perks_select()
+                        
     else:
         print(F"\n{Fore. WHITE}Schlafly gets right back up...")
         time.sleep(1)
