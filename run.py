@@ -103,55 +103,53 @@ def slow_read(string):
 
 
 def Office():
+    """ Last fight """
     global heroine
     time.sleep(2)
-    print(F"{Fore.WHITE}You walk to work carefully...")
-    time.sleep(2)
-    print("go through the revolving doors and into the office.")
-    time.sleep(2)
-    print(F"{Fore.LIGHTRED_EX}Your colleagues look nervous as they look up.")
-    time.sleep(2)
+    print()
+    slow_read(F"{Fore.MAGENTA}...CHAPTER FOUR.\n")
+    slow_read(F"{Fore.WHITE}You walk to work carefully... \n")
+    slow_read("go through the revolving doors and into the office.\n")
+    slow_read("Your colleagues look nervous as they look up.")
+    time.sleep(1)
     print(f"Someone whispers, '{heroine.name}...'")
     time.sleep(2)
     print("'We've got a new boss!'")
     time.sleep(2)
-    print("'But what happened to our old one?', you ask.")
-    time.sleep(2)
-    print("'She got voted out in some kind of horrible takeover!'")
-    time.sleep(2)
+    slow_read(F"{Fore.BLUE}'But what happened to our old one?', you ask.")
+    time.sleep(1)
+    print(
+        F"{Fore.WHITE}'She got voted out in some kind of horrible takeover!'")
+    time.sleep(1)
     print("'It all happened last night....'")
-    time.sleep(2)
-    print(F"{Fore.YELLOW}Everyone looks down as a man approaches.")
-    time.sleep(2)
-    time.sleep(2)
+    time.sleep(1)
+    slow_read("Everyone looks down as a man in a suit approaches.")
+    time.sleep(1)
     print("He looks polite, and smiles kindly.")
-    time.sleep(2)
+    time.sleep(1)
     print(f"'Hi, {heroine.name}, my name is Kavanaugh...'")
+    time.sleep(1)
+    print("'I'm so sorry, but you don't work here anymore.'")
+    slow_read(F"{Fore.BLUE}'But why?!' You ask.")
+    slow_read("'I went through hell to get here!!!'")
     time.sleep(2)
-    print("'I'm sorry, but you don't work here anymore.'")
+    print(F"{Fore.WHITE}He smiles nicely.")
+    print("'Because my people get what they want,' he says.")
+    slow_read(".....................")
+    slow_read(F"{Fore.GREEN}When suddenly, your workmate Conor stands up")
+    slow_read("...and throws a stapler at Kavanaugh's head.")
+    slow_read(
+        "Others join in. Your desk-neighbour Quinn throws a book at him...")
+    print("(and it's a copy of Tom Paine's 'The Rights of Man', of course)")
     time.sleep(2)
-    print("'But why?!' You ask.")
-    time.sleep(2)
-    print("'I went through hell to get here!!!'")
-    time.sleep(2)
-    print("He smiles nicely. 'Because my people like to get what they want,'")
-    time.sleep(2)
-    print(F"{Fore.LIGHTCYAN_EX}Suddenly, your workmate Conor stands up...")
-    print("and throws a stapler at Kavanaugh's head.")
-    time.sleep(2)
-    print("Others join in. Your desk-neighbour Quinn throws a book at him...")
-    time.sleep(2)
-    print("(it's a copy of Tom Paine's 'The Rights of Man', of course)")
-    time.sleep(2)
-    print(F"{Fore.LIGHTGREEN_EX}And that was how the revolution started.")
+    slow_read(".....................")
+    print(F"{Fore.WHITE}And this was how the revolution started.")
     time.sleep(2)
     print(F"{Fore.LIGHTBLUE_EX}In the words of Charles Bukowski:")
     time.sleep(2)
-    print(F"{Fore.WHITE}'There is a light somewhere...")
-    time.sleep(2)
-    print("it may not be much light but")
-    time.sleep(2)
-    print("it beats the darkness.'")
+    slow_read(F"\n{Fore.WHITE}'There is a light somewhere...\n")
+    slow_read("it may not be much light but\n")
+    slow_read("it beats the darkness.'")
 
     print("""
     ______ _                             
@@ -183,13 +181,11 @@ from http://patorjk.com/ """
 
 
 def treats():
-    treats_list = [
-        F"{Fore.MAGENTA}coffee", 
-        F"{Fore.MAGENTA}smoothie", F"{Fore.MAGENTA}valium"]
+    treats_list = ["coffee", "smoothie", "valium"]
     treat_rand = random.randint(0, 2)
     treat = treats_list[treat_rand]
     print(treat)
-    print(F"{Fore.MAGENTA}Nice! :)")
+    slow_read(F"{Fore.MAGENTA}Nice! :)")
     Office()
     """ Time to go to work!"""
 
@@ -200,30 +196,28 @@ def treats():
 def Fight_Trump():
     global heroine
     """a fight for medical care"""
-    time.sleep(2)
+    time.sleep(1)
+    slow_read(F"\n{Fore.MAGENTA}CHAPTER THREE\n")
+    time.sleep(1)
     print(F"{Fore.WHITE}You're feeling pretty damn good about yourself...")
-    time.sleep(2)
-    print("and you cross the road to a tall, glass building.")
-    time.sleep(2)
-    print("These are the offices where you work.")
-    time.sleep(2)
-    print("You push at the revolving door...")
-    time.sleep(2)
-    print("And bang your face. Someone pushed it in the opposite direction...")
-    time.sleep(2)
-    print(F"{Fore.LIGHTRED_EX}Blood streams from your nose. It feels broken.")
-    time.sleep(2)
-    print("Holding your nose, you run to the hospital.")
-    time.sleep(2) 
-    print("It's only a block away... and work would make you go anyway.")
-    time.sleep(2)
-    print("But at the main entrance to the emergency department...")
-    time.sleep(2)
-    print("stands a squarish, tanned man shaking his head.")
-    time.sleep(2)
-    print(f"'No free medical care for you, {heroine.name}.")
-    time.sleep(2)
-    print("'I've called the cops on you. Your insurance ran out years ago.'")
+    
+    accident = """and you cross the road to a tall, glass building.\n
+    These are the offices where you work.\n
+    You push at the revolving door...\n
+    And bang your face. Someone pushed it in the opposite direction...\n
+    Blood streams from your nose. It feels broken.\n
+    Holding your nose, you run to the hospital.\n
+    It's only a block away... and work would make you go anyway.\n
+    But at the main entrance to the emergency department...\n
+    stands a squarish, tanned man shaking his head.\n"""
+    
+    for line in accident.splitlines():
+        print(line)
+        sleep(2)
+
+    slow_read(f"'No free medical care for you, {heroine.name}.")
+    slow_read(
+        "'I've called the cops on you. Your insurance ran out years ago.'")
     time.sleep(2)
     print("Three black vans pull up by the hospital gate.")
     time.sleep(2)
@@ -231,10 +225,10 @@ def Fight_Trump():
     time.sleep(2)
     print("They don't look like police officers, more like private security.")
     time.sleep(2)
-    print(F"{Fore.GREEN}You have three options... ")
-    time.sleep(2)
+    slow_read(F"{Fore.BLUE}You have three options... ")
+    time.sleep(1)
     choice = input(
-        F"{Fore.BLUE}1. Use injustice_zapper \n2. Run! \n3. Call cops.")
+        F"{Fore.GREEN}1. Use injustice_zapper \n2. Run! \n3. Call cops.")
     if choice == "1":
         time.sleep(2)
         slow_read(F"{Fore.WHITE}You point the zapper at Trump.")
@@ -252,28 +246,30 @@ def Fight_Trump():
         elif defeat_chance < 4:
             Trump.fighting_spirit -= 90
             time.sleep(2) 
-            print(F"{Fore.WHITE}You stun him, then turn and zapp the others.")
+            slow_read(
+                F"{Fore.WHITE}You stun him, then turn and zapp the others.")
+            time.sleep(1)
+            slow_read(
+                "Trump's fighting spirit has been knocked by 90 points...")
             time.sleep(2)
-            print("Trump's fighting spirit has been knocked by 90 points...")
-            time.sleep(2)
-            print(f"and is now down to just {Trump.fighting_spirit}.")
+            slow_read(f"and is now down to just {Trump.fighting_spirit}.")
             time.sleep(2)
             print("It'll be a while before he poses a problem again...")
             print("Well done :)")
             time.sleep(3)
-            print("You get the medical treatment you need...")
+            slow_read("You get the medical treatment you need...")
             time.sleep(1)
             print("and are able to return to work.")
             time.sleep(2)
-            print(F"{Fore.GREEN}You decide to flip a coin...")
+            slow_read(F"{Fore.GREEN}You decide to flip a coin...")
             time.sleep(2)
             print("If it's heads, you grab a coffee.")
             time.sleep(2)
-            print("If it's tails, you get a smoothie.")
+            slow_read("If it's tails, you get a smoothie.")
             time.sleep(2)
-            print("And if the coin falls out of your hand...")
+            slow_read("And if the coin falls out of your hand...")
             time.sleep(2)
-            print("you can have some valium. (You probably need it).")
+            slow_read("you can have some valium. (You probably need it).")
             time.sleep(2)
             print(F"{Fore.BLUE}You flip the coin and you get... ")
             treats()
