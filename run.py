@@ -105,6 +105,7 @@ def score_end():
     + heroine.self_esteem
     float_points = total_points/30
     total_score = int(float_points)
+    slow_read(F"\n{Fore.WHITE}Thank you for playing...\n")
     print(f"Your end of game score is {total_score}\n")
     print("""
             
@@ -114,9 +115,9 @@ def score_end():
                                            
             \n""")
 # https://web.archive.org/web/20120819044459/http://www.roysac.com/thedrawfonts-tdf.asp
-
 # FIGFont created with: http://patorjk.com/figfont-editor      
-    exit()
+    slow_read(F"{Fore.GREEN}Want to play again?\n")
+    play_or_not()  
   
   
 ###################################################################
