@@ -25,9 +25,6 @@ data = scores_data.get_all_values()
 ##############################################################
 # (pre-story set up of code, & support for some functions
 
-##############################################################
-# (pre-story set up of code, & support for some functions
-
 
 class Heroine:
     """ Character for user to be through the game """
@@ -190,7 +187,7 @@ def treats():
     treat_rand = random.randint(0, 2)
     treat = treats_list[treat_rand]
     print(treat)
-    slow_read(F"{Fore.MAGENTA}Nice! :)")
+    slow_read(F"\n{Fore.MAGENTA}Nice! :)")
     Office()
     """ Time to go to work!"""
 
@@ -289,7 +286,7 @@ def Fight_Trump():
             time.sleep(2)
             slow_read("you can have some valium. (You probably need it).")
             time.sleep(2)
-            print(F"{Fore.BLUE}You flip the coin and you get... ")
+            print(F"{Fore.BLUE}You flip the coin and you get... \n")
             treats()
             """ treats for if you beat Trump """
  
@@ -335,12 +332,12 @@ def Fight_Trump():
 def perks_select():
     print()
     print()
-    slow_read(F"{Fore.MAGENTA}CHAPTER TWO:\n")
+    slow_read(F"\n{Fore.MAGENTA}CHAPTER TWO:\n \n")
     """ heroine gets a perk that raises score after defeating Schlafly """
     global heroine
     print()
     print()
-    print(F"{Fore.WHITE}The bus stops near the office and you get off.")
+    print(F"\n{Fore.WHITE}The bus stops near the office and you get off.\n")
     prize = """You decide to flip a coin...
 If it's heads, you'll grab a coffee from the cafe opposite.
 If it's tails, you get coffee AND cake."""
@@ -349,11 +346,11 @@ If it's tails, you get coffee AND cake."""
         print(line)
         sleep(1.5) 
     
-    slow_read("You flip the coin and you get... ")
+    slow_read("You flip the coin and you get...\n ")
 
     perk_chance = random.randint(0, 10)
     if perk_chance > 5:
-        slow_read(F"{Fore.GREEN}Tails!\n")
+        slow_read(F"{Fore.GREEN}\nTails!\n")
         time.sleep(2)
         slow_read(
             F"{Fore.BLUE}You get a large coffee AND a big slice of cake.\n")
@@ -361,25 +358,26 @@ If it's tails, you get coffee AND cake."""
         heroine.calories_to_burn += 300
         heroine.self_esteem += 200
         time.sleep(1)
-        slow_read("Your fighting spirit increases by 100pts...")
+        slow_read("Your fighting spirit increases by 100pts...\n")
         slow_read(
-            f"to {heroine.fighting_spirit}.")
-        slow_read("Your calories to use for fighting increase by 200,") 
-        slow_read(f"to {heroine.calories_to_burn}.")
-        slow_read("& your self-esteem has gone up by 200pts")
-        slow_read(f"to: {heroine.self_esteem}.")
+            f"to {heroine.fighting_spirit}.\n")
+        slow_read("Your calories to use for fighting increase by 200,\n") 
+        slow_read(f"to {heroine.calories_to_burn}.\n")
+        slow_read("& your self-esteem has gone up by 200pts\n")
+        slow_read(f"to: {heroine.self_esteem}.\n")
         sleep(2)
         Fight_Trump() 
         """ Onto the next scene to fight Trump! """
     elif perk_chance < 6:
         time.sleep(1)
-        slow_read(F"{Fore.GREEN}Heads!")
+        slow_read(F"\n{Fore.GREEN}Heads!\n")
         heroine.fighting_spirit += 50
         time.sleep(1)
         slow_read(
-            F"{Fore.BLUE}You grab coffee. Caffiene ups your fighting spirit")
+            F"\n{Fore.BLUE}You grab coffee.") 
+        slow_read("Caffiene ups your fighting spirit...\n")
         time.sleep(1)
-        slow_read(f"by 50 points, to {heroine.fighting_spirit} :)")
+        slow_read(f"\nby 50 points, to {heroine.fighting_spirit} :)\n \n")
 
         Fight_Trump()
         """ Onto the next scene to fight Trump! """
@@ -414,19 +412,19 @@ blocking your way out into the aisle.
         F"{Fore.BLUE}1. Use injustice_zapper \n2. Push her and run! \n")
     if choice == "1":
         slow_read(
-            F"{Fore.WHITE}You point the anti-injustice zapper at Schlafly.")
+            F"{Fore.WHITE}\n You point the zapper at Schlafly.\n")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 7:
             time.sleep(2)
             print()
             slow_read(
-                F"{Fore.WHITE}Schlafly knocks the zapper out of your hands")
+                F"\n{Fore.WHITE}Schlafly knocks the zapper outta your hands\n")
             time.sleep(1)
             slow_read("\nand shoots you. You die.")
             time.sleep(0.5)
-            slow_read(F"{Fore.RED}You'll never get to work, now. Sorry!\n")
+            slow_read(F"{Fore.RED}\nYou'll never get to work, now. Sorry!\n")
             time.sleep(0.5)
-            print("""
+            print("""\n
             
 ╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
 ║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
