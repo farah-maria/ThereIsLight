@@ -40,17 +40,17 @@ class Heroine:
         """ & starts the story (with a bus fight!)"""
         global heroine
         slow_read(f"\nYou have selected {self.name}.\n") 
-        print()
+        print("")
         sleep(1)
         print(F"{Fore.BLUE}These are your starting stats: \n")
-        print()
+        print("")
         sleep(1)
         print(f"\nfighting spirit - {self.fighting_spirit}")
         sleep(1)
         print(f"\nself esteem - {self.self_esteem}")
         sleep(1)
         print(f"\ncalories to burn - {self.calories_to_burn}\n \n")
-        print()
+        print("")
         time.sleep(2)  
         Bus_Fight()
         """Heroine is taken to first part of the story"""
@@ -97,6 +97,28 @@ def slow_read(string):
         sys.stdout.flush()
         time.sleep(0.1)
 
+
+def score_end():
+    """calculates and returns score at the end"""
+    global heroine
+    total_points = heroine.calories_to_burn + heroine.fighting_spirit 
+    + heroine.self_esteem
+    float_points = total_points/30
+    total_score = int(float_points)
+    print(f"Your end of game score is {total_score}\n")
+    print("""
+            
+╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
+║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
+╚═╝┴ ┴┴ ┴└─┘  └─┘ └┘ └─┘┴└─
+                                           
+            \n""")
+# https://web.archive.org/web/20120819044459/http://www.roysac.com/thedrawfonts-tdf.asp
+
+# FIGFont created with: http://patorjk.com/figfont-editor      
+    exit()
+  
+  
 ###################################################################
 # STORY: start at the bottom of the page for part 1, & move up.
 ###################################################################
@@ -108,7 +130,7 @@ def Office():
     """ Last fight """
     global heroine
     time.sleep(2)
-    print()
+    print("")
     slow_read(F"{Fore.MAGENTA}\nCHAPTER FOUR: The Last Battle.\n")
     slow_read(F"\n{Fore.WHITE}You walk to work carefully... \n")
     slow_read("go through the revolving doors and into the office.\n")
@@ -150,33 +172,9 @@ def Office():
     slow_read(F"\n{Fore.WHITE}'There is a light somewhere...\n")
     slow_read("it may not be much light but\n")
     slow_read("it beats the darkness.'\n")
+    score_end()
 
-    print("""
-    ______ _                             
-   (_) |  | |                         |  
-       |  | |     _     _   _  _    __|  
-     _ |  |/ \   |/    |/  / |/ |  /  |  
-    (_/   |   |_/|__/  |__/  |  |_/\_/|_/                            
-                                       
-    \n""")
-    
-    exit()
-
-
-""" CREDS for script/ lettering in 'The End': 
-Script by Glenn Chappell 4/93
-Includes ISO Latin-1
-figlet release 2.1 -- 12 Aug 1994
-Permission is hereby given to modify this font, as long as the
-modifier's name is placed on a comment line.
-
-Modified by Paul Burton <solution@earthlink.net> 
-12/96 to include new parameter
-supported by FIGlet and FIGWin.  May also be slightly modified for better use
-of new full-width/kern/smush alternatives, but default output is NOT changed.
-from http://patorjk.com/ """
-
-    
+  
 # PART SEVEN: IF PLAYER BEAT TRUMP, TREATS!! AND TIME TO GO TO WORK.
 
 
@@ -239,22 +237,9 @@ stands a squarish, tanned man shaking his head."""
             time.sleep(2)
             print("They bundle you into the back of a van.\n")
             time.sleep(2)
-            print("Oh dear...\n")
+            print("Oh dear... That's the end of you.\n")
             time.sleep(2)
-            slow_read(F"{Fore.RED}Game over.\n")
-
-            print("""
-            
-╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
-║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
-╚═╝┴ ┴┴ ┴└─┘  └─┘ └┘ └─┘┴└─
-                                           
-            \n""")
-# https://web.archive.org/web/20120819044459/http://www.roysac.com/thedrawfonts-tdf.asp
-
-# FIGFont created with: http://patorjk.com/figfont-editor
-        
-            exit()
+            score_end()
 
         elif defeat_chance < 4:
             Trump.fighting_spirit -= 90
@@ -269,7 +254,7 @@ stands a squarish, tanned man shaking his head."""
             time.sleep(2)
             print("It'll be a while before he poses a problem again...")
             print("Well done :)")
-            time.sleep(3)
+            time.sleep(2)
             slow_read("You get the medical treatment you need...")
             time.sleep(1)
             print("and are able to return to work.")
@@ -295,31 +280,24 @@ stands a squarish, tanned man shaking his head."""
         time.sleep(2)
         slow_read(F"{Fore.RED}Sorry. You died.")
         time.sleep(2)
-        print("""
-        
-╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
-║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
-╚═╝┴ ┴┴ ┴└─┘  └─┘ └┘ └─┘┴└─                         
-                              
-            """)
-
-        exit()
-
+        score_end()
+      
     else:
         police = """The police don't arrive in time.
-        But some medical staff run out of the building.
-        A nurse gets Trump in the neck with a needle...
-        The security men scatter.
-        You get the care you need, and everyone is smiling.
-        You decide to flip a coin...
-        If it's heads, you grab a coffee.
-        If it's tails, you get a smoothie."
-        And if the coin falls out of your hand...
-        you can have some valium from the nurse. (You probably need it).
-        You flip the coin and you get..."""
+But some medical staff run out of the building.
+A nurse gets Trump in the neck with a needle...
+The security men scatter.
+You get the care you need, and everyone is smiling.
+You decide to flip a coin...
+If it's heads, you grab a coffee.
+If it's tails, you get a smoothie.
+And if the coin falls out of your hand...
+you can have some valium from the nurse. 
+(You probably need it).
+You flip the coin and you get..."""
         for line in police.splitlines():
             print(line)
-            sleep(1) 
+            sleep(2) 
         treats()
         """Treats for if you beat Trump"""
 
@@ -328,13 +306,13 @@ stands a squarish, tanned man shaking his head."""
 
 
 def perks_select():
-    print()
-    print()
+    print("")
+    print("")
     slow_read(F"\n{Fore.MAGENTA}CHAPTER TWO:\n \n")
     """ heroine gets a perk that raises score after defeating Schlafly """
     global heroine
-    print()
-    print()
+    print("")
+    print("")
     print(F"\n{Fore.WHITE}The bus stops near the office and you get off.\n")
     prize = """You decide to flip a coin...
 If it's heads, you'll grab a coffee from the cafe opposite.
@@ -342,7 +320,7 @@ If it's tails, you get coffee AND cake."""
 
     for line in prize.splitlines():
         print(line)
-        sleep(1.5) 
+        sleep(2) 
     
     slow_read("You flip the coin and you get...\n ")
 
@@ -370,7 +348,7 @@ If it's tails, you get coffee AND cake."""
         time.sleep(1)
         slow_read(F"\n{Fore.GREEN}Heads!\n")
         heroine.fighting_spirit += 50
-        time.sleep(1)
+        time.sleep(2)
         slow_read(
             F"\n{Fore.BLUE}You grab coffee.") 
         slow_read("Caffiene ups your fighting spirit...\n")
@@ -387,10 +365,11 @@ If it's tails, you get coffee AND cake."""
 def Bus_Fight():
     global heroine
     """ First battle of heroine Vs opponent """
-    print()
+    print("")
     slow_read(F"{Fore.MAGENTA}CHAPTER ONE:\n \n")
     sleep(2)
     print(F"{Fore.WHITE}You get on a bus. It is 8am.")
+    sleep(2)
     bus_description = """You have 20mins to read before work.
 Just as you get your book out of your bag...
 a dangerous enemy sits next to you...
@@ -400,7 +379,7 @@ blocking your way out into the aisle.
 
     for line in bus_description.splitlines():
         print(line)
-        time.sleep(2.5)
+        time.sleep(2)
     
     slow_read("she draws a tiny gun from the pocket of her cardigan.\n")
 
@@ -414,24 +393,16 @@ blocking your way out into the aisle.
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 7:
             time.sleep(2)
-            print()
+            print("")
             slow_read(
                 F"\n{Fore.WHITE}Schlafly knocks the zapper outta your hands\n")
-            time.sleep(1)
+            time.sleep(2)
             slow_read("\nand shoots you. You die.")
-            time.sleep(0.5)
-            slow_read(F"{Fore.RED}\nYou'll never get to work, now. Sorry!\n")
-            time.sleep(0.5)
-            print("""\n
-            
-╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
-║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
-╚═╝┴ ┴┴ ┴└─┘  └─┘ └┘ └─┘┴└─
-
-   
-            """)
-
-            exit()
+            time.sleep(2)
+            slow_read(F"{Fore.RED}\n\nYou'll never get to work, now. Sorry!\n")
+            time.sleep(2)
+            print("")
+            score_end()
 
         elif defeat_chance < 8:
             Schlafly.fighting_spirit -= 40 
@@ -453,15 +424,7 @@ blocking your way out into the aisle.
         time.sleep(1.5)
         slow_read(F"\n{Fore.RED}Sorry. She won. You died.\n \n")
         time.sleep(1.5)
-        print("""
-        
-╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
-║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
-╚═╝┴ ┴┴ ┴└─┘  └─┘ └┘ └─┘┴└─
-     
-              """)        
-
-        exit()
+        score_end()
 
 
 # PART THREE: If 'Y', CHOOSE A HEROINE & move to a bus fight!!
@@ -507,7 +470,7 @@ def play_or_not():
     if answer.lower().strip() == "y":
         slow_read(F"\n{Fore.WHITE}Great! ") 
         slow_read("Choose which character you want to be...")
-        print()
+        print("")
         heroine_select()
     elif answer.lower().strip() == "n":
         print(F"{Fore.WHITE}I don't blame you. Bye!")
