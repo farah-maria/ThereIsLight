@@ -25,6 +25,9 @@ data = scores_data.get_all_values()
 ##############################################################
 # (pre-story set up of code, & support for some functions
 
+##############################################################
+# (pre-story set up of code, & support for some functions
+
 
 class Heroine:
     """ Character for user to be through the game """
@@ -42,11 +45,13 @@ class Heroine:
         slow_read(f"\nYou have selected {self.name}.\n") 
         print()
         sleep(1)
-        print(F"{Fore.BLUE}These are your stats: \n")
+        print(F"{Fore.BLUE}These are your starting stats: \n")
         print()
         sleep(1)
         print(f"\nfighting spirit - {self.fighting_spirit}")
+        sleep(1)
         print(f"\nself esteem - {self.self_esteem}")
+        sleep(1)
         print(f"\ncalories to burn - {self.calories_to_burn}\n \n")
         print()
         time.sleep(2)  
@@ -93,7 +98,7 @@ def slow_read(string):
     for x in string:
         sys.stdout.write(x)
         sys.stdout.flush()
-        time.sleep(0.2)
+        time.sleep(0.1)
 
 ###################################################################
 # STORY: start at the bottom of the page for part 1, & move up.
@@ -107,7 +112,7 @@ def Office():
     global heroine
     time.sleep(2)
     print()
-    slow_read(F"{Fore.MAGENTA}...CHAPTER FOUR. The Last Battle.\n")
+    slow_read(F"{Fore.MAGENTA}...CHAPTER FOUR: The Last Battle.\n")
     slow_read(F"{Fore.WHITE}You walk to work carefully... \n")
     slow_read("go through the revolving doors and into the office.\n")
     slow_read("Your colleagues look nervous as they look up.")
@@ -197,7 +202,7 @@ def Fight_Trump():
     global heroine
     """a fight for medical care"""
     time.sleep(1)
-    slow_read(F"\n{Fore.MAGENTA}CHAPTER THREE\n")
+    slow_read(F"\n{Fore.MAGENTA}CHAPTER THREE:\n")
     time.sleep(1)
     print(F"{Fore.WHITE}You're feeling pretty damn good about yourself...")
     
@@ -328,12 +333,15 @@ def Fight_Trump():
 
 
 def perks_select():
-    slow_read(F"{Fore.MAGENTA}...CHAPTER TWO\n")
+    print()
+    print()
+    slow_read(F"{Fore.MAGENTA}CHAPTER TWO:\n")
     """ heroine gets a perk that raises score after defeating Schlafly """
     global heroine
-    prize = """
-    The bus stops near the office and you get off. \n
-    You decide to flip a coin...\n
+    print()
+    print()
+    prize = """The bus stops near the office and you get off.
+You decide to flip a coin...\n
     If it's heads, you'll grab a coffee from the cafe opposite.\n
     If it's tails, you get coffee AND cake.\n
     And if the coin falls out of your hand...\n
@@ -381,33 +389,31 @@ def perks_select():
 
 # PART FOUR: A BUS FIGHT WITH SCHLAFLY! 1st PART OF REAL STORY.
 
+
 def Bus_Fight():
     global heroine
     """ First battle of heroine Vs opponent """
+    print()
     slow_read(F"{Fore.MAGENTA}CHAPTER ONE:\n \n")
-    slow_read(F"{Fore.WHITE}You get on a bus. It is 8am.\n")
-    time.sleep(2)
-    slow_read("You have 20mins to read before work.\n")
-    time.sleep(2)
-    slow_read("Just as you get your book out of your bag...\n")
-    time.sleep(2)
-    slow_read("a dangerous enemy sits next to you...\n")
-    time.sleep(2)
-    bus_description = """blocking your way out into the aisle.
+    sleep(2)
+    print(F"{Fore.WHITE}You get on a bus. It is 8am.")
+    bus_description = """You have 20mins to read before work.
+Just as you get your book out of your bag...
+a dangerous enemy sits next to you...
+blocking your way out into the aisle.
 'Hello', she says. 'My name's Schlafly...'
-'I don't think you should be going to work,' she continues...  
-\n"""
+'I don't think you should be going to work,' she continues..."""
 
     for line in bus_description.splitlines():
         print(line)
-        time.sleep(2)
+        time.sleep(2.5)
     
     slow_read("she draws a tiny gun from the pocket of her cardigan.\n")
 
     print(F"\n{Fore.GREEN}You have two choices: \n")
     time.sleep(2)
     choice = input(
-        F"{Fore.BLUE}1. Use injustice_zapper \n \n2. Push her and run! \n")
+        F"{Fore.BLUE}1. Use injustice_zapper \n2. Push her and run! \n")
     if choice == "1":
         slow_read(
             F"{Fore.WHITE}You point the anti-injustice zapper at Schlafly.")
@@ -415,10 +421,10 @@ def Bus_Fight():
         if defeat_chance > 7:
             time.sleep(2)
             print()
-            print(
+            slow_read(
                 F"{Fore.WHITE}Schlafly knocks the zapper out of your hands")
             time.sleep(1)
-            print("\nand shoots you. You die.\n")
+            slow_read("\nand shoots you. You die.")
             time.sleep(0.5)
             slow_read(F"{Fore.RED}You'll never get to work, now. Sorry!\n")
             time.sleep(0.5)
@@ -435,18 +441,19 @@ def Bus_Fight():
 
         elif defeat_chance < 8:
             Schlafly.fighting_spirit -= 40 
-            print(F"\n{Fore. WHITE}You manage to stun her. She falls.")
+            slow_read(F"\n{Fore. WHITE}You manage to stun her. She falls.")
             time.sleep(1)
             slow_read("\nHer fighting spirit has been knocked by 40 points...")
-            print(f"\nand is now down to just {Schlafly.fighting_spirit}.")
-            print(
+            slow_read(f"\nand is now down to just {Schlafly.fighting_spirit}.")
+            slow_read(
                 "She'll have less energy to pester other people, now :)")
+            time.sleep(2)
+            print("Well done!")
             perks_select()
                         
     else:
-        print(F"\n{Fore. WHITE}Schlafly gets right back up...")
-        time.sleep(1)
-        print("\n... and shoots you in the back as you try to run.")
+        slow_read(F"\n{Fore. WHITE}Schlafly gets right back up...")
+        slow_read("\n... and shoots you in the back as you try to run.")
         time.sleep(1.5)
         slow_read(F"\n{Fore.RED}Sorry. She won. You died.\n \n")
         time.sleep(1.5)
@@ -503,7 +510,7 @@ def play_or_not():
     answer = input(F"\n\n{Fore.BLUE}Answer 'y' or 'n': ")
     if answer.lower().strip() == "y":
         slow_read(F"\n{Fore.WHITE}Great! ") 
-        slow_read("Choose which heroine you want to play as...")
+        slow_read("Choose which character you want to be...")
         print()
         heroine_select()
     elif answer.lower().strip() == "n":
