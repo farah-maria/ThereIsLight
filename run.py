@@ -340,21 +340,20 @@ def perks_select():
     global heroine
     print()
     print()
-    prize = """The bus stops near the office and you get off.
-You decide to flip a coin...\n
-    If it's heads, you'll grab a coffee from the cafe opposite.\n
-    If it's tails, you get coffee AND cake.\n
-    And if the coin falls out of your hand...\n
-    you can have a coffee and a pain au chocolate.\n
-    You flip the coin and you get...\n """
+    print(F"{Fore.WHITE}The bus stops near the office and you get off.")
+    prize = """You decide to flip a coin...
+If it's heads, you'll grab a coffee from the cafe opposite.
+If it's tails, you get coffee AND cake."""
 
     for line in prize.splitlines():
         print(line)
         sleep(1.5) 
+    
+    slow_read("You flip the coin and you get... ")
 
     perk_chance = random.randint(0, 10)
     if perk_chance > 5:
-        print(F"{Fore.GREEN}Tails!\n")
+        slow_read(F"{Fore.GREEN}Tails!\n")
         time.sleep(2)
         slow_read(
             F"{Fore.BLUE}You get a large coffee AND a big slice of cake.\n")
@@ -363,7 +362,6 @@ You decide to flip a coin...\n
         heroine.self_esteem += 200
         time.sleep(1)
         slow_read("Your fighting spirit increases by 100pts...")
-        time.sleep(1.5)
         slow_read(
             f"to {heroine.fighting_spirit}.")
         slow_read("Your calories to use for fighting increase by 200,") 
@@ -371,11 +369,11 @@ You decide to flip a coin...\n
         slow_read("& your self-esteem has gone up by 200pts")
         slow_read(f"to: {heroine.self_esteem}.")
         sleep(2)
-        Fight_Trump()
+        Fight_Trump() 
         """ Onto the next scene to fight Trump! """
     elif perk_chance < 6:
         time.sleep(1)
-        print(F"{Fore.GREEN}Heads!")
+        slow_read(F"{Fore.GREEN}Heads!")
         heroine.fighting_spirit += 50
         time.sleep(1)
         slow_read(
@@ -444,11 +442,13 @@ blocking your way out into the aisle.
             slow_read(F"\n{Fore. WHITE}You manage to stun her. She falls.")
             time.sleep(1)
             slow_read("\nHer fighting spirit has been knocked by 40 points...")
-            slow_read(f"\nand is now down to just {Schlafly.fighting_spirit}.")
+            slow_read(
+                f"\nand is now down to just {Schlafly.fighting_spirit}.\n")
             slow_read(
                 "She'll have less energy to pester other people, now :)")
             time.sleep(2)
-            print("Well done!")
+            print("\nWell done!")
+            time.sleep(2)
             perks_select()
                         
     else:
