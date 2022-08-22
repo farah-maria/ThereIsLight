@@ -177,36 +177,32 @@ def play_or_not():
         play_or_not()
 
 
-######################################################
-class Heroine:
-    """ Character for user to be through the game """
-    def __init__(self, name, fighting_spirit, self_esteem, calories_to_burn):
-        self.name = name
-        self.fighting_spirit = fighting_spirit
-        self.self_esteem = self_esteem
-        self.calories_to_burn = calories_to_burn
-
-    def printStats_and_start(self): 
-        # STARTS THE GAME AFTER PLAYER CHOOSES 'Y' in PART 3, line 408)
-        """ Calls stats on player's choice of Heroine,""" 
-        """ & starts the story (with a bus fight!)"""
-        global heroine
-        slow_read(f"\nYou have selected {self.name}.\n") 
-        print("")
-        sleep(1)
-        print(F"{Fore.BLUE}These are your starting stats: \n")
-        print("")
-        sleep(1)
-        print(f"\nfighting spirit - {self.fighting_spirit}")
-        sleep(1)
-        print(f"\nself esteem - {self.self_esteem}")
-        sleep(1)
-        print(f"\ncalories to burn - {self.calories_to_burn}\n \n")
-        print("")
-        time.sleep(2)  
-        Bus_Fight()
+def heroine_select():
+    """ Allows player to choose which heroine they play as.
+    Go to line 32 if need to read the printStats function """
+    selection = input(
+        "\n1. Demeter \n2. Persephone  \n3. Athena \n4. Lilith \n5. Roe \n")
+    
+    if selection == "1":
+        return Heroine("Demeter", 80, 80, 2800)
         """Heroine is taken to first part of the story"""
+    elif selection == "2":
+        return Heroine("Persephone", 90, 50, 1500)
+    elif selection == "3":
+        return Heroine("Athena", 100, 90, 2000)
+        """Heroine is taken to first part of the story"""
+    elif selection == "4":
+        return Heroine("Lilith", 75, 40, 3500)
+        """Heroine is taken to first part of the story"""
+    elif selection == "5":
+        return Heroine("Roe", 100, 95, 3000)
+    else:
+        slow_read(F"{Fore.RED}Error!")
+        slow_read("Only press 1, 2, 3, 4 or 5 and press enter")
+        heroine_select() 
 
+
+######################################################
 # heroine stats:
 
 
