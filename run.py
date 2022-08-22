@@ -93,6 +93,7 @@ class Heroine:
 
     def get_calories_to_burn(self, calories_to_burn):
         return self.fighting_spirit
+# calls stats of heroine after player chooses which to be
 
     def print_stats(self):
         slow_read(f"\nYou have selected {self.name}.\n")
@@ -109,8 +110,6 @@ class Heroine:
         print("")
         time.sleep(game_speed)
         """Heroine now taken to first part of the story"""
-
-# re-writing mess of code from below #
 
 
 def intro_text():
