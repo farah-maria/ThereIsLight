@@ -113,6 +113,46 @@ class Heroine:
 # re-writing mess of code from below #
 
 
+def intro_text():
+    # PART ONE: LOGO. INTRO to game. Goes to decision function: 
+    # play or not
+    print("""
+    ╔╦╗╦ ╦╔═╗╦═╗╔═╗  ╦╔═╗  ╦  ╦╔═╗╦ ╦╔╦╗
+     ║ ╠═╣║╣ ╠╦╝║╣   ║╚═╗  ║  ║║ ╦╠═╣ ║ 
+     ╩ ╩ ╩╚═╝╩╚═╚═╝  ╩╚═╝  ╩═╝╩╚═╝╩ ╩ ╩                                                       
+    """)
+    """ CREDS for lettering in title: 
+    Mini by Glenn Chappell 4/93
+    Includes ISO Latin-1
+    figlet release 2.1 -- 12 Aug 1994
+    Permission is hereby given to modify this font, as long as the
+    modifier's name is placed on a comment line.
+    Modified by Paul Burton <solution@earthlink.net> 12/96 to include 
+    new parameter
+    supported by FIGlet and FIGWin.  
+    May also be slightly modified for better use
+    of new full-width/kern/smush alternatives, 
+    but default output is NOT changed.
+    from https://patorjk.com/"""
+
+    time.sleep(game_speed)
+    intro = """This is a game where winning is hard.
+The situation is as follows... 
+You wake up trapped in a patriarchial nightmare.
+The odds are staked against you.
+There will be enemies! And enemies are a drag!
+But you will always have options: either y/n...
+...or a number you need to select to choose a pathway.
+(Remember to press 'enter' after your selection.)
+Also, you can pick up points, which increases your score...
+... by eating cake and winning fights :) """
+    for line in intro.splitlines():
+        print(line)
+        sleep(game_speed)
+
+    slow_read(F"\n{Fore.GREEN}Would you like to play?")
+
+
 class Heroine:
     """ Character for user to be through the game """
     def __init__(self, name, fighting_spirit, self_esteem, calories_to_burn):
