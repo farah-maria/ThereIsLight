@@ -153,6 +153,15 @@ Also, you can pick up points, which increases your score...
     slow_read(F"\n{Fore.GREEN}Would you like to play?")
 
 
+def slow_read(string):
+    """ allows text to appear letter by letter in console """
+    for x in string:
+        sys.stdout.write(x)
+        sys.stdout.flush()
+        time.sleep(0.01)
+
+
+######################################################
 class Heroine:
     """ Character for user to be through the game """
     def __init__(self, name, fighting_spirit, self_esteem, calories_to_burn):
