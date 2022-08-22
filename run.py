@@ -240,36 +240,6 @@ Trump = Enemy("Trump", 100, 3500)
 
 # # # 
 
-
-def slow_read(string):
-    """ allows text to appear letter by letter in console """
-    for x in string:
-        sys.stdout.write(x)
-        sys.stdout.flush()
-        time.sleep(0.1)
-
-
-def score_end():
-    """calculates and returns score at the end"""
-    global heroine
-    total_points = heroine.calories_to_burn + heroine.fighting_spirit 
-    + heroine.self_esteem
-    float_points = total_points/30
-    total_score = int(float_points)
-    slow_read(F"\n{Fore.WHITE}Thank you for playing...\n")
-    print(f"Your end of game score is {total_score}\n")
-    print("""
-            
-╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
-║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
-╚═╝┴ ┴┴ ┴└─┘  └─┘ └┘ └─┘┴└─
-                                           
-            \n""")
-# https://web.archive.org/web/20120819044459/http://www.roysac.com/thedrawfonts-tdf.asp
-# FIGFont created with: http://patorjk.com/figfont-editor      
-    slow_read(F"{Fore.GREEN}Want to play again?\n")
-    play_or_not()  
-  
   
 ###################################################################
 # STORY: start at the bottom of the page for part 1, & move up.
