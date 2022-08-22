@@ -160,6 +160,23 @@ def slow_read(string):
         time.sleep(0.01)
 
 
+def play_or_not():
+    """ player chooses to continue to game or quit """
+    answer = input(F"\n\n{Fore.BLUE}Answer 'y' or 'n': ")
+    if answer.lower().strip() == "y":
+        slow_read(F"\n{Fore.WHITE}Great!\n")
+        slow_read("Choose which character you want to be...\n")
+        print("")
+        return True
+    elif answer.lower().strip() == "n":
+        print(F"\n{Fore.WHITE}I don't blame you. Bye!\n")
+        return False
+    else:
+        slow_read(F"\n{Fore.RED}Incorrect input!\n \n")
+        slow_read("Try again. Just one letter and press enter.\n")
+        play_or_not()
+
+
 ######################################################
 class Heroine:
     """ Character for user to be through the game """
