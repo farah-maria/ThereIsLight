@@ -178,11 +178,9 @@ def play_or_not():
 
 
 def heroine_select():
-    """ Allows player to choose which heroine they play as.
-    Go to line 32 if need to read the printStats function """
+    """ Allows player to choose which heroine they play as."""
     selection = input(
-        "\n1. Demeter \n2. Persephone  \n3. Athena \n4. Lilith \n5. Roe \n")
-    
+        "\n1. Demeter \n2. Persephone \n3. Athena \n4. Lilith \n5. Roe \n")
     if selection == "1":
         return Heroine("Demeter", 80, 80, 2800)
         """Heroine is taken to first part of the story"""
@@ -202,19 +200,24 @@ def heroine_select():
         heroine_select() 
 
 
-######################################################
-# heroine stats:
-
-
-Demeter = Heroine("Demeter", 80, 80, 2800)
-
-Persephone = Heroine("Persephone", 90, 50, 1500)
-
-Athena = Heroine("Athena", 100, 90, 2000)
-
-Lilith = Heroine("Lilith", 75, 40, 3500)
-
-Roe = Heroine("Roe", 100, 95, 3000)
+def score_end(heroine):
+    """calculates and returns score at the end"""
+    total_points = heroine.calories_to_burn + heroine.fighting_spirit
+    + heroine.self_esteem
+    float_points = total_points / 30
+    total_score = int(float_points)
+    slow_read(F"\n{Fore.WHITE}Thank you for playing...\n")
+    print(f"Your end of game score is {total_score}\n")
+    print("""\n
+╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
+║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
+╚═╝┴ ┴┴ ┴└─┘  └─┘ └┘ └─┘┴└─
+            \n""")
+# https://web.archive.org/web/20120819044459/
+# http://www.roysac.com/thedrawfonts-tdf.asp
+# FIGFont created with: http://patorjk.com/figfont-editor
+    slow_read(F"\n{Fore.GREEN}Want to play again?\n")
+    play_or_not()
 
 
 # opponents who appear in battles:
@@ -630,7 +633,8 @@ def play_or_not():
         play_or_not()
 
 
-# PART ONE: LOGO. INTRO to game. Takes goes to decision function: play or not
+# PART ONE: LOGO. INTRO to game. 
+# Goes to decision function: play or not
 
 print("""
 ╔╦╗╦ ╦╔═╗╦═╗╔═╗  ╦╔═╗  ╦  ╦╔═╗╦ ╦╔╦╗
@@ -644,12 +648,11 @@ Includes ISO Latin-1
 figlet release 2.1 -- 12 Aug 1994
 Permission is hereby given to modify this font, as long as the
 modifier's name is placed on a comment line.
-
 Modified by Paul Burton <solution@earthlink.net> 12/96 to include 
 new parameter
-supported by FIGlet and FIGWin.  May also be slightly modified for better use
-of new full-width/kern/smush alternatives, but default output is NOT changed.
-
+supported by FIGlet and FIGWin.  May also be slightly modified 
+for better use of new full-width/kern/smush alternatives, 
+but default output is NOT changed.
 from https://patorjk.com/"""
 
 time.sleep(2)
