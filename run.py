@@ -27,6 +27,41 @@ data = scores_data.get_all_values()
 # (pre-story set up of code, & support for some functions
 
 
+global game_speed
+game_speed = 2
+
+
+class Enemy:
+    """ Enemy who reduces player's power through the game """
+
+    def __init__(self, name, fighting_spirit, calories_to_burn):
+        self.name = name
+        self.fighting_spirit = fighting_spirit
+        self.calories_to_burn = calories_to_burn
+
+#  Methods not being used but might come in handy in the future
+  
+    def get_enemy_name(self):
+        return self.name
+
+    def get_enemy_fighting_spirit(self):
+        return self.fighting_spirit
+
+    def get_enemy_calories_to_burn(self):
+        return self.calories_to_burn
+
+    def set_enemy_name(self, name):
+        self.name = name
+
+    def set_fighting_spirit(self, fighting_spirit):
+        self.fighting_spirit = fighting_spirit
+
+    def set_calories_to_burn(self, calories_to_burn):
+        self.calories_to_burn = calories_to_burn
+
+
+
+### re-writing mess of code from below ###
 class Heroine:
     """ Character for user to be through the game """
     def __init__(self, name, fighting_spirit, self_esteem, calories_to_burn):
