@@ -364,6 +364,121 @@ If it's tails, you get coffee AND cake."""
             f"\nby {fight_spirit_bonus} points, to \
                 {heroine.fighting_spirit} :)\n \n")
 
+def Fight_Trump(heroine, enemy):
+  ##the heroine and enemy(Trump) which was created in main code so attributes
+  ##can be accessed by the function
+    """a fight for medical care"""
+    time.sleep(game_speed / 2)
+    slow_read(F"\n{Fore.MAGENTA}CHAPTER THREE:\n")
+    time.sleep(game_speed)
+    print(F"\n{Fore.WHITE}You're feeling pretty damn good about yourself...\n")
+
+    accident = """and you cross the road to a tall, glass building.
+These are the offices where you work.
+You push at the revolving door...
+and bang your face. Someone pushed it in the opposite direction...
+Blood streams from your nose. It feels broken.
+Holding your nose, you run to the hospital.
+It's only a block away... and work would make you go anyway.
+But at the main entrance to the emergency department...
+stands a squarish, tanned man shaking his head."""
+
+    for line in accident.splitlines():
+        print(line)
+        sleep(game_speed)
+
+    slow_read(f"\n'No free medical care for you, {heroine.name}.\n")
+    slow_read(
+        "\n'I've called the cops on you. Your insurance ran out years ago.'")
+    time.sleep(game_speed)
+    print("\nThree black vans pull up by the hospital gate.")
+    time.sleep(game_speed)
+    print("\nThe men who get out...")
+    time.sleep(game_speed)
+    print("\nThey don't look like police, more like private security.")
+    time.sleep(game_speed)
+    slow_read(F"\n{Fore.BLUE}You have three options...\n ")
+    time.sleep(game_speed / 2)
+
+    still_alive = True
+    choice = input(
+        F"\n{Fore.GREEN}1. Use injustice_zapper \n2. Run! \n3. \
+            Call real cops.")
+    if choice == "1":
+        time.sleep(game_speed)
+        slow_read(F"\n{Fore.WHITE}You point the zapper at Trump.\n")
+        defeat_chance = random.randint(0, 10)
+        if defeat_chance > 3:
+            time.sleep(game_speed)
+            print("But his men get to you before you zapp...\n ")
+            time.sleep(game_speed)
+            print("They bundle you into the back of a van.\n")
+            time.sleep(game_speed)
+            print("Oh dear... That's the end of you.\n")
+            time.sleep(game_speed)
+            still_alive = False
+            return still_alive
+        elif defeat_chance < 4:
+            enemy_fighting_spirit_damage = 90
+            enemy.fighting_spirit -= enemy_fighting_spirit_damage
+            time.sleep(game_speed)
+            slow_read(
+                F"\n{Fore.WHITE}You stun him, then turn and zapp the others.\n")
+            time.sleep(game_speed / 2)
+            slow_read(
+                f"\nTrump's fighting spirit has been knocked by \
+                    {enemy_fighting_spirit_damage} points...\n")
+            time.sleep(game_speed)
+            slow_read(f"and is now down to just {enemy.fighting_spirit}.\n")
+            time.sleep(game_speed)
+            print("It'll be a while before he poses a problem again...\n")
+            print("Well done :)\n")
+            time.sleep(game_speed)
+            slow_read("\n You get the medical treatment you need...\n")
+            time.sleep(game_speed / 2)
+            print("and are able to return to work.\n")
+            time.sleep(game_speed)
+            slow_read(F"{Fore.GREEN}You decide to flip a coin...\n")
+            time.sleep(game_speed)
+            print("If it's heads, you grab a coffee.\n")
+            time.sleep(game_speed)
+            slow_read("If it's tails, you get a smoothie.\n")
+            time.sleep(game_speed)
+            slow_read("And if the coin falls out of your hand...")
+            time.sleep(game_speed)
+            slow_read("you can have some valium. (You probably need it\
+                and the nurse seems nice).\n")
+            time.sleep(game_speed)
+            print(F"{Fore.BLUE}You flip the coin and you get... \n")
+            return still_alive
+    elif choice == 2:
+        print("\nYou run, and slip on your own blood.")
+        time.sleep(game_speed)
+        print("\nA black van drives straight into you.")
+        time.sleep(game_speed)
+        slow_read(F"\n{Fore.RED}Sorry. You died.")
+        time.sleep(game_speed)
+        still_alive = False
+    else:
+        police = """The police don't arrive in time.
+But some medical staff run out of the building.
+A nurse gets Trump in the neck with a needle...
+The security men scatter.
+You get the care you need, and everyone is smiling.
+You decide to flip a coin...
+If it's heads, you grab a coffee.
+If it's tails, you get a smoothie.
+And if the coin falls out of your hand...
+you can have some valium from the nurse. 
+(You probably need it).
+You flip the coin and you get..."""
+        for line in police.splitlines():
+            print(line)
+            sleep(game_speed)
+        return still_alive
+        
+
+
 ######################
 # PART EIGHT of EIGHT: FIGHT KAVANAUGH AT WORK. THE OFFICE IS UNSAFE!. THE END.
 
