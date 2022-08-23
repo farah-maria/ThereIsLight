@@ -109,7 +109,7 @@ class Heroine:
         slow_read(f"\nYou have selected {self.name}.\n")
         print("")
         sleep(game_speed / 2)
-        print(F"{Fore.BLUE}These are your starting stats: \n")
+        print(F"{Fore.CYAN}These are your starting stats: \n")
         print("")
         sleep(game_speed / 2)
         print(f"\nfighting spirit - {self.fighting_spirit}")
@@ -172,7 +172,7 @@ def slow_read(string):
 
 def play_or_not():
     """ player chooses to continue to game or quit """
-    answer = input(F"\n\n{Fore.BLUE}Answer 'y' or 'n':\n")
+    answer = input(F"\n\n{Fore.CYAN}Answer 'y' or 'n':\n")
     if answer.lower().strip() == "y":
         slow_read(F"\n{Fore.WHITE}Great!\n")
         slow_read("Choose which character you want to be...\n")
@@ -189,7 +189,7 @@ def play_or_not():
 
 def play_again(): 
     slow_read(F"\n{Fore.WHITE}Want to play again?\n")
-    answer = input(F"\n\n{Fore.BLUE}Answer 'y' or 'n':\n")
+    answer = input(F"\n\n{Fore.CYAN}Answer 'y' or 'n':\n")
     if answer.lower().strip() == "y":
         intro_text()
     elif answer.lower().strip() == "n":
@@ -253,7 +253,7 @@ def score_end(heroine):
 def Bus_Fight(enemy):
     """ First battle of heroine Vs opponent """
     print("")
-    slow_read(F"{Fore.MAGENTA}CHAPTER ONE:\n \n")
+    slow_read(F"{Fore.YELLOW}CHAPTER ONE:\n \n")
     sleep(game_speed)
     print(F"{Fore.WHITE}You get on a bus. It is 8am.\n")
     sleep(game_speed)
@@ -274,7 +274,7 @@ blocking your way out into the aisle.
 
     you_are_still_alive = True
     choice = input(
-        F"{Fore.BLUE}1. Use injustice_zapper \n2. Push her and run! \n")
+        F"{Fore.CYAN}1. Use injustice_zapper \n2. Push her and run! \n")
     if choice == "1":
         slow_read(
             F"{Fore.WHITE}\n You point the zapper at\
@@ -327,7 +327,7 @@ def perks_select(heroine):
     heroine to this function """
     print("")
     print("")
-    slow_read(F"\n{Fore.MAGENTA}CHAPTER TWO:\n \n")
+    slow_read(F"\n{Fore.YELLOW}CHAPTER TWO:\n \n")
     """ heroine gets a perk that raises score after defeating Schlafly """
     print("")
     print("")
@@ -347,7 +347,7 @@ If it's tails, you get coffee AND cake."""
         slow_read(F"\n{Fore.GREEN}Tails!\n")
         time.sleep(game_speed)
         slow_read(
-            F"{Fore.BLUE}You get a large coffee AND a big slice of cake.\n")
+            F"{Fore.CYAN}You get a large coffee AND a big slice of cake.\n")
         # variables created so can be used in text of story:
         fighting_spirit_bonus = 100
         calories_to_burn_bonus = 300
@@ -375,7 +375,7 @@ increase by {calories_to_burn_bonus},\n")
         heroine.fighting_spirit += fight_spirit_bonus
         time.sleep(game_speed)
         slow_read(
-            F"\n{Fore.BLUE}You grab coffee.")
+            F"\n{Fore.CYAN}You grab coffee.")
         slow_read("\nCaffiene ups your fighting spirit...\n")
         time.sleep(game_speed / 2)
         slow_read(
@@ -386,7 +386,7 @@ increase by {calories_to_burn_bonus},\n")
 def Fight_Trump(heroine, enemy):
     """a fight for medical care"""
     time.sleep(game_speed / 2)
-    slow_read(F"\n{Fore.MAGENTA}CHAPTER THREE:\n")
+    slow_read(F"\n{Fore.YELLOW}CHAPTER THREE:\n")
     time.sleep(game_speed)
     print(
         F"\n{Fore.WHITE}You're feeling pretty damn good about yourself...\n")
@@ -415,7 +415,7 @@ stands a squarish, tanned man shaking his head."""
     time.sleep(game_speed)
     print("\nThey don't look like police, more like private security.")
     time.sleep(game_speed)
-    slow_read(F"\n{Fore.BLUE}You have three options...\n ")
+    slow_read(F"\n{Fore.CYAN}You have three options...\n ")
     time.sleep(game_speed / 2)
 
     still_alive = True
@@ -468,7 +468,7 @@ stands a squarish, tanned man shaking his head."""
             slow_read("you can have some valium.\n")
             slow_read("You probably need it and the nurse seems nice).\n")
             time.sleep(game_speed)
-            print(F"{Fore.BLUE}You flip the coin and you get... \n")
+            print(F"{Fore.CYAN}You flip the coin and you get... \n")
             return still_alive
     elif choice == 2:
         print("\nYou run, and slip on your own blood.")
@@ -511,7 +511,7 @@ def Office(heroine, enemy):
     """ Last fight """
     time.sleep(game_speed)
     print("")
-    slow_read(F"{Fore.MAGENTA}\nCHAPTER FOUR: The Last Battle.\n")
+    slow_read(F"{Fore.YELLOW}\nCHAPTER FOUR: The Last Battle.\n")
     slow_read(F"\n{Fore.WHITE}You walk to work carefully... \n")
     slow_read("go through the revolving doors and into the office.\n")
     slow_read("Your colleagues look nervous as they look up.\n")
@@ -524,7 +524,7 @@ def Office(heroine, enemy):
         F"{Fore.GREEN}'But what happened to our old one?', you ask.\n")
     time.sleep(game_speed / 2)
     slow_read(
-        F"\n{Fore.BLUE}'She got voted out in a horrible takeover!'\n")
+        F"\n{Fore.CYAN}'She got voted out in a horrible takeover!'\n")
     slow_read("'It all happened last night....\n'")
     time.sleep(game_speed / 2)
     slow_read(F"\n{Fore.WHITE}Everyone looks down as a man approaches.\n")
@@ -533,7 +533,7 @@ def Office(heroine, enemy):
     print(f"\n'Hi,{heroine.name}, my name is{enemy.get_enemy_name()}'")
     time.sleep(game_speed)
     print("\n'I'm so sorry but you don't work here anymore.'")
-    slow_read(F"\n{Fore.BLUE}'But why?!' You ask.")
+    slow_read(F"\n{Fore.CYAN}'But why?!' You ask.")
     slow_read("\n'I went through hell to get here!!!'")
     time.sleep(game_speed)
     print(F"\n{Fore.WHITE}He smiles nicely.")
