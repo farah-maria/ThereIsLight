@@ -238,13 +238,36 @@ Schlafly = Enemy("Schlafly", 60, 3000)
 
 Trump = Enemy("Trump", 100, 3500)
 
-# # # 
-
   
 ###################################################################
-# STORY: start at the bottom of the page for part 1, & move up.
+# STORY
 ###################################################################
 
+
+def Bus_Fight(enemy):
+    """ First battle of heroine Vs opponent """
+    print("")
+    slow_read(F"{Fore.MAGENTA}CHAPTER ONE:\n \n")
+    sleep(game_speed)
+    print(F"{Fore.WHITE}You get on a bus. It is 8am.\n")
+    sleep(game_speed)
+    bus_description = F"""You have 20mins to read before work.
+Just as you get your book out of your bag...
+a dangerous enemy sits next to you...
+blocking your way out into the aisle.
+'Hello', she says. 'My name's {enemy.get_enemy_name()}...'
+'I don't think you should be going to work,' she continues..."""
+
+    for line in bus_description.splitlines():
+        print(line)
+        time.sleep(game_speed)
+
+    slow_read("\nshe draws a tiny gun from the pocket of her cardigan.\n")
+
+    print(F"\n{Fore.GREEN}You have two choices: \n")
+
+
+######################
 # PART EIGHT of EIGHT: FIGHT KAVANAUGH AT WORK. THE OFFICE IS UNSAFE!. THE END.
 
 
