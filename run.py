@@ -4,7 +4,7 @@ import colorama
 import gspread
 import time
 import sys
-import pprint
+from pprint import pprint
 from colorama import Fore
 from time import sleep
 from google.oauth2.service_account import Credentials
@@ -172,7 +172,7 @@ def slow_read(string):
 
 def play_or_not():
     """ player chooses to continue to game or quit """
-    answer = input(F"\n\n{Fore.BLUE}Answer 'y' or 'n': ")
+    answer = input(F"\n\n{Fore.BLUE}Answer 'y' or 'n':\n")
     if answer.lower().strip() == "y":
         slow_read(F"\n{Fore.WHITE}Great!\n")
         slow_read("Choose which character you want to be...\n")
@@ -189,7 +189,7 @@ def play_or_not():
 
 def play_again(): 
     slow_read(F"\n{Fore.WHITE}Want to play again?\n")
-    answer = input(F"\n\n{Fore.BLUE}Answer 'y' or 'n': ")
+    answer = input(F"\n\n{Fore.BLUE}Answer 'y' or 'n':\n")
     if answer.lower().strip() == "y":
         intro_text()
     elif answer.lower().strip() == "n":
