@@ -58,6 +58,16 @@ class Enemy:
     def set_calories_to_burn(self, calories_to_burn):
         self.calories_to_burn = calories_to_burn
 
+# enemy stats
+
+
+Kavanaugh = Enemy("Kavanaugh", 40, 2500)
+
+Schlafly = Enemy("Schlafly", 60, 3000)
+
+Trump = Enemy("Trump", 100, 3500)
+
+
 # Heroine/ main character class
 
 
@@ -219,25 +229,6 @@ def score_end(heroine):
     slow_read(F"\n{Fore.GREEN}Want to play again?\n")
     play_or_not()
 
-
-# opponents who appear in battles:
-
-class Enemy:
-    """ Enemy who reduces player's power through the game """
-    def __init__(self, name, fighting_spirit, calories_to_burn):
-        self.name = name
-        self.fighting_spirit = fighting_spirit 
-        self.calories_to_burn = calories_to_burn
-
-# enemy stats
-
-
-Kavanaugh = Enemy("Kavanaugh", 40, 2500)
-
-Schlafly = Enemy("Schlafly", 60, 3000)
-
-Trump = Enemy("Trump", 100, 3500)
-
   
 ###################################################################
 # STORY
@@ -271,13 +262,15 @@ blocking your way out into the aisle.
         F"{Fore.BLUE}1. Use injustice_zapper \n2. Push her and run! \n")
     if choice == "1":
         slow_read(
-            F"{Fore.WHITE}\n You point the zapper at {enemy.get_enemy_name()}.\n")
+            F"{Fore.WHITE}\n You point the zapper at \
+            {enemy.get_enemy_name()}.\n")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 7:
             time.sleep(game_speed)
             print("")
             slow_read(
-                F"\n{Fore.WHITE}{enemy.get_enemy_name()} knocks the zapper outta your hands\n")
+                F"\n{Fore.WHITE}{enemy.get_enemy_name()} \
+                    knocks the zapper outta your hands\n")
             time.sleep(game_speed)
             slow_read("\nand shoots you. You die.\n")
             time.sleep(game_speed)
@@ -290,7 +283,7 @@ blocking your way out into the aisle.
             enemy.fighting_spirit -= 40
             slow_read(F"\n{Fore.WHITE}You manage to stun her. She falls.\n")
             time.sleep(game_speed / 2)
-            slow_read("\nHer fighting spirit has been knocked by 40 points...\n")
+            slow_read("\nHer fighting spirit is down 40 points...\n")
             slow_read(
                 f"\nand is now down to just {enemy.fighting_spirit}.\n")
             slow_read(
@@ -301,13 +294,44 @@ blocking your way out into the aisle.
             you_are_still_alive = True
             return you_are_still_alive            
     else:
-        slow_read(F"\n{Fore.WHITE}{enemy.get_enemy_name()} gets right back up...")
+        slow_read(
+            F"\n{Fore.WHITE}{enemy.get_enemy_name()} gets right back up...")
         slow_read("\n... and shoots you in the back as you try to run.")
         time.sleep(1.5)
         slow_read(F"\n{Fore.RED}Sorry. She won. You died.\n \n")
         time.sleep(1.5)
         you_are_still_alive = False
         return you_are_still_alive
+
+
+def perks_select(heroine):
+    """class attributes and method accessed by passing 
+    heroine to this function """
+    print("")
+    print("")
+    slow_read(F"\n{Fore.MAGENTA}CHAPTER TWO:\n \n")
+    """ heroine gets a perk that raises score after defeating Schlafly """
+    print("")
+    print("")
+    print(F"\n{Fore.WHITE}The bus stops near the office and you get off.\n")
+    prize = """You decide to flip a coin...
+If it's heads, you'll grab a coffee from the cafe opposite.
+If it's tails, you get coffee AND cake."""
+  
+    for line in prize.splitlines():
+        print(line)
+        sleep(game_speed)
+  
+    slow_read("\nYou flip the coin and you get...\n ")
+  
+    perk_chance = random.randint(0, 10)
+    if perk_chance > 5:
+        slow_read(F"{Fore.GREEN}\nTails!\n")
+        time.sleep(game_speed)
+        slow_read(
+            F"{Fore.BLUE}You get a large coffee AND a big slice of cake.\n")
+        # variables above created so can be used in story-text
+
 
 ######################
 # PART EIGHT of EIGHT: FIGHT KAVANAUGH AT WORK. THE OFFICE IS UNSAFE!. THE END.
