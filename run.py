@@ -177,7 +177,6 @@ def play_or_not():
         slow_read(F"\n{Fore.WHITE}Great!\n")
         slow_read("Choose which character you want to be...\n")
         print("")
-        heroine_select()
         return True
     elif answer.lower().strip() == "n":
         print(F"\n{Fore.WHITE}I don't blame you. Bye!\n")
@@ -205,7 +204,8 @@ def play_again():
 def heroine_select():
     """ Allows player to choose which heroine they play as."""
     selection = input(
-        "\n1. Demeter \n2. Persephone \n3. Athena \n4. Lilith \n5. Roe \n")
+        "\n1. Demeter \n2. Persephone \n3. Athena \n4. Lilith \n5. Roe \
+            \n")
     if selection == "1":
         return Heroine("Demeter", 80, 80, 2800)
         """Heroine is taken to first part of the story"""
@@ -259,8 +259,8 @@ def Bus_Fight(enemy):
 Just as you get your book out of your bag...
 a dangerous enemy sits next to you...
 blocking your way out into the aisle.
-'Hello', she says. 'My name's {enemy.get_enemy_name()}...'
-'I don't think you should be going to work,' she continues..."""
+'Hello', she says. 'My name's{enemy.get_enemy_name()}'
+'I don't think you should be going to work,' she continues."""
 
     for line in bus_description.splitlines():
         print(line)
@@ -275,15 +275,15 @@ blocking your way out into the aisle.
         F"{Fore.BLUE}1. Use injustice_zapper \n2. Push her and run! \n")
     if choice == "1":
         slow_read(
-            F"{Fore.WHITE}\n You point the zapper at \
-            {enemy.get_enemy_name()}.\n")
+            F"{Fore.WHITE}\n You point the zapper at\
+{enemy.get_enemy_name()}.\n")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 7:
             time.sleep(game_speed)
             print("")
             slow_read(
-                F"\n{Fore.WHITE}{enemy.get_enemy_name()} \
-                    knocks the zapper outta your hands\n")
+                F"\n{Fore.WHITE}{enemy.get_enemy_name()}\
+knocks the zapper outta your hands\n")
             time.sleep(game_speed)
             slow_read("\nand shoots you. You die.\n")
             time.sleep(game_speed)
@@ -309,7 +309,7 @@ blocking your way out into the aisle.
     else:
         slow_read(
             F"\n{Fore.WHITE}{enemy.get_enemy_name()} gets right back up...")
-        slow_read("\n... and shoots you in the back as you try to run.")
+        slow_read("\ngit... and shoots you in the back as you try to run.")
         time.sleep(1.5)
         slow_read(F"\n{Fore.RED}Sorry. She won. You died.\n \n")
         time.sleep(1.5)
@@ -415,8 +415,8 @@ stands a squarish, tanned man shaking his head."""
 
     still_alive = True
     choice = input(
-        F"\n{Fore.GREEN}1. Use injustice_zapper \n2. Run! \n3. \
-            Call real cops.")
+        F"\n{Fore.GREEN}1. Use injustice_zapper \n2. Run!\
+3. Call real cops.\n")
     if choice == "1":
         time.sleep(game_speed)
         slow_read(F"\n{Fore.WHITE}You point the zapper at Trump.\n")
@@ -439,28 +439,28 @@ stands a squarish, tanned man shaking his head."""
                 F"\n{Fore.WHITE}You stun him, & turn and zapp the others.\n")
             time.sleep(game_speed / 2)
             slow_read(
-                f"\nTrump's fighting spirit has been knocked by \
-                    {enemy_fighting_spirit_damage} points...\n")
+                f"\nTrump's fighting spirit has been knocked by\
+{enemy_fighting_spirit_damage} points...\n")
             time.sleep(game_speed)
-            slow_read(f"and is now down to just {enemy.fighting_spirit}.\n")
+            slow_read(f"and is now down to just{enemy.fighting_spirit}\n")
             time.sleep(game_speed)
             print("It'll be a while before he poses a problem again...\n")
             print("Well done :)\n")
             time.sleep(game_speed)
-            slow_read("\n You get the medical treatment you need...\n")
+            slow_read("\nYou get the medical treatment you need...\n")
             time.sleep(game_speed / 2)
             print("and are able to return to work.\n")
             time.sleep(game_speed)
-            slow_read(F"{Fore.GREEN}You decide to flip a coin...\n")
+            slow_read(F"\n\n{Fore.GREEN}You decide to flip a coin...\n")
             time.sleep(game_speed)
-            print("If it's heads, you grab a coffee.\n")
+            print(F"\n{Fore.WHITE}If it's heads, you grab a coffee.\n")
             time.sleep(game_speed)
             slow_read("If it's tails, you get a smoothie.\n")
             time.sleep(game_speed)
             slow_read("And if the coin falls out of your hand...")
             time.sleep(game_speed)
-            slow_read("you can have some valium. (You probably need it\
-                and the nurse seems nice).\n")
+            slow_read("you can have some valium.\n")
+            slow_read("You probably need it and the nurse seems nice).\n")
             time.sleep(game_speed)
             print(F"{Fore.BLUE}You flip the coin and you get... \n")
             return still_alive
@@ -509,46 +509,51 @@ def Office(heroine, enemy):
     slow_read("go through the revolving doors and into the office.\n")
     slow_read("Your colleagues look nervous as they look up.\n")
     time.sleep(game_speed / 2)
-    print(f"Someone whispers, '{heroine.name}!'\n")
+    print(f"Someone whispers,'{heroine.name}!'\n")
     time.sleep(game_speed)
     print("'We've got a new boss!'\n")
     time.sleep(game_speed)
     slow_read(
-        F"{Fore.BLUE}'But what happened to our old one?', you ask.\n")
+        F"{Fore.GREEN}'But what happened to our old one?', you ask.\n")
     time.sleep(game_speed / 2)
     slow_read(
-        F"{Fore.WHITE}'She got voted out in a horrible takeover!'\n")
+        F"\n{Fore.BLUE}'She got voted out in a horrible takeover!'\n")
     slow_read("'It all happened last night....\n'")
     time.sleep(game_speed / 2)
-    slow_read("Everyone looks down as a man in a suit approaches.\n")
+    slow_read(F"\n{Fore.WHITE}Everyone looks down as a man in a suit approaches.\n")
     slow_read("He looks polite, and smiles kindly.\n")
     time.sleep(game_speed / 2)
-    print(f"\n'Hi, {heroine.name}, my name is {enemy.get_enemy_name()}...'")
+    print(f"\n'Hi,{heroine.name}, my name is{enemy.get_enemy_name()}'")
     time.sleep(game_speed)
-    print("\n'I'm so sorry, but you don't work here anymore.'")
+    print("\n'I'm so sorry but you don't work here anymore.'")
     slow_read(F"\n{Fore.BLUE}'But why?!' You ask.")
     slow_read("\n'I went through hell to get here!!!'")
     time.sleep(game_speed)
     print(F"\n{Fore.WHITE}He smiles nicely.")
     print("\n'Because my people get what they want,' he says.")
-    slow_read("\n.....................\n")
-    slow_read(F"{Fore.GREEN}Suddenly, your workmate Conor stands up\n")
+    print("")
+    print("")
+    slow_read("Suddenly, your workmate Conor stands up\n")
     slow_read(
-        f"...and throws a stapler at {enemy.get_enemy_name()}'s head.\n")
+        f"...and throws a stapler at{enemy.get_enemy_name()}'s head.\n")
     slow_read("Others join in.\n")
     slow_read("Your desk-neighbour Quinn throws a book at him...\n")
-    print("\n(- it's a copy of Tom Paine's 'The Rights of Man')\n")
+    print("\n(it's a copy of Tom Paine's 'The Rights of Man')\n")
     time.sleep(game_speed)
-    slow_read(".....................")
-    print(F"\n{Fore.WHITE}And this was how the revolution started!\n")
+    print("")
+    print("")
+    print("And that was how the revolution started!\n")
     time.sleep(game_speed)
-    print(F"{Fore.LIGHTBLUE_EX}In the words of Charles Bukowski:\n")
+    print("")
+    print("In the words of Charles Bukowski:\n")
+    print("")
+    print("")
     time.sleep(game_speed)
-    slow_read(F"\n{Fore.WHITE}'There is a light somewhere...\n")
+    slow_read("There is a light somewhere...\n")
     slow_read("it may not be much light but\n")
     slow_read("it beats the darkness.'\n")
 
-
+#WHERE IS GAME OVER?????
 # Main Program #
 
 running = True
