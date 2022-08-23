@@ -477,7 +477,13 @@ You flip the coin and you get..."""
             sleep(game_speed)
         return still_alive
         
-
+def treats():
+    treats_list = ["coffee", "smoothie", "valium"]
+    treat_rand = random.randint(0, 2)
+    treat = treats_list[treat_rand]
+    print(treat)
+    slow_read(F"\n{Fore.MAGENTA}Nice! :)\n")
+    """ Time to go to work!"""
 
 ######################
 # PART EIGHT of EIGHT: FIGHT KAVANAUGH AT WORK. THE OFFICE IS UNSAFE!. THE END.
