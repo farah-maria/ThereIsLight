@@ -501,7 +501,7 @@ def treats():
     treat_rand = random.randint(0, 2)
     treat = treats_list[treat_rand]
     print(treat)
-    slow_read(Nice! :)n")
+    slow_read("\nNice! :)\n")
     """ Time to go to work!"""
 
 
@@ -525,8 +525,8 @@ def Office(heroine, enemy):
         F"\n{Fore.BLUE}'She got voted out in a horrible takeover!'\n")
     slow_read("'It all happened last night....\n'")
     time.sleep(game_speed / 2)
-    slow_read(F"\n{Fore.WHITE}Everyone looks down as a man in a suit approaches.\n")
-    slow_read("He looks polite, and smiles kindly.\n")
+    slow_read(F"\n{Fore.WHITE}Everyone looks down as a man approaches.\n")
+    slow_read("He looks polite, wears a suit, and smiles kindly.\n")
     time.sleep(game_speed / 2)
     print(f"\n'Hi,{heroine.name}, my name is{enemy.get_enemy_name()}'")
     time.sleep(game_speed)
