@@ -153,7 +153,7 @@ There will be enemies! And enemies are a drag!
 But you will always have options: either y/n...
 ...or a number you need to select to choose a pathway.
 (Remember to press 'enter' after your selection.)
-Also, you can pick up points, which increases your score...
+You can pick up points, which increases your score...
 ... by eating cake and winning fights :) """
     for line in intro.splitlines():
         print(line)
@@ -167,7 +167,7 @@ def slow_read(string):
     for x in string:
         sys.stdout.write(x)
         sys.stdout.flush()
-        time.sleep(0.01)
+        time.sleep(0.15)
 
 
 def play_or_not():
@@ -177,10 +177,11 @@ def play_or_not():
         slow_read(F"\n{Fore.WHITE}Great!\n")
         slow_read("Choose which character you want to be...\n")
         print("")
+        heroine_select()
         return True
     elif answer.lower().strip() == "n":
         print(F"\n{Fore.WHITE}I don't blame you. Bye!\n")
-        return False
+        exit()
     else:
         slow_read(F"\n{Fore.RED}Incorrect input!\n \n")
         slow_read("Try again. Just one letter and press enter.\n")
