@@ -536,7 +536,7 @@ def Office(heroine, enemy):
     slow_read("it beats the darkness.'\n")
 
 
-##### Main Program #####
+# Main Program #
 
 running = True
 play_the_game = True
@@ -549,7 +549,8 @@ while running:
         heroine = heroine_select()  # returns a heroine class
         heroine.print_stats()  # display stats
         Schlafly = Enemy("Schlafly", 60, 3000)  # create first enemy
-        play_the_game = Bus_Fight(Schlafly)  # passes enemy to Bus_Fight and returns if you survived or not
+        play_the_game = Bus_Fight(Schlafly)  
+        # passes enemy to Bus_Fight and returns if you survived or not
         if not play_the_game:
             running = False
         else:
