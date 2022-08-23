@@ -330,8 +330,39 @@ If it's tails, you get coffee AND cake."""
         time.sleep(game_speed)
         slow_read(
             F"{Fore.BLUE}You get a large coffee AND a big slice of cake.\n")
-        # variables above created so can be used in story-text
-
+        # variables created so can be used in text of story:
+        fighting_spirit_bonus = 100
+        calories_to_burn_bonus = 300
+        self_esteem_bonus = 200
+        heroine.fighting_spirit += fighting_spirit_bonus
+        heroine.calories_to_burn += calories_to_burn_bonus
+        heroine.self_esteem += self_esteem_bonus
+        time.sleep(game_speed / 2)
+        slow_read(
+            f"\nYour fighting spirit increases by \
+                {fighting_spirit_bonus}pts...\n")
+        slow_read(
+            f"\n up to {heroine.fighting_spirit}.\n")
+        slow_read(f"Your calories to use for fighting \
+            increase by {calories_to_burn_bonus},\n")
+        slow_read(f"up to {heroine.calories_to_burn}.\n")
+        slow_read(
+            f"& your self-esteem has gone up by {self_esteem_bonus}pts\n")
+        slow_read(f"up to: {heroine.self_esteem}.\n")
+        sleep(game_speed)
+    elif perk_chance < 6:
+        time.sleep(game_speed / 2)
+        slow_read(F"\n{Fore.GREEN}Heads!\n")
+        fight_spirit_bonus = 50
+        heroine.fighting_spirit += fight_spirit_bonus
+        time.sleep(game_speed)
+        slow_read(
+            F"\n{Fore.BLUE}You grab coffee.")
+        slow_read("\nCaffiene ups your fighting spirit...\n")
+        time.sleep(game_speed / 2)
+        slow_read(
+            f"\nby {fight_spirit_bonus} points, to \
+                {heroine.fighting_spirit} :)\n \n")
 
 ######################
 # PART EIGHT of EIGHT: FIGHT KAVANAUGH AT WORK. THE OFFICE IS UNSAFE!. THE END.
