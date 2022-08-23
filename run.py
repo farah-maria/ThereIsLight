@@ -290,6 +290,7 @@ knocks the zapper outta your hands\n")
             slow_read(F"{Fore.RED}\n\nYou'll never get to work, now. Sorry!\n")
             time.sleep(game_speed)
             print("")
+            score_end(heroine)
             you_are_still_alive = False
             return you_are_still_alive
         elif defeat_chance < 8:
@@ -312,6 +313,8 @@ knocks the zapper outta your hands\n")
         slow_read("\ngit... and shoots you in the back as you try to run.")
         time.sleep(1.5)
         slow_read(F"\n{Fore.RED}Sorry. She won. You died.\n \n")
+        time.sleep(2)
+        score_end(heroine)
         time.sleep(1.5)
         you_are_still_alive = False
         return you_are_still_alive
@@ -339,7 +342,7 @@ If it's tails, you get coffee AND cake."""
   
     perk_chance = random.randint(0, 10)
     if perk_chance > 5:
-        slow_read(F"{Fore.GREEN}\nTails!\n")
+        slow_read(F"\n{Fore.GREEN}Tails!\n")
         time.sleep(game_speed)
         slow_read(
             F"{Fore.BLUE}You get a large coffee AND a big slice of cake.\n")
@@ -352,15 +355,15 @@ If it's tails, you get coffee AND cake."""
         heroine.self_esteem += self_esteem_bonus
         time.sleep(game_speed / 2)
         slow_read(
-            f"\nYour fighting spirit increases by \
-                {fighting_spirit_bonus}pts...\n")
+            f"\nYour fighting spirit increases by\
+{fighting_spirit_bonus}pts...\n")
         slow_read(
-            f"\n up to {heroine.fighting_spirit}.\n")
-        slow_read(f"Your calories to use for fighting \
-            increase by {calories_to_burn_bonus},\n")
+            f"\n up to{heroine.fighting_spirit}.\n")
+        slow_read(f"Your calories to use for fighting\
+increase by {calories_to_burn_bonus},\n")
         slow_read(f"up to {heroine.calories_to_burn}.\n")
         slow_read(
-            f"& your self-esteem has gone up by {self_esteem_bonus}pts\n")
+            f"& your self-esteem has gone up by{self_esteem_bonus}pts\n")
         slow_read(f"up to: {heroine.self_esteem}.\n")
         sleep(game_speed)
     elif perk_chance < 6:
@@ -429,6 +432,7 @@ stands a squarish, tanned man shaking his head."""
             time.sleep(game_speed)
             print("Oh dear... That's the end of you.\n")
             time.sleep(game_speed)
+            score_end(heroine)
             still_alive = False
             return still_alive
         elif defeat_chance < 4:
@@ -471,6 +475,7 @@ stands a squarish, tanned man shaking his head."""
         time.sleep(game_speed)
         slow_read(F"\n{Fore.RED}Sorry. You died.")
         time.sleep(game_speed)
+        score_end(heroine)
         still_alive = False
     else:
         police = """The police don't arrive in time.
@@ -496,7 +501,7 @@ def treats():
     treat_rand = random.randint(0, 2)
     treat = treats_list[treat_rand]
     print(treat)
-    slow_read(F"\n{Fore.MAGENTA}Nice! :)\n")
+    slow_read(Nice! :)n")
     """ Time to go to work!"""
 
 
@@ -552,8 +557,9 @@ def Office(heroine, enemy):
     slow_read("There is a light somewhere...\n")
     slow_read("it may not be much light but\n")
     slow_read("it beats the darkness.'\n")
+    score_end(heroine)
 
-#WHERE IS GAME OVER?????
+
 # Main Program #
 
 running = True
