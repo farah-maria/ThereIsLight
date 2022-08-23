@@ -233,6 +233,8 @@ def score_end(heroine):
     total_score = int(float_points)
     slow_read(F"\n{Fore.WHITE}Thank you for playing...\n")
     slow_read(f"Your end of game score is {total_score}\n")
+    time.sleep(2)
+    print("(Yes, you do get points just for playing.)")
     print("""\n
 ╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
 ║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
@@ -266,7 +268,7 @@ blocking your way out into the aisle.
         print(line)
         time.sleep(game_speed)
 
-    slow_read("\nshe draws a tiny gun from the pocket of her cardigan.\n")
+    slow_read("\nShe draws a tiny gun from the pocket of her cardigan.\n")
 
     print(F"\n{Fore.GREEN}You have two choices: \n")
 
