@@ -188,6 +188,20 @@ def play_or_not():
         play_or_not()
 
 
+def play_again(): 
+    slow_read(F"\n{Fore.GREEN}Want to play again?\n")
+    answer = input(F"\n\n{Fore.BLUE}Answer 'y' or 'n': ")
+    if answer.lower().strip() == "y":
+        intro_text()
+    elif answer.lower().strip() == "n":
+        print(F"\n{Fore.WHITE}I don't blame you. Bye!\n")
+        exit()
+    else:
+        slow_read(F"\n{Fore.RED}Incorrect input!\n \n")
+        slow_read("Try again. Just one letter and press enter.\n")
+        play_again()
+
+
 def heroine_select():
     """ Allows player to choose which heroine they play as."""
     selection = input(
@@ -218,7 +232,7 @@ def score_end(heroine):
     float_points = total_points / 30
     total_score = int(float_points)
     slow_read(F"\n{Fore.WHITE}Thank you for playing...\n")
-    print(f"Your end of game score is {total_score}\n")
+    slow_read(f"Your end of game score is {total_score}\n")
     print("""\n
 ╔═╗┌─┐┌┬┐┌─┐  ┌─┐┬  ┬┌─┐┬─┐
 ║ ╦├─┤│││├┤   │ │└┐┌┘├┤ ├┬┘
@@ -227,10 +241,8 @@ def score_end(heroine):
 # https://web.archive.org/web/20120819044459/
 # http://www.roysac.com/thedrawfonts-tdf.asp
 # FIGFont created with: http://patorjk.com/figfont-editor
-    slow_read(F"\n{Fore.GREEN}Want to play again?\n")
-    play_or_not()
+    play_again()
 
-  
 ###################################################################
 # STORY
 ###################################################################
@@ -362,8 +374,8 @@ If it's tails, you get coffee AND cake."""
         slow_read("\nCaffiene ups your fighting spirit...\n")
         time.sleep(game_speed / 2)
         slow_read(
-            f"\nby {fight_spirit_bonus} points, to \
-                {heroine.fighting_spirit} :)\n \n")
+            f"\nby {fight_spirit_bonus} points, to\
+                {heroine.fighting_spirit}:)\n\n")
 
 
 def Fight_Trump(heroine, enemy):
