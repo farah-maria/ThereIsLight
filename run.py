@@ -266,6 +266,48 @@ blocking your way out into the aisle.
 
     print(F"\n{Fore.GREEN}You have two choices: \n")
 
+    you_are_still_alive = True
+    choice = input(
+        F"{Fore.BLUE}1. Use injustice_zapper \n2. Push her and run! \n")
+    if choice == "1":
+        slow_read(
+            F"{Fore.WHITE}\n You point the zapper at {enemy.get_enemy_name()}.\n")
+        defeat_chance = random.randint(0, 10)
+        if defeat_chance > 7:
+            time.sleep(game_speed)
+            print("")
+            slow_read(
+                F"\n{Fore.WHITE}{enemy.get_enemy_name()} knocks the zapper outta your hands\n")
+            time.sleep(game_speed)
+            slow_read("\nand shoots you. You die.\n")
+            time.sleep(game_speed)
+            slow_read(F"{Fore.RED}\n\nYou'll never get to work, now. Sorry!\n")
+            time.sleep(game_speed)
+            print("")
+            you_are_still_alive = False
+            return you_are_still_alive
+        elif defeat_chance < 8:
+            enemy.fighting_spirit -= 40
+            slow_read(F"\n{Fore.WHITE}You manage to stun her. She falls.\n")
+            time.sleep(game_speed / 2)
+            slow_read("\nHer fighting spirit has been knocked by 40 points...\n")
+            slow_read(
+                f"\nand is now down to just {enemy.fighting_spirit}.\n")
+            slow_read(
+                "She'll have less energy to pester other people, now :)\n")
+            time.sleep(game_speed)
+            print("\nWell done!\n")
+            time.sleep(game_speed)
+            you_are_still_alive = True
+            return you_are_still_alive            
+    else:
+        slow_read(F"\n{Fore.WHITE}{enemy.get_enemy_name()} gets right back up...")
+        slow_read("\n... and shoots you in the back as you try to run.")
+        time.sleep(1.5)
+        slow_read(F"\n{Fore.RED}Sorry. She won. You died.\n \n")
+        time.sleep(1.5)
+        you_are_still_alive = False
+        return you_are_still_alive
 
 ######################
 # PART EIGHT of EIGHT: FIGHT KAVANAUGH AT WORK. THE OFFICE IS UNSAFE!. THE END.
