@@ -364,14 +364,14 @@ If it's tails, you get coffee AND cake."""
             f"\nby {fight_spirit_bonus} points, to \
                 {heroine.fighting_spirit} :)\n \n")
 
+
 def Fight_Trump(heroine, enemy):
-  ##the heroine and enemy(Trump) which was created in main code so attributes
-  ##can be accessed by the function
     """a fight for medical care"""
     time.sleep(game_speed / 2)
     slow_read(F"\n{Fore.MAGENTA}CHAPTER THREE:\n")
     time.sleep(game_speed)
-    print(F"\n{Fore.WHITE}You're feeling pretty damn good about yourself...\n")
+    print(
+        F"\n{Fore.WHITE}You're feeling pretty damn good about yourself...\n")
 
     accident = """and you cross the road to a tall, glass building.
 These are the offices where you work.
@@ -423,7 +423,7 @@ stands a squarish, tanned man shaking his head."""
             enemy.fighting_spirit -= enemy_fighting_spirit_damage
             time.sleep(game_speed)
             slow_read(
-                F"\n{Fore.WHITE}You stun him, then turn and zapp the others.\n")
+                F"\n{Fore.WHITE}You stun him, & turn and zapp the others.\n")
             time.sleep(game_speed / 2)
             slow_read(
                 f"\nTrump's fighting spirit has been knocked by \
@@ -477,6 +477,7 @@ You flip the coin and you get..."""
             sleep(game_speed)
         return still_alive
         
+
 def treats():
     treats_list = ["coffee", "smoothie", "valium"]
     treat_rand = random.randint(0, 2)
@@ -484,6 +485,55 @@ def treats():
     print(treat)
     slow_read(F"\n{Fore.MAGENTA}Nice! :)\n")
     """ Time to go to work!"""
+
+
+def Office(heroine, enemy):
+    """ Last fight """
+    time.sleep(game_speed)
+    print("")
+    slow_read(F"{Fore.MAGENTA}\nCHAPTER FOUR: The Last Battle.\n")
+    slow_read(F"\n{Fore.WHITE}You walk to work carefully... \n")
+    slow_read("go through the revolving doors and into the office.\n")
+    slow_read("Your colleagues look nervous as they look up.\n")
+    time.sleep(game_speed / 2)
+    print(f"Someone whispers, '{heroine.name}!'\n")
+    time.sleep(game_speed)
+    print("'We've got a new boss!'\n")
+    time.sleep(game_speed)
+    slow_read(
+        F"{Fore.BLUE}'But what happened to our old one?', you ask.\n")
+    time.sleep(game_speed / 2)
+    slow_read(
+        F"{Fore.WHITE}'She got voted out in a horrible takeover!'\n")
+    slow_read("'It all happened last night....\n'")
+    time.sleep(game_speed / 2)
+    slow_read("Everyone looks down as a man in a suit approaches.\n")
+    slow_read("He looks polite, and smiles kindly.\n")
+    time.sleep(game_speed / 2)
+    print(f"\n'Hi, {heroine.name}, my name is {enemy.get_enemy_name()}...'")
+    time.sleep(game_speed)
+    print("\n'I'm so sorry, but you don't work here anymore.'")
+    slow_read(F"\n{Fore.BLUE}'But why?!' You ask.")
+    slow_read("\n'I went through hell to get here!!!'")
+    time.sleep(game_speed)
+    print(F"\n{Fore.WHITE}He smiles nicely.")
+    print("\n'Because my people get what they want,' he says.")
+    slow_read("\n.....................\n")
+    slow_read(F"{Fore.GREEN}Suddenly, your workmate Conor stands up\n")
+    slow_read(
+        f"...and throws a stapler at {enemy.get_enemy_name()}'s head.\n")
+    slow_read("Others join in.\n")
+    slow_read("Your desk-neighbour Quinn throws a book at him...\n")
+    print("\n(- it's a copy of Tom Paine's 'The Rights of Man')\n")
+    time.sleep(game_speed)
+    slow_read(".....................")
+    print(F"\n{Fore.WHITE}And this was how the revolution started!\n")
+    time.sleep(game_speed)
+    print(F"{Fore.LIGHTBLUE_EX}In the words of Charles Bukowski:\n")
+    time.sleep(game_speed)
+    slow_read(F"\n{Fore.WHITE}'There is a light somewhere...\n")
+    slow_read("it may not be much light but\n")
+    slow_read("it beats the darkness.'\n")
 
 ######################
 # PART EIGHT of EIGHT: FIGHT KAVANAUGH AT WORK. THE OFFICE IS UNSAFE!. THE END.
