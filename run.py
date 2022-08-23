@@ -145,7 +145,7 @@ def intro_text():
     from https://patorjk.com/"""
 
     time.sleep(game_speed)
-    intro = """This is a game where winning is hard.
+    intro = F"""{Fore.WHITE}This is a game where winning is hard.
 The situation is as follows... 
 You wake up trapped in a patriarchial nightmare.
 The odds are staked against you.
@@ -188,7 +188,7 @@ def play_or_not():
 
 
 def play_again(): 
-    slow_read(F"\n{Fore.GREEN}Want to play again?\n")
+    slow_read(F"\n{Fore.WHITE}Want to play again?\n")
     answer = input(F"\n\n{Fore.BLUE}Answer 'y' or 'n': ")
     if answer.lower().strip() == "y":
         intro_text()
@@ -259,7 +259,7 @@ def Bus_Fight(enemy):
 Just as you get your book out of your bag...
 a dangerous enemy sits next to you...
 blocking your way out into the aisle.
-'Hello', she says. 'My name's{enemy.get_enemy_name()}'
+'Hello', she says. 'My name's {enemy.get_enemy_name()}'
 'I don't think you should be going to work,' she continues."""
 
     for line in bus_description.splitlines():
@@ -310,7 +310,7 @@ knocks the zapper outta your hands\n")
     else:
         slow_read(
             F"\n{Fore.WHITE}{enemy.get_enemy_name()} gets right back up...")
-        slow_read("\ngit... and shoots you in the back as you try to run.")
+        slow_read("\n... and shoots you in the back as you try to run.")
         time.sleep(1.5)
         slow_read(F"\n{Fore.RED}Sorry. She won. You died.\n \n")
         time.sleep(2)
