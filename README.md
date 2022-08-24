@@ -81,7 +81,7 @@ The greater aim is to contribute towards gender equality in the field of softwar
 
 * I would like there to be some friendliness to the same (e.g. be greeted as the user, and get something like a "Better luck next time and thank you for playing at the end.")
 
-#### As a returning user:
+#### As a returning user:  
 
 * I would like to explore alternative paths through the choose your own adventure.
 * I would like to find a way of winning the game or improving on my score compared to last time.
