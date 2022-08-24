@@ -1,7 +1,7 @@
 """ Modules allow random selection, colour, time delay and scores record """
 import random
 import colorama
-import gspread
+# import gspread
 import time
 import sys
 # from pprint import pprint
