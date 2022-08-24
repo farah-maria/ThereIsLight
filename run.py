@@ -58,15 +58,6 @@ class Enemy:
     def set_calories_to_burn(self, calories_to_burn):
         self.calories_to_burn = calories_to_burn
 
-# enemy stats
-
-
-# Kavanaugh = Enemy("Kavanaugh", 40, 2500)
-
-# Schlafly = Enemy("Schlafly", 60, 3000)
-
-# Trump = Enemy("Trump", 100, 3500)
-
 
 # Heroine/ main character class
 
