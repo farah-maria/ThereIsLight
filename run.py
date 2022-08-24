@@ -157,14 +157,6 @@ def slow_read(string):
         sys.stdout.flush()
         time.sleep(0.15)
 
-# def clear(): 
-    # for windows
-    # if name == 'nt':
-    #  _ = system('cls') 
-    # for mac and linux(here, os.name is 'posix')
-    # else:
-    #  _ = system('clear')
- 
 
 def play_or_not():
     """ player chooses to continue to game or quit """
@@ -592,5 +584,4 @@ while running:
         running = False
         
     player_name = score_end(heroine)  
-    # print(f'Debug: {player_name}' )
 
