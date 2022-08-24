@@ -21,6 +21,7 @@ SHEET = GSPREAD_CLIENT.open('scoresheet')
 
 scores_data = SHEET.worksheet('scores_data')
 data = scores_data.get_all_values()
+print(data)
 
 ##############################################################
 # (pre-story set up of code, & support for some functions
