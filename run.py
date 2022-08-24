@@ -4,12 +4,12 @@ import colorama
 import gspread
 import time
 import sys
-from pprint import pprint
+# from pprint import pprint
 from colorama import Fore
 from time import sleep
-from google.oauth2.service_account import Credentials
+# from google.oauth2.service_account import Credentials
 
-SCOPE = [
+"""SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
@@ -21,7 +21,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('scoresheet')
 
 scores_data = SHEET.worksheet('scores_data')
-data = scores_data.get_all_values()
+data = scores_data.get_all_values()"""
 
 ##############################################################
 # (pre-story set up of code, & support for some functions
