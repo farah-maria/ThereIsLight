@@ -61,11 +61,11 @@ class Enemy:
 # enemy stats
 
 
-Kavanaugh = Enemy("Kavanaugh", 40, 2500)
+# Kavanaugh = Enemy("Kavanaugh", 40, 2500)
 
-Schlafly = Enemy("Schlafly", 60, 3000)
+# Schlafly = Enemy("Schlafly", 60, 3000)
 
-Trump = Enemy("Trump", 100, 3500)
+# Trump = Enemy("Trump", 100, 3500)
 
 
 # Heroine/ main character class
@@ -159,8 +159,6 @@ You can pick up points, which increases your score...
         print(line)
         sleep(game_speed)
 
-    slow_read(F"\n{Fore.GREEN}Would you like to play?")
-
 
 def slow_read(string):
     """ allows text to appear letter by letter in console """
@@ -169,9 +167,18 @@ def slow_read(string):
         sys.stdout.flush()
         time.sleep(0.15)
 
+# def clear(): 
+    # for windows
+    # if name == 'nt':
+    #  _ = system('cls') 
+    # for mac and linux(here, os.name is 'posix')
+    # else:
+    #  _ = system('clear')
+ 
 
 def play_or_not():
     """ player chooses to continue to game or quit """
+    slow_read(F"\n{Fore.GREEN}Would you like to play?")
     answer = input(F"\n\n{Fore.CYAN}Answer 'y' or 'n':\n")
     if answer.lower().strip() == "y":
         slow_read(F"\n{Fore.WHITE}Great!\n")
@@ -227,11 +234,13 @@ def heroine_select():
 
 def score_end(heroine):
     """calculates and returns score at the end"""
+    player_name = input("What is your first name/ nickname?:\n").capitalize
+    return player_name
     total_points = heroine.calories_to_burn + heroine.fighting_spirit
     + heroine.self_esteem
-    float_points = total_points / 30
+    float_points = total_points / 40
     total_score = int(float_points)
-    slow_read(F"\n{Fore.WHITE}Thank you for playing...\n")
+    slow_read(F"\n{Fore.WHITE}Thank you for playing.\n")
     slow_read(f"Your end of game score is {total_score}\n")
     time.sleep(2)
     print("(Yes, you do get points just for playing.)")
@@ -243,7 +252,6 @@ def score_end(heroine):
 # https://web.archive.org/web/20120819044459/
 # http://www.roysac.com/thedrawfonts-tdf.asp
 # FIGFont created with: http://patorjk.com/figfont-editor
-    play_again()
 
 ###################################################################
 # STORY
@@ -360,12 +368,12 @@ If it's tails, you get coffee AND cake."""
             f"\nYour fighting spirit increases by\
 {fighting_spirit_bonus}pts...\n")
         slow_read(
-            f"\n up to{heroine.fighting_spirit}.\n")
+            f"\n up to {heroine.fighting_spirit}.\n")
         slow_read(f"Your calories to use for fighting\
 increase by {calories_to_burn_bonus},\n")
         slow_read(f"up to {heroine.calories_to_burn}.\n")
         slow_read(
-            f"& your self-esteem has gone up by{self_esteem_bonus}pts\n")
+            f"& your self-esteem has gone up by {self_esteem_bonus}pts\n")
         slow_read(f"up to: {heroine.self_esteem}.\n")
         sleep(game_speed)
     elif perk_chance < 6:
@@ -448,7 +456,7 @@ stands a squarish, tanned man shaking his head."""
                 f"\nTrump's fighting spirit has been knocked by\
 {enemy_fighting_spirit_damage} points...\n")
             time.sleep(game_speed)
-            slow_read(f"and is now down to just{enemy.fighting_spirit}\n")
+            slow_read(f"and is now down to just {enemy.fighting_spirit}\n")
             time.sleep(game_speed)
             print("It'll be a while before he poses a problem again...\n")
             print("Well done :)\n")
@@ -530,7 +538,7 @@ def Office(heroine, enemy):
     slow_read(F"\n{Fore.WHITE}Everyone looks down as a man approaches.\n")
     slow_read("He looks polite, wears a suit, and smiles kindly.\n")
     time.sleep(game_speed / 2)
-    print(f"\n'Hi,{heroine.name}, my name is{enemy.get_enemy_name()}'")
+    print(f"\n'Hi,{heroine.name}, my name is {enemy.get_enemy_name()}'")
     time.sleep(game_speed)
     print("\n'I'm so sorry but you don't work here anymore.'")
     slow_read(F"\n{Fore.CYAN}'But why?!' You ask.")
@@ -542,7 +550,7 @@ def Office(heroine, enemy):
     print("")
     slow_read("Suddenly, your workmate Conor stands up\n")
     slow_read(
-        f"...and throws a stapler at{enemy.get_enemy_name()}'s head.\n")
+        f"...and throws a stapler at {enemy.get_enemy_name()}'s head.\n")
     slow_read("Others join in.\n")
     slow_read("Your desk-neighbour Quinn throws a book at him...\n")
     print("\n(it's a copy of Tom Paine's 'The Rights of Man')\n")
@@ -567,10 +575,11 @@ def Office(heroine, enemy):
 running = True
 play_the_game = True
 
-
 while running:
-    intro_text()
+    intro_text()  
+    # clear()
     play_the_game = play_or_not()  # returns true or false
+    # clear()
     if play_the_game:
         heroine = heroine_select()  # returns a heroine class
         heroine.print_stats()  # display stats
@@ -592,4 +601,6 @@ while running:
     else:
         running = False
         
-score_end(heroine)
+    player_name = score_end(heroine)  
+    # print(f'Debug: {player_name}' )
+
