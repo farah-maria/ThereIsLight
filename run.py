@@ -18,7 +18,7 @@ SCOPE = [
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('HJ_Scoresheet')
+SHEET = GSPREAD_CLIENT.open('scoresheet')
 
 scores_data = SHEET.worksheet('scores_data')
 data = scores_data.get_all_values()
