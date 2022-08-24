@@ -71,7 +71,7 @@ The greater aim is to contribute towards gender equality in the field of softwar
 
 * I want the purpose of the game to be clear from the start. i.e. what defines success/ winning (e.g. fighting a monster and beating her/ him.) 
 
-* I want to know what the objectives of the game, in terms of the journey to the end (e.g. picking up points, or treasure, who my friends and enemies are.)
+* I want to know what the objectives of the game, in terms of the journey to the end (e.g. picking up points, or treasure, who my friends and enemies are.)  
 
 * I want clarity in how to play the game, and a clear sense of the rules of the game.
 
