@@ -218,8 +218,8 @@ def heroine_select():
 
 def score_end(heroine):
     """calculates and returns score at the end"""
-    player_name = input("What is your first name/ nickname?:\n").capitalize
-    return player_name
+    #player_name = input("What is your first name/ nickname?:\n").capitalize
+    #return player_name
     total_points = heroine.calories_to_burn + heroine.fighting_spirit
     + heroine.self_esteem
     float_points = total_points / 40
