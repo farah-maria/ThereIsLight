@@ -39,9 +39,17 @@ Above is a screenshot of the the opening text, showing the title, the set-up and
 [Link to the GitHub repo](https://github.com/farah-maria/ThereIsLight)
 
 
-
 ## **User Experience, Scope & Design**
 
+### Responsivity
+
+Design responsivity to different screen sizes was not part of the brief for this project, and it’s therefore outside of the intended scope. However, a user can play the game and access all features on a phone, tablet, laptop or desktop. In the case of playing on a phone, the game is best played in landscape. In portrait, on a mobile phone, the content is accessible, but scrolling to the right to read the end of sentences is required. Below is how the game looks on different types of screen resolutions. 
+
+
+![game displayed on different devices](images/responsive.png)
+
+
+Deployment via Heroku was a required aspect of this project, which has its limitations.
 
 
 ### User Stories
