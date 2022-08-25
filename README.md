@@ -49,7 +49,16 @@ Design responsivity to different screen sizes was not part of the brief for this
 ![game displayed on different devices](images/responsive.png)
 
 
-Deployment via Heroku was a required aspect of this project, which has its limitations.
+Deployment via Heroku was a required aspect of this project, which has its limitations, as well as the fact that this is a pure Python project.
+
+## General design
+
+Within the constraints of the project brief, I used four main methods to affect the appearance of the game. 
+
+The first was that I imported the external library Colorama so that I could change the colour of the text. The main bulk of the text is white, as this has the best constrast against the black background of the console. Cyan is generally used throughout for questions posed to the user, as it's quite a neutral colour that its also pleasant and has better contrast against the black than colorama's version of blue . Green is used to show/ type answers as a result of player input or a chance event triggered by their behaviour in the game. Red is used when the player has lost (indicating warning/ blood, as is generally the case in signage through everyday life). Yellow is for chapter headings. 
+
+The colour adds a little variety, and the way it's used through the game gives a level of consistency in design, helping the user know what to expect from different types of text.
+
 
 
 ### User Stories:
