@@ -3,6 +3,7 @@
 
 ## Table of contents for this README 
 * [Introduction](#there-is-light)
+* [Links](#links)
 * [User Experience](#user-experience)
 * [Logic](#logic)
 * [Design](#design)
@@ -26,7 +27,9 @@ The characters pick up points by eating cake, drinking coffee or beating their e
 
 The wry and statistically unlikely outcome, determined by poor odds that I deliberately put in place using the Python import 'random', is a successful revolution. This outcome, when selected, ends with a quote from the poem 'The Laughing Heart' by Charles Bukowski ("There's a light somewhere/ It may not be much light/ but it beats the darkness"). It is the inspiration for the title of the game.
 
-![mock-up of site on different sized devices](assets/images/amiresponsive.jpg)
+![deployed app on desktop](/images/intro.jpg)
+
+Above is a screenshot of the the opening text, showing the title, the set-up and the tone of the adventure. 
 
 ## **User Experience, Scope & Design**
 
