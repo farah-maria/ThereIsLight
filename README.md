@@ -31,7 +31,18 @@ The wry and statistically unlikely outcome, determined by poor odds that I delib
 
 Above is a screenshot of the the opening text, showing the title, the set-up and the tone of the adventure. 
 
+
+## **Links**
+
+[Live link for game](https://thelaughingheart.herokuapp.com)
+
+[Link to the GitHub repo](https://github.com/farah-maria/ThereIsLight)
+
+
+
 ## **User Experience, Scope & Design**
+
+
 
 ### User Stories
 
