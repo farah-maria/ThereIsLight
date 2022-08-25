@@ -253,7 +253,7 @@ def Bus_Fight(enemy):
 Just as you get your book out of your bag...
 a dangerous enemy sits next to you...
 blocking your way out into the aisle.
-'Hello', she says. 'My name's {enemy.get_enemy_name()}'
+'Hello', she says. 'My name's {enemy.get_enemy_name()} '
 'I don't think you should be going to work,' she continues."""
 
     for line in bus_description.splitlines():
@@ -266,17 +266,17 @@ blocking your way out into the aisle.
 
     you_are_still_alive = True
     choice = input(
-        F"{Fore.CYAN}1. Use injustice_zapper \n2. Push her and run! \n")
+        F"{Fore.CYAN}1. Use injustice_zapper \n2. Push her and run!\n")
     if choice == "1":
         slow_read(
-            F"{Fore.WHITE}\n You point the zapper at\
-{enemy.get_enemy_name()}.\n")
+            F"{Fore.WHITE}\nYou point the zapper at \
+ {enemy.get_enemy_name()}.\n")
         defeat_chance = random.randint(0, 10)
         if defeat_chance > 7:
             time.sleep(game_speed)
             print("")
             slow_read(
-                F"\n{Fore.WHITE}{enemy.get_enemy_name()}\
+                F"\n{Fore.WHITE}{enemy.get_enemy_name()} \
 knocks the zapper outta your hands\n")
             time.sleep(game_speed)
             slow_read("\nand shoots you. You die.\n")
@@ -438,7 +438,7 @@ stands a squarish, tanned man shaking his head."""
             time.sleep(game_speed / 2)
             slow_read(
                 f"\nTrump's fighting spirit has been knocked by\
-{enemy_fighting_spirit_damage} points...\n")
+ {enemy_fighting_spirit_damage} points...\n")
             time.sleep(game_speed)
             slow_read(f"and is now down to just {enemy.fighting_spirit}\n")
             time.sleep(game_speed)
@@ -522,7 +522,7 @@ def Office(heroine, enemy):
     slow_read(F"\n{Fore.WHITE}Everyone looks down as a man approaches.\n")
     slow_read("He looks polite, wears a suit, and smiles kindly.\n")
     time.sleep(game_speed / 2)
-    print(f"\n'Hi,{heroine.name}, my name is {enemy.get_enemy_name()}'")
+    print(f"\n'Hi,{heroine.name}, my name is {enemy.get_enemy_name()}'\n")
     time.sleep(game_speed)
     print("\n'I'm so sorry but you don't work here anymore.'")
     slow_read(F"\n{Fore.CYAN}'But why?!' You ask.")
