@@ -88,9 +88,13 @@ Deployment via Heroku was a required aspect of this project, which has its limit
 
 ## Logic
 
-* Here is a hand-drawn flowchart that shows the paths that can be taken through the game.
+* Below is a hand-drawn flowchart that shows the paths that can be taken through the game.
+<br>
+<br><br><br><br><br><img src="images/logic.png" alt="image of flowchart" width="50%"/></right>
+<br>
 
-![Flowchart](https://github.com/sherryrich/bandersnatch/blob/main/docs/bandersnatch.drawio.png)
+
+A black circle indicates the player has lost or the game has ended. A white circle indicates where the random import is used in Python to introduce an element of chance to the outcome. As stated in the opening of the game 'the stakes are against' the player winning.
 
 Accessibility is an important part of this project, not only it is central to how this particular work is being assessed but because, as mentioned above, this is a site aimed at a non-specialist audience aged 13 years and up. Young readers need content that is easier to understand and navigate, as do those who may not describe themselves as “tech-savvy”.
 Simple language is used throughout the site for this reason, and the inclusion of images and media links keeps the content varied, engaging and educational for those who want to explore more about the female coders introduced on the timeline.
