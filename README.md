@@ -27,7 +27,7 @@ The characters pick up points by eating cake, drinking coffee or beating their e
 
 The wry and statistically unlikely outcome, determined by poor odds that I deliberately put in place using the Python import 'random', is a successful revolution. This outcome, when selected, ends with a quote from the poem 'The Laughing Heart' by Charles Bukowski ("There's a light somewhere/ It may not be much light/ but it beats the darkness"). It is the inspiration for the title of the game.
 
-![deployed app on desktop](/images/intro.jpg)
+![deployed app on desktop](images/intro.jpg)
 
 Above is a screenshot of the the opening text, showing the title, the set-up and the tone of the adventure. 
 
@@ -122,13 +122,13 @@ Simplicity is at the heart of the basic navigation structure: yes or no, or a nu
 ## Existing Features
 ### Features
 
-Users are greeted and asked for their name which is then used later in the game.
+1. Users are greeted with the title logo and introduction to the game. Following the user experience stories as a guide to what's needed in the structure of the game, the intro tells the player what the game is, what their chances of success are, what success entails, whether there will be opponents and how they can pick up points to build their score. The player is also told how to navigate the game/ interact with it. The 'Would you like to play?' question invites them in and informs them of their interative role in the game right from the start.
 
-![Preview](https://github.com/sherryrich/bandersnatch/blob/main/docs/bandersnatch_welcome.PNG)
+![Preview](images/intro.png)
 
-When users choose the incorrect path they are displayed why it was the wrong path and shown game over message.
+When the player types in an option that is a typo or isn't a valid selection, an error message comes up and the user is asked the question again, so that the game can resume with minimum interruption.
 
-![Preview](https://github.com/sherryrich/bandersnatch/blob/main/docs/bandersnatch_game_over.PNG)
+![Preview](images/validation.png)
 
 
 They are then given with the option of starting again which loops back to the start.
