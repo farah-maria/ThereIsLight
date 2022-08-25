@@ -236,6 +236,8 @@ def score_end(heroine):
 # https://web.archive.org/web/20120819044459/
 # http://www.roysac.com/thedrawfonts-tdf.asp
 # FIGFont created with: http://patorjk.com/figfont-editor
+    play_again()
+
 
 ###################################################################
 # STORY
