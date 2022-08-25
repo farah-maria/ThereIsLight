@@ -286,7 +286,6 @@ knocks the zapper outta your hands\n")
             slow_read(F"{Fore.RED}\n\nYou'll never get to work, now. Sorry!\n")
             time.sleep(game_speed)
             print("")
-            score_end(heroine)
             you_are_still_alive = False
             return you_are_still_alive
         elif defeat_chance < 8:
@@ -464,7 +463,7 @@ stands a squarish, tanned man shaking his head."""
             time.sleep(game_speed)
             print(F"{Fore.CYAN}You flip the coin and you get... \n")
             return still_alive
-    elif choice == 2:
+    elif choice == "2":
         print("\nYou run, and slip on your own blood.")
         time.sleep(game_speed)
         print("\nA black van drives straight into you.")
@@ -587,4 +586,4 @@ while running:
     else:
         running = False
         
-    player_name = score_end(heroine)  
+    # player_name = score_end(heroine)  
