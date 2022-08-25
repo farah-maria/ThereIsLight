@@ -233,6 +233,7 @@ def heroine_select():
         slow_read("Only press 1, 2, 3, 4 or 5 and press enter")
         heroine_select() """
 
+
 def score_end(heroine):
     """calculates and returns score at the end"""
     player_name = input("What is your first name/ nickname?:\n").capitalize
