@@ -76,7 +76,7 @@ Deployment via Heroku was a required aspect of this project, which has its limit
 
 * I would like there to be some friendliness to the same (e.g. be greeted as the user, and get something like a "Better luck next time and thank you for playing at the end.")
 
-
+  
 #### As a returning user:  
 
 
