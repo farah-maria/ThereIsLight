@@ -87,7 +87,8 @@ Deployment via Heroku was a required aspect of this project, which has its limit
 * Try to compete with other players and my own past score.
 
 ## Logic
-* A flowchart was created to visualise the logical flow and various paths possible.
+
+* Here is a hand-drawn flowchart that shows the paths that can be taken through the game.
 
 ![Flowchart](https://github.com/sherryrich/bandersnatch/blob/main/docs/bandersnatch.drawio.png)
 
