@@ -463,7 +463,7 @@ stands a squarish, tanned man shaking his head."""
             time.sleep(game_speed)
             print(F"{Fore.CYAN}You flip the coin and you get... \n")
             return still_alive
-    elif choice == "2":
+    elif choice == "2": 
         print("\nYou run, and slip on your own blood.")
         time.sleep(game_speed)
         print("\nA black van drives straight into you.")
@@ -478,7 +478,7 @@ But some medical staff run out of the building.
 A nurse gets Trump in the neck with a needle...
 The security men scatter.
 You get the care you need, and everyone is smiling.
-You decide to flip a coin...
+You decide to flip a coin... 
 If it's heads, you grab a coffee.
 If it's tails, you get a smoothie.
 And if the coin falls out of your hand...
