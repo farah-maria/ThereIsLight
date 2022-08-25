@@ -1,37 +1,8 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+**THERE IS LIGHT - A choose your own text adventure using Python**
 
-Welcome Farah M,  
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
 
 ## Table of contents for this README 
-* [Introduction](#the-heroine's-journey)
+* [Introduction](#there-is-light)
 * [User Experience](#user-experience)
 * [Logic](#logic)
 * [Design](#design)
@@ -45,17 +16,15 @@ Happy coding!
 * [Acknowledgements](#acknowledgements)
 
 
- **THE HEROINE'S JOURNEY (AKA "Patriarchy Sucks")**
+## There Is Light
 
-Did you know that women have been writing machine-readable code since the 1840s? And that coding used to be considered "women's work"? Yet according to a Statista poll taken in 2021, only 5% of software developers worldwide are female.
+This is a choose your own text adventure based on some of the games I played in the 80s, in my after-school computer club.
 
-This site is both a general interest and educational resource that shows how women have in fact shaped the world of coding since its inception, from before the first computing device was even invented. The website includes an illustrated timeline. This will eventually include current and future projects being headed by female coders, not just historical figures. I also hope to add a page with links to resources for women and girls who want to learn more about coding and the tech industry. 
+There is a twist, however. The setting is a humourous one with a small bit of seriousness. 'You wake up in a patriarchial nightmare,' is the premise, and the enemies through the game share their surnames with figures who have obstructed women's reproductive rights in the USA. The setting is dystopian, and the game 'is hard', with most paths leading to the obliteration of the female protagonist. The player can choose one of five characters to be, each with their own stats/ strengths. These five characters are named after female mythological figures (e.g. the goddess Athena). The one exception is 'Roe', after the legal pseudonym of the woman involved in the Roe Vs Wade landmark case in the USA. 
 
-The project is a work in progress, with more figures who need including on the timeline. It is aimed at both school children and adults who do not necessarily know much about programming, tech, or the history behind its development. Any technical terms used are therefore explained in simple and accessible language. 
+The characters pick up points by eating cake, drinking coffee or beating their enemies in battles that take place on a bus to work, outside a hospital and in the office where the character works (but has been apparently dismissed from her position.)
 
-The objective is to educate and engage women and girls who would not "normally" be interested in this subject or who are new to it. The colour palette and imagery is therefore gentle, non-glaring, friendly, and "soft". The site is meant to be inviting to those who might otherwise feel intimidated by tech talk. 
-
-The greater aim is to contribute towards gender equality in the field of software engineering and to raise awareness of the great accomplishments already been achieved by female coders. The knowledge of positive role models, past and present, will hopefully inspire women and girls to feel "I could do this, too!"
+The wry and statistically unlikely outcome, determined by poor odds put in place using the Python import 'random', is a successful revolution. This outcome, when selected, ends with a quote from the poem 'The Laughing Heart' by Charles Bukowski ("There's a light somewhere/ It may not be much light/ but it beats the darkness"). This is the inspiration for the title of the game.
 
 ![mock-up of site on different sized devices](assets/images/amiresponsive.jpg)
 
