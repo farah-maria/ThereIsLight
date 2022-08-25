@@ -96,11 +96,8 @@ Deployment via Heroku was a required aspect of this project, which has its limit
 
 A black circle indicates the player has lost or the game has ended. A white circle indicates where the random import is used in Python to introduce an element of chance to the outcome. As stated in the opening of the game 'the stakes are against' the player winning.
 
-Accessibility is an important part of this project, not only it is central to how this particular work is being assessed but because, as mentioned above, this is a site aimed at a non-specialist audience aged 13 years and up. Young readers need content that is easier to understand and navigate, as do those who may not describe themselves as “tech-savvy”.
-Simple language is used throughout the site for this reason, and the inclusion of images and media links keeps the content varied, engaging and educational for those who want to explore more about the female coders introduced on the timeline.
-A timeline format was used as this lay-out is simple to follow, carrying the reader from the 1840s to the current day. Entries that describe female coders through history are short and concise, aimed at the concentration levels of a young audience or an adult scrolling through the internet in their coffee break. 
+Most story paths lead to defeat, but one leads to a revolution for better odds. If the player plays often enough, chance should ensure that s/he will reach this at some point, after a good deal of frustration. :)
 
-The homepage and feedback form are therefore minimalist, with little content, and get straight to the point. The focus is clear – the timeline. But the landing page is also attractive in a “soft” way that is pleasing to the eye, and as discussed in the introduction, uses a gentle palette of colours that puts the audience at ease. 
 
 <br>
 <center>Desktop version of homepage with 'hover' colour on 'home' along the navigation bar.<br><br><img src="assets/images/homepage-desk.jpg" alt="screenshot of homepage for desktop" width="60%"/></center>
