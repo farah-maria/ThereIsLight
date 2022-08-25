@@ -117,53 +117,7 @@ Most story paths lead to defeat, but one leads to a revolution for better odds. 
 
 Story paths are chosen by the user either by entering 'y' or 'n' for yes or no questions, or by entering a number to choose from an offered selection of pathways. 
 
-
-
-<br>
-<center>Desktop version of homepage with 'hover' colour on 'home' along the navigation bar.<br><br><img src="assets/images/homepage-desk.jpg" alt="screenshot of homepage for desktop" width="60%"/></center>
-<br>
-
-The imagery of nature and trees is used subtly throughout for the headings and footers, as nature generally helps people to relax. The imagery of trees also feeds into the idea of growth – personal growth through learning and evolution through time. Family trees are used to illustrate the growth of a family through many years, and the idea of using tree-imagery on a history site came from this usage.
-
-The site is not aimed at very young primary school aged children, where the use of bright colours and busy content would have been more appropriate. However, I used to be a Montessori teacher, and the site would be suitable for some elementary school aged children in such an educational setting (where over-busy decoration is discouraged, and natural colours are used more often).
-The colour palette of lilacs, blues, greens and soft brown is meant to reflect nature through use of the colours of flowers, grass, sky and trees. The surface level of the website is therefore entirely designed to put the eye, and the audience, at ease and to let the reader feel gently invited to the content.
-
-Simplicity is at the heart of the basic navigation structure: a homepage that introduces the subject area and content of the site in one line, and just two other navigation options… The timeline and a feedback page. Consistency of design is used throughout the site, in terms of the headers and footers and the location of these features. The site is easy and simple to follow. This was a priority right from the onset of designing the site, when I hand-drew my wireframes...
-
-<br>
-<center>1. <img src="assets/images/frame-one.jpg" alt="wireframe drawing for homepage" width="30%"/></center>
-<br>
-<center>2. <img src="assets/images/frame-two.jpg" alt="wireframe drawing of timeline page in landscape" width="30%"/></center>     
-<br>
-<center>3. <img src="assets/images/frame-two-scrollview.jpg" alt="wireframe drawing of timeline page in portrait with scrolling view" width="25%"/></center>
-<br>     
-<center>4. <img src="assets/images/frame-three.jpg" alt="wireframe drawing of feedback page" width="30%"/></center>
-<br>
-<center>5. <img src="assets/images/frame-four.jpg" alt="wireframe drawing of landing page that says thank for submitting your form "width="30%"/></center>
-<br>
-
-Image one  is the homepage, images two and three are of the timeline, image four is the feedback page and image five is a 'thank you' page that pops up to confirm successful submission of the form.
-
-A few minor aspects of design changed after the wireframing process. The hero image, for example, contains a lot of empty space in the middle, so it was better suited as a background image with what I called the 'blurb' going across the centre rather than underneath. I asked a friend to open the homepage on his computer with a large desktop, and he found that it was still very empty-looking after this change in design, so I veered away from my choice of the courier font (which evokes a historical sense of "typing" code using an old machine) for larger desktops. A more attractive, decorative font was employed just for bigger screens to address this issue. I chose "Homemade Apple" from Google Fonts as this worked well with the handwritten-style header (the font used for the header is "Permanent Marker", also from Google Fonts) in suggesting a first draft of history that's still being written. It also softens the page, giving a more homely feel, helping the user feel they are in their comfort zone despite being taught about a technical subject.
-
-The combination of "Open Sans" (also from Google Fonts) for small text on the site with "Permanent Marker" for the header is a pairing suggested by Canva [Canva website](canva.com/learn/best-google-font-combinations).
-
-The 'thank you' page that I planned, as confirmation to the user that their feedback form had been successfully submitted, fell away as the scope of the project became more limited given the time constraints. This is something I would like to add later. Instead, there is a standard Code Institute "form dump" confirmation message that pops us after data is successfully sent. 
-
-I wanted to include links to the educational curricula in Ireland and the UK for teachers using the site for class, ideally during the week of international women's day, but I decided early on in the wireframing process that the scope would have to exclude this due to time constraints. This can be added as the website develops, along with an easily-printable format for the timeline, so that the history page can be used as a hand-out for students. I kept the scope quite basic, with space for additional content. The focus is on simply informing the user of the history of women in coding... A basic but attractive educational site that is also suitable for general interest.
-
-## Design Responsivity, User Experience & Scope/ Strategy
-
-Design responsivity for different devices is essential for positive user experiences. According to a recent article  by the online magazine Design Rush (15 Screen Resolutions to Design For | DesignRush), 90% of website visitors bounce due to poor design. So, after creating an elaborate desktop design for the homepage (which didn’t work on smaller screens) I decided to start again from scratch with a mobile first approach, with the awareness that a majority of website visits in general happen via smart phone. 
-
-Accessibility is an important part of my website, as it is partly aimed at a non-tech-savvy audience who are less likely to have elaborate, expensive devices for viewing web pages. A young audience – especially the school student community - is also less likely to have the funds, as they do not control their own budget or income. So, I researched the most common screen sizes and set my scope for design responsivity around these. According to the Design Rush article already mentioned, which is based on statistics from StatCounter, the most common screen sizes for mobile phone are somewhere between 320 and 667 pixels wide and between 480 and 812 pixels tall. I tested the design of my site and created media queries with a focus on this in terms of mobile phone devices. However, these parameters only accounted for 45% of web surfers between March 2019 and March 2020, and there are now even more mobile phone sizes in use. Mobile phones clearly account for the most varied and unpredictable screen sizes in use, and so I did make sure that my media queries included sizes above and beyond the parameters discussed in Design Rush magazine…
-The website is fully responsive from the smallest screen size of an iPhone 4.  Foldables and wearables were not included in the scope for the above reasons (they are less commonly used and RE associated with people with a higher level of tech-awareness and appreciation). 
-
-According to research (the same article), tablet sizes and desktop sizes (including laptops) are far more predictable, in terms of assessing what most people use, so I strongly focused on the most common screen sizes for these types of devices when it came to testing my site using Chrome dev tools and creating specific media queries targeting these screen sizes.
-
-The five most common desktop screen resolutions worldwide are: 1366 x 768px; 1536 x 864px; 1440 x 900px; 1920 x 1090px and 1280 x 720px. This includes laptops, and these screen-size users accounted for 63% of web surfing. While including media queries and dev testing for other screen sizes, I strongly focused on these. The site is optimised to look good and be accessible when it comes to how content is presented on these screen sizes. Strong contrast between content and background (colours, fonts, information boxes), and making sure the screen is not too "busy", have been priorities for these sized screens.
-
-Tablets are even more predictable/ standard in size. The 5 most common tablet sizes used to surf the net between March 2019 and March 2020, according to StatCounter, were 1024 x 768px; 1280 x 800px, 800 x 1280px (the same device in portrait); 962 x 601px and 601 x 962px (the same device in portrait). This accounted for 70% of tablet users. While including media queries and doing dev testing for other dimensions, I strongly focused on these. The site is optimised to look good and be accessible when it comes to how content is presented on these screen sizes. Strong contrast between content and background (colours, fonts, information boxes), and making sure the screen is not too "busy", have been priorities for these sized screens
+Simplicity is at the heart of the basic navigation structure: yes or no, or a number.
 
 ## Existing Features
 ### Features
