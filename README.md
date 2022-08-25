@@ -41,7 +41,7 @@ Above is a screenshot of the the opening text, showing the title, the set-up and
 
 ## **User Experience, Scope & Design**
 
-### Responsivity
+### Design responsivity
 
 Design responsivity to different screen sizes was not part of the brief for this project, and it’s therefore outside of the intended scope. However, a user can play the game and access all features on a phone, tablet, laptop or desktop. In the case of playing on a phone, the game is best played in landscape. In portrait, on a mobile phone, the content is accessible, but scrolling to the right to read the end of sentences is required. Below is how the game looks on different types of screen resolutions. 
 
@@ -52,13 +52,17 @@ Design responsivity to different screen sizes was not part of the brief for this
 Deployment via Heroku was a required aspect of this project, which has its limitations.
 
 
-### User Stories
+### User Stories:
 
-#### As the site creator:
-* Create a simple website incorporating the app to allow users interact with the game.
-* Build a simple and challenging game for users to complete.
+
+#### As the site creator, my aim was to:
+
+* Create a simple game app using python that allows users to interact with the game.
+* Build a game that is fun and interesting for users to complete.
+
 
 #### As a first time user:
+
 
 * I want the purpose of the game to be clear from the start. i.e. what defines success/ winning (e.g. fighting a monster and beating her/ him.) 
 
@@ -72,13 +76,15 @@ Deployment via Heroku was a required aspect of this project, which has its limit
 
 * I would like there to be some friendliness to the same (e.g. be greeted as the user, and get something like a "Better luck next time and thank you for playing at the end.")
 
+
 #### As a returning user:  
 
-* I would like to explore alternative paths through the choose your own adventure.
+
+* I would like to explore alternative paths through the choose-your-own-adventure.
 * I would like to find a way of winning the game or improving on my score compared to last time.
 * For the above reason, I might like a record of my past scores to be in the game, so I can see if I did better.
 * I might like to see how other players have done, so I can compare my score.
-* Try to complete with other players and my last try at the game now that I am familiar with it.
+* Try to compete with other players and my own past score.
 
 ## Logic
 * A flowchart was created to visualise the logical flow and various paths possible.
