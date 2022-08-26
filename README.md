@@ -126,41 +126,27 @@ Simplicity is at the heart of the basic navigation structure: yes or no, or a nu
 
 ![Preview](images/intro.png)
 
-When the player types in an option that is a typo or isn't a valid selection, an error message comes up and the user is asked the question again, so that the game can resume with minimum interruption.
+2. When the player types in an option that is a typo or isn't a valid selection, an error message comes up and the user is asked the question again, so that the game can resume with minimum interruption. Throughout the game, errors are handled in this way and loop back  to the question.
 
 ![Preview](images/validation.png)
 
+3. The player can choose which character to play in the game, adding even more possible paths, as each character has their own 'stats' which affects the player's final score. There is added potential for the returning user to explore more paths, playing a different character each time.
 
-They are then given with the option of starting again which loops back to the start.
+![preview](images/heroineSelect.png)
 
-![Preview](https://github.com/sherryrich/bandersnatch/blob/main/docs/bandersnatch_play_again.PNG)
+4. The stories is separated into chapters, as in a book, giving the player a sense of progression and direction through the the adventure. There are four chapters. Chapter one is set on a bus to work. If the player survives the enemy on the bus, chapter two leads them to a 'treat' from the cafe opposite the character's workplace. Chapter three is set outside a hospital, after the character slips and injures herself outside the cafe. If the character survives Trump's attempts to stop them getting healthcare, they move on to chapter four, where they go to work. Here, they encounter an enemy in the office but also a great deal of solidarity from their colleagues (this path ends in victory).
 
-Offer on the table - multiple paths to choose from.
+5. The story features an anti-injuctice zapper, which is an option a couple of times in the story. If used, the character's odd of winning or being tripped up in some way are dictated by odds determined within the code, with an element of chance. 
 
-![Preview](https://github.com/sherryrich/bandersnatch/blob/main/docs/bandersnatch_paths.PNG)
+The treats are also determined by chance in this way (using the 'random' library imported into Python), and the element of different outcomes from the flipping of a coin, for example, in the story, means that the returning user can experience different 'perks' in the plot without even selecting a different path. 
 
-Offer 2 path - a deal is done if you choose <= 20 weeks only. Otherwise user is advised wrong choice and game ends.
+6. The possible deaths are generally amusing.
 
-![Preview](https://github.com/sherryrich/bandersnatch/blob/main/docs/bandersnatch_offer_2_path.PNG)
+7. The player is given the option of playing again whenever they die, and if they select 'y' the game loops back to the start. 
 
-* Offer 3 path - user wins and is shown a bonus guess the password game.
-* Random word is chosen as the password to guess.
-* "_" blank spaces displayed as per the random word.
-* User asked to choose a letter.
-* If the letter is contained withing the random word then it replaces the blank space.
-* If the letter is not within the random word the user looses a life.
-* If the user has 5 failed attempts the game is over and asked would they like to play again.
+8. The player starts with a set of strengths, and this determines their starting score. They can gain or lose points relating to their score by defeating an enemy or, by chance, eating a treat/ drinking coffee. This "quest" type set-up, with various scoring functions through the game, some of them determined by chance, others by their actions, and some by both, was borrowed from the series of classes called 'Python Text adventure [EASY!]' on the YouTube channel 'Learn to Code GCSE'. (https://www.youtube.com/watch?v=5a1KJPHPImc&ab_channel=LearntoCodeGCSE).  
 
-![Preview](https://github.com/sherryrich/bandersnatch/blob/main/docs/bandersnatch_offer_3_path.PNG)
-
-User is given 5 attempts to guess the password.
-
-![Preview](https://github.com/sherryrich/bandersnatch/blob/main/docs/bandersnatch_5_lives.PNG)
-
-If the user correctly guess the random word they completed the game Bandersnatch.
-
-![Preview](https://github.com/sherryrich/bandersnatch/blob/main/docs/bandersnatch_win_game.PNG)
-
+The enemy can also lose points by taking a hit by the player, which is a feature for future development.
 
 ### Future Features:
 * I had set up linking externally to Google Sheet API and the functionality was to retrieve the password from the Google Sheet rather than the password.py file. I reverted back as felt this was adding unnecessary complexity to the project as the current password.py file worked as expected.
