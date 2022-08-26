@@ -169,7 +169,8 @@ def play_or_not():
         return True
     elif answer.lower().strip() == "n":
         print(F"\n{Fore.WHITE}I don't blame you. Bye!\n")
-        exit()
+        return False
+        #exit()
     else:
         slow_read(F"\n{Fore.RED}Incorrect input!\n \n")
         slow_read("Try again. Just one letter and press enter.\n")
@@ -251,7 +252,6 @@ def score_end(heroine):
 # https://web.archive.org/web/20120819044459/
 # http://www.roysac.com/thedrawfonts-tdf.asp
 # FIGFont created with: http://patorjk.com/figfont-editor
-    play_again()
 
 
 ###################################################################
