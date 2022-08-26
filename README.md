@@ -119,8 +119,7 @@ Story paths are chosen by the user either by entering 'y' or 'n' for yes or no q
 
 Simplicity is at the heart of the basic navigation structure: yes or no, or a number.
 
-## Existing Features
-### Features
+## Features
 
 1. Users are greeted with the title logo and introduction to the game. Following the user experience stories as a guide to what's needed in the structure of the game, the intro tells the player what the game is, what their chances of success are, what success entails, whether there will be opponents and how they can pick up points to build their score. The player is also told how to navigate the game/ interact with it. The 'Would you like to play?' question invites them in and informs them of their interative role in the game right from the start.
 
@@ -162,7 +161,7 @@ If used, the character's odd of winning or being tripped up in some way are dict
 
 10. The scoring function was set up, along with an API link to a google scoresheet, to build in the potentiality for the creation of a leaderboard (see below under future features section). The googlesheet has already been set up with an automatic ranking function that orders the players stats by how high their score is/ was.
 
-### Future Features:
+## Future Features:
 
 * Add a leaderboard and scoresheet to the game. Player is asked for their first name or nick-name as part of the game, as part of the score_end() function, and this is recorded along with their score.
 
@@ -180,13 +179,17 @@ If used, the character's odd of winning or being tripped up in some way are dict
 
 I sent the link for the game to several friends to see if they were coming up against any errors. Numerous errors came up! Most related to one part of the story not leading to another after a user input, or the wrong storyline coming up for the number selected, or to a situation where a loop was created and the same question was being asked of the player again and again or the same text was coming up (see below).
 
+
 ![repetition of code](images/repetition.png)
+
 
 In the above case, the function was being called in more than one place in the code unnecessarily. And most of these issues either related to the logic in the code, where a function was being called twice in the different parts of the code by mistake, or to typos. I sent the deployed link to a friend, for example, and he found that choosing option two when encountering Trump outside the hospital was actually leading to the consequences for option 3. It turned out that my 'elif' for option two didn't have quotation marks around it. I'd forgotten to put them in. So, that part of the code was referring to an integer 2 rather than the string "2", and the program, when run, just ignored it and went to the 'else' option, which was option 3.  
 
 I encountered extensive issues when deploying via Heroku, also. And no one really worked out what the issue was, other than that it looked like it was an issue on Heroku's side. I kept getting the following screen when opening the app in Heroku:
 
+<br>
 ![Heroku issues](images/appError.png)
+<br>
 
  My code was deployed as it was, unchanged, successfully, using a different Heroku account set up using a different email address. The app was deleted and recreated a number of times in Heroku, too, and this is why my link for the deployed app isn't similar in any way to the name of the game or the Github link for its code. 
 
@@ -195,17 +198,29 @@ I encountered extensive issues when deploying via Heroku, also. And no one reall
 
 I used the PEP8 online code checker, found at (http://pep8online.com/), to check that my Python code was up to standard. I coped and pasted my Python code into the box, and my code passed in so far as there weren't any 'red' warnings, apart from one regarding a simple spacing issue (I needed to add a blank line after a function) that was easily resolved.
 
+<br>
 
 ![PEP8 validation](images/pep8.png)
+
+<br>
+
+<br>
+
 ![PEP8 validation](images/pep8a.png)
+
+<br>
 
 My use of matchcase in a Python function was also fine in PEP8, but GitPod didn't have the version of Python to deal with it, and after various attempts to install Python.10, I ended up commenting out my use of matchcase (even though it's recommended for functions with lots of 'elif's). This is my function called heroine_selection(), which has five character options. So, despite being validated via PEP8, I had to change the code back due to GitPod. 
 
+<br>
+
 ![matchcase issue in gitpod](images/matchCase.png)
+
+<br>
 
 ![python download issue](images/installIssues.png)
 
-
+<br>
  
 ## **Deployment**
 
@@ -243,6 +258,23 @@ Click on 'enable automatic deployment'
 You may need to make a change in GitPod and commit & push it (even if it's just an extra space somewhere in your README) after this process in order to trigger automatic deployment.
 
 Press the 'open app' button and you should see your app in all it's glory (or not!). You can get your deployed link here, or it should be in green on the deply page after a few minutes.
+
+## Main technologies used
+
+Python - main language 
+(imported libraries:
+random
+gspread - external library, requires pip install
+time
+sys
+pprint
+colorama - external library, requires pip install
+time import
+google.oauth2.service_account)
+
+Heroku - for deployment
+
+GitHub/ GitPod - version control
 
 
 ## **Acknowledgements**
