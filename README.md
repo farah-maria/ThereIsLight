@@ -1,24 +1,24 @@
-**THERE IS LIGHT - A choose your own text adventure using Python**
+# **'There is Light': A choose your own text adventure**
 
 
 ## Table of contents for this README 
-* [Introduction](#there-is-light)
-* [Links](#links)
-* [Design](#design)
-* [UX - user stories](#user-stories)
-* [Logic](#logic)
-* [Features](#features)
-* [Future Features](#future-features)
-* [Testing & Bugs](#testing-and-bugs)
-* [Validation](#code-validation)
-* [Deployment](#deployment)
-* [Technologies Used](#main-technologies-used)
-* [Acknowledgements](#acknowledgements)
+* Introduction
+* Links
+* Design
+* UX - user stories
+* Logic/ Structure of Game
+* Features
+* Future Features
+* Testing & Bugs
+* Code Validation
+* Deployment to Heroku
+* Technologies Used
+* Acknowledgements
 
 
 ## **Introduction**
 
-'There Is Light' is a choose your own text adventure based on some of the games I played in the 80s, in my after-school computer club.
+'There Is Light' is a choose your own text adventure based on the games I played in the 1980s, in my after-school computer club. It is basically a Python project, in that Python is the language used to make this game.
 
 There is a twist, however. The setting is a humourous one with a small bit of seriousness. 'You wake up in a patriarchial nightmare,' is the premise, and the enemies through the game share their surnames with figures who have obstructed women's reproductive rights in the USA. The setting is dystopian, and the game 'is hard', with most paths leading to the obliteration of the female protagonist. The player can choose one of five characters to be, each with their own stats/ strengths. These five characters are named after female mythological figures (e.g. the goddess Athena). The one exception is 'Roe', after the legal pseudonym of the woman involved in the Roe Vs Wade landmark case in the USA. 
 
@@ -26,7 +26,7 @@ The characters pick up points by eating cake, drinking coffee or beating their e
 
 The wry and statistically unlikely outcome, determined by poor odds that I deliberately put in place using the Python import 'random', is a successful revolution. This outcome, when selected, ends with a quote from the poem 'The Laughing Heart' by Charles Bukowski ("There's a light somewhere/ It may not be much light/ but it beats the darkness"). It is the inspiration for the title of the game.
 
-![deployed app on desktop](images/intro.jpg)
+![deployed app on desktop](images/intro.png)
 
 Above is a screenshot of the the opening text, showing the title, the set-up and the tone of the adventure. 
 
