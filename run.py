@@ -174,8 +174,7 @@ def play_or_not():
         slow_read(F"\n{Fore.RED}Incorrect input!\n \n")
         slow_read("Try again. Just one letter and press enter.\n")
         play_or_not()
-        heroine_select()
-
+    
 
 def play_again(): 
     slow_read(F"\n{Fore.WHITE}Want to play again?\n")
