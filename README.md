@@ -5,7 +5,7 @@
 * [Introduction](#there-is-light)
 * [Links](#links)
 * [Design](#design)
-* [UX - user stories](#user-stories) ]
+* [UX - user stories](#user-stories)
 * [Logic](#logic)
 * [Features](#features)
 * [Future Features](#future-features)
