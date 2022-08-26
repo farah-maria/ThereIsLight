@@ -148,11 +148,12 @@ The treats are also determined by chance in this way (using the 'random' library
 
 9. The enemy can also lose points by taking a hit by the player, which is a feature for future development.
 
-10. The scoring function was set up, along with an API link to a google scoresheet, to build in the potentiality for the creation of a leaderboard (see below).
+10. The scoring function was set up, along with an API link to a google scoresheet, to build in the potentiality for the creation of a leaderboard (see below under future features section). The googlesheet has already been set up with an automatic ranking function that orders the players stats by how high their score is/ was.
 
 ### Future Features:
-* I had set up linking externally to Google Sheet API and the functionality was to retrieve the password from the Google Sheet rather than the password.py file. I reverted back as felt this was adding unnecessary complexity to the project as the current password.py file worked as expected.
-* Add a leaderboard and Log users details to the Google Sheet.
+* Add a leaderboard and scoresheet to the game. Player is asked for their first name or nick-name as part of the game, as part of the score_end() function, and this is recorded along with their score.
+
+* 
 ## **Testing (and bugs!)**
 
 Two key aspects of this project are accessibility and design responsivity (media queries). To test for accessibility, I used the Lighthouse report generator in Chrome dev tools to check that the accessibility scores for the desktop and mobile versions of the site were over 70%. 
