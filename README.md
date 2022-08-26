@@ -134,19 +134,31 @@ Simplicity is at the heart of the basic navigation structure: yes or no, or a nu
 
 ![preview](images/heroineSelect.png)
 
-4. The stories is separated into chapters, as in a book, giving the player a sense of progression and direction through the the adventure. There are four chapters. Chapter one is set on a bus to work. If the player survives the enemy on the bus, chapter two leads them to a 'treat' from the cafe opposite the character's workplace. Chapter three is set outside a hospital, after the character slips and injures herself outside the cafe. If the character survives Trump's attempts to stop them getting healthcare, they move on to chapter four, where they go to work. Here, they encounter an enemy in the office but also a great deal of solidarity from their colleagues (this path ends in victory).
+4. The stories is separated into chapters, as in a book, giving the player a sense of progression and direction through the the adventure. There are four chapters. Chapter one is set on a bus to work. If the player survives the enemy on the bus, chapter two leads them to a 'treat' from the cafe opposite the character's workplace. Chapter three is set outside a hospital, after the character slips and injures herself outside the cafe. If the character survives Trump's attempts to stop them getting healthcare, they move on to chapter four, where they go to work. Here, they encounter an enemy in the office but also a great deal of solidarity from their colleagues (this path ends in victory - see below).
 
-5. The story features an anti-injuctice zapper, which is an option a couple of times in the story. If used, the character's odd of winning or being tripped up in some way are dictated by odds determined within the code, with an element of chance. 
+![Happy outcome](images/revolution.png)
 
-The treats are also determined by chance in this way (using the 'random' library imported into Python), and the element of different outcomes from the flipping of a coin, for example, in the story, means that the returning user can experience different 'perks' in the plot without even selecting a different path. 
+5. The story features an anti-injuctice zapper, which is an option a couple of times in the story. 
 
-6. The possible deaths are generally amusing.
+![zapper](images/chapters.png)
+
+
+If used, the character's odd of winning or being tripped up in some way are dictated by odds determined within the code, with an element of chance, thanks to the imported library 'random'. The treats are also determined by chance in this way (using the 'random' library imported into Python), and the element of different outcomes from the flipping of a coin, for example, in the story, means that the returning user can experience different 'perks' in the plot without even selecting a different path. 
+
+6. The possible deaths are generally amusing, as are the perks.
+
+![end](images/scoreEnd.pngscoreEnd)
+
 
 7. The player is given the option of playing again whenever they die, and if they select 'y' the game loops back to the start. 
 
-8. The player starts with a set of strengths, and this determines their starting score. They can gain or lose points relating to their score by defeating an enemy or, by chance, eating a treat/ drinking coffee. This "quest" type set-up, with various scoring functions through the game, some of them determined by chance, others by their actions, and some by both, was borrowed from the series of classes called 'Python Text adventure [EASY!]' on the YouTube channel 'Learn to Code GCSE'. (https://www.youtube.com/watch?v=5a1KJPHPImc&ab_channel=LearntoCodeGCSE).  
+8. The player starts with a set of strengths, and this determines their starting score. They can gain or lose points relating to their score by defeating an enemy or, by chance, eating a treat/ drinking coffee. This "quest" type set-up, with various scoring functions through the game, some of them determined by chance, others by their actions, and some by both, was borrowed from the series of classes called 'Python Text adventure [EASY!]' on the YouTube channel 'Learn to Code GCSE'. (https://www.youtube.com/watch?v=5a1KJPHPImc&ab_channel=LearntoCodeGCSE).
 
-9. The enemy can also lose points by taking a hit by the player, which is a feature for future development.
+
+![scores](images/perks.png)
+
+
+9. The enemy can also lose points by taking a hit by the player, which is a feature that can be taken further for future development.
 
 10. The scoring function was set up, along with an API link to a google scoresheet, to build in the potentiality for the creation of a leaderboard (see below under future features section). The googlesheet has already been set up with an automatic ranking function that orders the players stats by how high their score is/ was.
 
@@ -162,39 +174,37 @@ The treats are also determined by chance in this way (using the 'random' library
 
 * Add design responsivity for phones. The app isn't visible at all on some iphones (I tested it).
 
+* Give user the option to choose difficulty of game. Easier version would have better odds of winning in the code, but with the same story. This could ease the frustration of it being a little too hard to win.
+
 ## **Testing (and bugs!)**
 
+I sent the link for the game to several friends to see if they were coming up against any errors. Numerous errors came up! Most related to one part of the story not leading to another after a user input, or the wrong storyline coming up for the number selected, or to a situation where a loop was created and the same question was being asked of the player again and again or the same text was coming up (see below).
 
- ## **Code Validation**
+![repetition of code](images/repetition.png)
 
- The HTML for the landing page, the timeline page and the feedback page all passed when I copied and pasted the code into the free w3 validator service online. The screenshots are below.  
+In the above case, the function was being called in more than one place in the code unnecessarily. And most of these issues either related to the logic in the code, where a function was being called twice in the different parts of the code by mistake, or to typos. I sent the deployed link to a friend, for example, and he found that choosing option two when encountering Trump outside the hospital was actually leading to the consequences for option 3. It turned out that my 'elif' for option two didn't have quotation marks around it. I'd forgotten to put them in. So, that part of the code was referring to an integer 2 rather than the string "2", and the program, when run, just ignored it and went to the 'else' option, which was option 3.  
 
-<br>
-<center><img src="assets/images/hmpg_html_validation.png" alt="screenshot of pass report for landing page from w3 HTML validator" width="80%"/></center>
-<br>  
+I encountered extensive issues when deploying via Heroku, also. And no one really worked out what the issue was, other than that it looked like it was an issue on Heroku's side.
 
-<br>
-<center><img src="assets/images/tmln_html_validation.png" alt="screenshot of pass report for timeline page from HTML validator" width="80%"/></center>
-<br>
+ My code was deployed as it was, unchanged, successfully, using a different Heroku account set up using a different email address. 
 
-<br>
-<center><img src="assets/images/form_html_validation.png" alt="screenshot of pass report for feedback page from HTML validator" width="80%"/></center>
-<br>
 
-The CSS code for the website also passed when it was cut and paste into the Jigsaw w3 validation service online. The screenshot showing this is below.
+## **Code Validation**
 
-<br>
-<center><img src="assets/images/css_validation.png" alt="screenshot of pass report for CSS code page from Jigsaw w3 validator" width="80%"/></center>
-<br>
+I used the PEP8 online code checker, found at (http://pep8online.com/), to check that my Python code was up to standard. I coped and pasted my Python code into the box, and my code passed in so far as there weren't any 'red' warnings, apart from one regarding a simple spacing issue (I needed to add a blank line after a function) that was easily resolved.
 
-No errors were found in the HTML or the CSS code when tested two days prior to the submission of this project. Before this, however, there were some bugs I needed to swat! A few errors were found by the validator that I had to fix. It turned out that my history timeline was riddled with tags that were not closed properly... Below is an example.
 
-<br>
-<center><img src="assets/images/bugs.png" alt="screenshot of errors found by w3 HTML validator" width="80%"/></center>
-<br>
+![PEP8 validation](images/pep8.png)
+![PEP8 validation](images/pep8a.png)
 
-I went through the HTML with a fine toothcomb and discovered the problem. I was trying to wrap block elements with inline elements, and this meant that my paragraphs weren't closing properly. I fixed this, and correctly ordered my tags. I removed the use of divs to style the links embedded in various paragraphs, remembering that divs are used as outer-wrappers. I needed to be using the span element to style these links instead. My code passed after making these changes.
+My use of matchcase in a Python function was also fine in PEP8, but GitPod didn't have the version of Python to deal with it, and after various attempts to install Python.10, I ended up commenting out my use of matchcase (even though it's recommended for functions with lots of 'elif's). This is my function called heroine_selection(), which has five character options. So, despite being validated via PEP8, I had to change the code back due to GitPod. 
 
+![matchcase issue in gitpod](images/matchCase.png)
+
+![python download issue](images/installIssues.png)
+
+
+ 
 ## **Deployment**
 
 I used GitHub pages to deploy my site. The process is simple. Click on 'settings' after going into the repository and scroll down. The menu down the lefthand side will have an option called 'pages'. Click on this, and after a few moments the site will be deployed and GitHub will automatically show a web address in blue. This is the address for the live site, which anyone can now access from their own devices.
