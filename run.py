@@ -192,28 +192,32 @@ def play_again():
 
 
 """def heroine_select():
-    """ Allows player to choose which heroine they play as."""
+    Allows player to choose which heroine they play as.
     selection = input(
         "\n1. Demeter \n2. Persephone \n3. Athena \n4. Lilith \n5. Roe \
             \n")
     if selection == "1":
         return Heroine("Demeter", 80, 80, 2800)
-        """Heroine is taken to first part of the story"""
+        Heroine is taken to first part of the story
     elif selection == "2":
         return Heroine("Persephone", 90, 50, 1500)
     elif selection == "3":
         return Heroine("Athena", 100, 90, 2000)
-        """Heroine is taken to first part of the story"""
+        Heroine is taken to first part of the story
     elif selection == "4":
         return Heroine("Lilith", 75, 40, 3500)
-        """Heroine is taken to first part of the story"""
+        Heroine is taken to first part of the story
     elif selection == "5":
         return Heroine("Roe", 100, 95, 3000)
     else:
         slow_read(F"{Fore.RED}Error!")
         slow_read("Only press 1, 2, 3, 4 or 5 and press enter")
         heroine_select() """
-
+def heroine_select():
+    """Allows player to choose which heroine they play as."""
+    selection = input(
+        "\n1. Demeter \n2. Persephone \n3. Athena \n4. Lilith \n5. Roe \
+            \n")
     match selection:
         case "1":
             return Heroine("Demeter", 80, 80, 2800)
