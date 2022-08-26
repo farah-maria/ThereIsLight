@@ -232,7 +232,7 @@ The process is simpler where there are no APIs, but I do have a creds.json file 
 
 The stages are as follows:
 
-Create an account or log-in to Heroku on Heroku.com
+Create an account or log-in to Heroku on www.heroku.com
 
 There are now extra requirements for security, so you may need to download a salesforce password validator app on your phone using googleplay. (This is what I had to do, or Heroku wouldn't allow me to add the buildpacks for Python and Node.Js) 
 
@@ -262,63 +262,38 @@ Press the 'open app' button and you should see your app in all it's glory (or no
 ## Main technologies used
 
 Python - main language 
-(imported libraries:
+(imported Python libraries:
 random
 gspread - external library, requires pip install
 time
 sys
-pprint
+pprint - potentially for the API/ Leaderboard usage
 colorama - external library, requires pip install
-time import
+time 
 google.oauth2.service_account)
 
 Heroku - for deployment
 
 GitHub/ GitPod - version control
 
+Google cloud services
+
+Google sheets / Google Drive
 
 ## **Acknowledgements**
 
 1. Am I Responsive? (https://amiresponsive.co.uk/) This free site illustrates how your web project looks on different devices in an attractive way.
 
-2. Google Fonts. (https://fonts.google.com/) 
+2. Letter art in the app is from https://patorjk.com/
 
-3. Canva. (canva.com/learn/best-google-font-combinations).
+3. 'Python Text adventure [EASY!]' on the YouTube channel 'Learn to Code GCSE'. (https://www.youtube.com/watch?v=5a1KJPHPImc&ab_channel=LearntoCodeGCSE).
 
-4. Font Awesome. (https://fontawesome.com/)
+3. Tech with Tim, Choose Your Own Adventure Game tutorial on YouTube: (https://www.youtube.com/watch?v=DEcFCn2ubSg)
 
-5. Hero image by @lum3n on Unsplash [Unsplash web address](https://unsplash.com/photos/-RBuQ2PK_L8).
+4. Heroku for deployment: https://www.heroku.com
 
-6. Digital papers used as backgrounds throughout the site originally sourced from Creative Tacos (https://creativetacos.com/). 
+5. PIP8 Python code validator: http://pep8online.com/
 
-7. Code for timeline inspired by https://alvarotrigo.com/blog/html-css-timelines. I added floating images and different fonts, which meant that I had to edit the code.
+6. Google Cloud Services
 
-8. All images for the timeline are open source and from Wikimedia Commons (https://commons.wikimedia.org/wiki/Main_Page). 
-
-9. W3 schools "HOW TO - Responsive Form" at http://www.w3schools.com/howto/howto_css_responsive_form.asp/.
-
-10. 'Website Dimensions: These are the 15 Most Common 15 Screen Resolutions to Design for'. Design Rush. Updated 05/05/2022. https://www.designrush.com/agency/web-development-companies/trends/website-dimensions
-
-11. Chrome developer tools, including Lighthouse. https://developer.chrome.com/docs/lighthouse/overview/
-
-12. W3C Markup Validation Service (https://validator.w3.org/index.html)
-
-13. W3C Jigsaw CSS Validation Service (https://jigsaw.w3.org/css-validator/)
-
-14. Colborn, R. Kyrnin, J. & Lemay, L. (2016) Sam's Teach Yourself HTML, CSS & JavaScript: Web Publishing in One Hour a Day. Pearson Education, Indiana.
-
-15. Information about the history of female coders was from a range of sources, including the Encyclopaedia Britannica online (https://www.britannica.com/). I also watched the wonderful 2016 film, Hidden Figures, and took notes. Links to articles, YouTube videos and audio can be found on the timeline page of the site, with acknowledgements also below...
-
-16. Jones, B. & Larson, L. (2019)'Long before Gates or Jobs, 6 women programmed the first digital computer', Digital Trends, https://www.digitaltrends.com/computing/remembering-eniac-and-the-women-who-programmed-it/
-
-17. Shetterly, M. L. NASA biography of Katherine Johnson, https://www.nasa.gov/content/katherine-johnson-biography/. 
-
-18. Women's Stories, (2014) 'Who is Grace Hopper?', https://youtube.be/Fg82iV-L8ZY (video).
-
-19. STEM for Success, (2021) Valerie Thomas: Transmitting the Future, https://www.youtube.com/watch?v=EWBlW1xgAow. 
-
-20. Lantero, A. (2016) 'Five Fast Facts About Rocket Scientist Annie Easley' https://www.energy.gov/articles/five-fast-facts-about-rocket-scientist-annie-easley
-
-21. Youtube interview with "Hidden Figures" author Margot Lee Shetterly: https://www.youtube.com/watch?v=PdbPkCGUq9k
-
-22. Biography magazine (2016) 'Dorothy Johnson Vaughan', https://www.biography.com/scientist/dorothy-johnson-vaughan
+7. Google Sheets
