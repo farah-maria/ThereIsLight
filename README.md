@@ -209,7 +209,41 @@ My use of matchcase in a Python function was also fine in PEP8, but GitPod didn'
  
 ## **Deployment**
 
-I used GitHub pages to deploy my site. The process is simple. Click on 'settings' after going into the repository and scroll down. The menu down the lefthand side will have an option called 'pages'. Click on this, and after a few moments the site will be deployed and GitHub will automatically show a web address in blue. This is the address for the live site, which anyone can now access from their own devices.
+The project was deployed using Heroku.
+
+I had many issues deploying, unfortunately, but normally it shouldn't be too difficult. 
+
+The process is simpler where there are no APIs, but I do have a creds.json file for an API set up to make the app ready for a few future features.
+
+The stages are as follows:
+
+Create an account or log-in to Heroku on Heroku.com
+
+There are now extra requirements for security, so you may need to download a salesforce password validator app on your phone using googleplay. (This is what I had to do, or Heroku wouldn't allow me to add the buildpacks for Python and Node.Js) 
+
+Press the button where it says you can create a new app.
+
+Go to 'settings'. Even if you do not have an API to link with the app,
+go to vars and enter the following key/ value pair:
+
+PORT + 8000
+
+If you have an api, add another key/ value pair:
+
+CREDS + {cut and paste ALL code from your creds.json file}
+
+Now, on the same page, there's the option to add buildpacks. These need to be built in this specific order: first of all, Python (press save), then Nodejs (press save). Python should appear above Nodejs on the list of added buildpacks.
+
+Now, go to the 'deploy' page.
+
+Link your project via Github, here, and choose the right repo.
+
+Click on 'enable automatic deployment'
+
+You may need to make a change in GitPod and commit & push it (even if it's just an extra space somewhere in your README) after this process in order to trigger automatic deployment.
+
+Press the 'open app' button and you should see your app in all it's glory (or not!). You can get your deployed link here, or it should be in green on the deply page after a few minutes.
+
 
 ## **Acknowledgements**
 
