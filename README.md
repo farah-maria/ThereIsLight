@@ -153,107 +153,6 @@ The treats are also determined by chance in this way (using the 'random' library
 ### Future Features:
 * I had set up linking externally to Google Sheet API and the functionality was to retrieve the password from the Google Sheet rather than the password.py file. I reverted back as felt this was adding unnecessary complexity to the project as the current password.py file worked as expected.
 * Add a leaderboard and Log users details to the Google Sheet.
-
-
-
-It is hard to completely separate the topics that need attention in this document, so there is some overlap, but I will avoid repeating descriptions.
-
--_Navigation Bar_
-
-As suggested above, in the section on user experience and design, the header and navigation bar are on all three pages of the website. The navigation bar is part of the header and is fully responsive, containing links to the homepage, the history timeline and the feedback form. At no point does the user need to hit the ‘back’ button to access a page they were on previously, as each available option is clearly displayed in the same area of each page and is easily ‘clickable’. This is true regardless of whether the site is being accessed via mobile, tablet, laptop of desktop. I have tried to balance creativity with consistency. As the site focuses on new discoveries and breakthroughs made by innovative women, I wanted to avoid translating consistency as “sameness”, while recognizing that the user needs to know where they are on the navigation journey. Consistency is important, especially for the visually impaired, so they have a clear sense that they are on the same website even if they are on a different page. Here are the three headers, containing the nav bards, with the same main title and logo on each page...
-
-<br>
-<center>Homepage <br><img src="assets/images/homenav.png" alt="screenshot of homepage header with navigation bar" width="50%"/></center>
-<br>
-<center>Timeline page <br><img src="assets/images/timelinenav.png" alt="screenshot of navigation bar on history page" width="50%"/></center>     
-<br>
-<center>Feedback page <br><img src="assets/images/formnav.png" alt="screenshot of navigation bar on feedback page" width="50%"/></center>
-<br>     
-
-The style and font is the same for each of the three navigation bars, except on small mobile devices where a border and background colour were added for the feedback page to improve visibility of the navigation options (the form necessitated a smaller font-size). The colours used are still from the same colour palette. I kept the header and navigation identical for the first two pages of the mobile version, with the understanding that a smaller screen gives less visual clues, making consistency in design even more important.
-
-Home & history pages, mobile screenshot:
-
-<center><img src="assets/images/mobhistorynav.jpg" alt="screenshot on Huawei P30 lite phone of navigation bar on history page" width="30%"/></center>     
-<br>
-Feedback page, mobile screenshot:
-
-<br>
-<center><img src="assets/images/mobformnav.png" alt="screenshot of nav bar on feedback page using Chrome dev tools to create dimensions for iphone4" width="30%"/></center>
-<br>     
- 
-The top screenshot was taken on my Huawei P30 lite phone. The second is on the dimensions of an iPhone 4, created using Chrome dev tools. 
-
-There is a hover effect for the options on the navbars, to help the user see that the labels on the header are interactive and 'clickable', and also a colour effect to show if the page has already been visited. This is to help the reader understand the functionality of the navigation bar and to remind them of what they have already viewed, creating a clear sense of where they are on their journey through the site.
-
--_Footer with Social Media Links_-
-
-The same footer design is used on all three pages with a hover effect to indicate interactivity. There are three icons for Facebook, Twitter and YouTube taken from the Font Awesome library. As with the navigation bar on the mobile version of the site, the feedback page has a border around the icons so that they clearly stand out on a small screen. The style and colour of the border is the same. Tablets also have a slightly tweaked design for the footer, which is a compromise between the full-size design for large desktops and the boxed footer for mobiles. It consists of the same background illustration that's used for desktops, but with the addition of a grey border to draw emphasis to the links on a smaller screen. The links on the footer do work, but I have yet to set up a social media presence for the WICH project. 
-
--_Landing Page & WICH Logo_-
-
-As shown at the start of this document, the landing page, or homepage, is simple, minimalist but informative, with a natural and gentle colour palette. The words 'Women coders since the 1840...' informs the user of the content they should expect from the next page. The navigation label 'timeline' at the top of the page also introduces how this information is going to be presented. The hero image of a keyboard on a pink desk is attractive as well as functional in conveying the main themes of women at work in computer technology and coding. 
-
-The icon used for the logo is from the Font Awesome library [Font Awesome website](fontawesome.com) and clearly indicates the subject matter of computing, while the shades of pink on the home page are a wry reference to what is stereotypically thought of as 'feminine taste'. The logo and title heading are repeated on all three pages.
-
-The WICH acronym was fun to come up with, and obviously points to the word 'witch'. This is intended to evoke the history of confident, intelligent women being considered oddballs and outsiders. Women software developers are, after all, still a small minority.
-
-All of the fonts are from Google Fonts [Google Fonts website](fonts.google.com), except for Courier. Courier is used on the landing page for smaller screens, as it is clearer to read and still in line with the themes of coding and history (i.e. typewriters).
-
-The hero image is by @lum3n and can be downloaded free of charge from Unsplash [Unsplash web address](https://unsplash.com/photos/-RBuQ2PK_L8).
-
-The tree wallpaper design used as a background throughout the site as been edited to different sizes and hues by me, but the original can be downloaded from the Creative Tacos site, which has a beautiful collection of free design resources. To find free background wallpaper options, look up 'digital papers' on https://creativetacos.com/ 
-
--_Timeline_-
-
-The timeline is the main focus of the website and it is where the most of the content is concentrated. Fourteen women coders are described, from Ada Lovelace's annotations on machine coding in 1843 to Valerie Johnson's current work as an advocate for women and people of colour in the tech industry. 
-
-Descriptions of each figure are short and easy to understand with technical terms such as "compiler" fully explained, making the timeline a bit of an introduction to the world of computing in general.
-
-Every description is accompanied by an image, and most are accompanied by a link to audio or video material for users who want to know more. Most people, especially young people, learn through all of their senses, not just through sight, so it was important to include audio material as well as videos that provide a 'break' from pure text. 
-
-Every image has an 'alt' tag, for users with visual impairments.
-
-The timeline has a different background for phones than for tablets and larger desktops. The smaller the device, the fewer colours used. I did not want to crowd the page with strong colours and contrasts for mobile phone screens, as this can affect concentration. The bigger desktops have background wallpaper for the timeline to add interest where the background might otherwise look too bare. 
-
-The wallpaper idea, also used for the headings and footers, was inspired by William Morris and the Arts and Crafts Movement. The movement roughly correlates with the period when machine readable code started being talked about. Morris began his apprenticeship as an embroiderer of textiles in the mid-1800s, when Ada Lovelace was working as a mathematician in the same city (London). Both were associated with radical politics (Morris was a socialist and Ada Lovelace was the daughter of Lord Byron).
-
-Timeline for mobile phones with neutral background (screenshot from my Huawei P30 lite):
-
-<br>
-<center><img src="assets/images/mobtimeline.jpg" alt="screenshot on Huawei P30 lite phone of timeline" width="50%"/></center>
-<br>     
-
-Timeline for tablets and smaller desktops with sky blue background (screenshot from my Surface Go):
-
-<br>
-<center><img src="assets/images/tabtimeline.png" alt="screenshot on Surface Go" width="50%"/></center>
-<br>   
-
-Timeline for larger desktops with 'wallpaper' as background (screen size 1882 x 1317px in Chrome dev tools):
-
-<br>
-<center><img src="assets/images/desktimeline.png" alt="screenshot on Surface Go" width="80%"/></center>
-<br>   
-
-Code for the timeline was borrowed from the following website: https://alvarotrigo.com/blog/html-css-timelines. However, there were numerous bugs in the code, which I had to fix so that it worked on all sized screens. I'll discuss these later.
-
-All images for the timeline are open source, and from Wikimedia Commons (https://commons.wikimedia.org/wiki/Main_Page). 
-
-All links have an aria-label to help visually impaired users, and they open in a separate tab. The links are coloured violet to set them apart from the non-interactive text. 
-
--_Feedback Form_-
-
-The feedback form is responsive and functional on all different devices from the size of an iPhone 4 up. I already knew how to code forms from my HTML course material, however I taught myself how to make a fully responsive one from W3 schools "HOW TO - Responsive Form" at http://www.w3schools.com/howto/howto_css_responsive_form.asp/.
-
-I have yet to make this form active beyond the data being sent to the Code Institute form dump address. To make this website a functioning site of current use, the main thing I need to do is to change this, so that I receive the data and am able to respond to the feedback in how I develop the project in future.
-
-When I learn JavaScript later in my diploma course, I will use this language to code a properly interactive form with a pop up page that says "Thank you for submitting your feedback!". 
-
-As the timeline project is at its inception stage, I deliberately wanted a feedback form with space for whatever views users have. This is why there is a large text box. I'm effectively gathering views as if I'm holding a market research event, with the first users giving a full account of their views, first impressions and feelings. Later, when the project gathers momentum and there is a social media presence for WICH, I will narrow the options down on the form to radio button answers to specific questions.  
-
-The email address box only accepts text that is recognisably in the format of a proper email address (a validated and required input field). The form is not submitted unless an email address is entered. The addresses will eventually be used, when this site is live and fully functioning, for updates and possibly a newsletter or blog.
-
 ## **Testing (and bugs!)**
 
 Two key aspects of this project are accessibility and design responsivity (media queries). To test for accessibility, I used the Lighthouse report generator in Chrome dev tools to check that the accessibility scores for the desktop and mobile versions of the site were over 70%. 
@@ -276,7 +175,7 @@ The timeline code turned out to not work in its entirety on different devices af
 
 I tested all of the links on the history line to make sure they were up to date and functional when clicked on. A bug that came up initially was that some of the links didn't work. The 'position: relative' style automatically gave the elements a z-index, so part of the div element was covering the link, making it unclickable. I worked this out with the help of a tutor. My adding 'position: relative' to the style for the links in CSS, this got fixed.
 
- ## **Code Validation (and bugs!)**
+ ## **Code Validation**
 
  The HTML for the landing page, the timeline page and the feedback page all passed when I copied and pasted the code into the free w3 validator service online. The screenshots are below.  
 
