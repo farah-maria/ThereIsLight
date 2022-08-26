@@ -4,22 +4,21 @@
 ## Table of contents for this README 
 * [Introduction](#there-is-light)
 * [Links](#links)
-* [User Experience](#user-experience)
-* [Logic](#logic)
 * [Design](#design)
+* [UX - user stories](#user-stories) ]
+* [Logic](#logic)
 * [Features](#features)
-* [Technologies Used](#technologies-used)
-* [Testing](#testing)
-* [Bugs](#bugs)
-* [Future Improments](#future-improvements)
+* [Future Features](#future-features)
+* [Testing & Bugs](#testing-and-bugs)
+* [Validation](#code-validation)
 * [Deployment](#deployment)
-* [Credits](#credits)
+* [Technologies Used](#main-technologies-used)
 * [Acknowledgements](#acknowledgements)
 
 
-## There Is Light
+## **Introduction**
 
-This is a choose your own text adventure based on some of the games I played in the 80s, in my after-school computer club.
+'There Is Light' is a choose your own text adventure based on some of the games I played in the 80s, in my after-school computer club.
 
 There is a twist, however. The setting is a humourous one with a small bit of seriousness. 'You wake up in a patriarchial nightmare,' is the premise, and the enemies through the game share their surnames with figures who have obstructed women's reproductive rights in the USA. The setting is dystopian, and the game 'is hard', with most paths leading to the obliteration of the female protagonist. The player can choose one of five characters to be, each with their own stats/ strengths. These five characters are named after female mythological figures (e.g. the goddess Athena). The one exception is 'Roe', after the legal pseudonym of the woman involved in the Roe Vs Wade landmark case in the USA. 
 
@@ -34,12 +33,15 @@ Above is a screenshot of the the opening text, showing the title, the set-up and
 
 ## **Links**
 
+
 [Live link for game](https://thelaughingheart.herokuapp.com)
 
 [Link to the GitHub repo](https://github.com/farah-maria/ThereIsLight)
 
 
+
 ## **User Experience, Scope & Design**
+
 
 ### Design responsivity
 
@@ -51,7 +53,11 @@ Design responsivity to different screen sizes was not part of the brief for this
 
 Deployment via Heroku was a required aspect of this project, which has its limitations, as well as the fact that this is a pure Python project.
 
-## General design
+
+
+### General design
+
+
 
 Within the constraints of the project brief, I used four main methods to affect the appearance of the game. 
 
@@ -68,6 +74,8 @@ The second design feature I used were heading designs for the title and 'game ov
 The third, more subtle design aspect I used was a liberal use of spacing, so that the player isn't completely overwhelmed by text, even though it is a text adventure. Colour, spacing and the timing of the letters appearing on the screen were the main things I used to add "spice" to an otherwise plain looking screen. Timing was the fourth and last design feature I used in the game. The slow_read effect that I used meant that certain parts of the the story appear more slowly, and the words appear letter by letter in the console, to add suspense and add a 'typewriter' effect. This typewriter effect is intended to give the game an extra retro feel for the days of text adventures, when typewriters were still in use in offices. The Time module was imported so that pauses (via the "time.sleep" method) could be put into the text, while other parts had no pauses at all and appeared faster to let the narrative pick up pace.   
 
 'Chapters' are used in the story, and there is a fair bit of text, as I'm a writer and I wanted to give the game a bookish feel. The content was all written by me.
+
+
 
 ### User Stories:
 
@@ -103,7 +111,11 @@ The third, more subtle design aspect I used was a liberal use of spacing, so tha
 * I might like to see how other players have done, so I can compare my score.
 * Try to compete with other players and my own past score.
 
-## Logic
+
+
+## **Logic and story structure**
+
+
 
 * Below is a hand-drawn flowchart that shows the paths that can be taken through the game.
 <br>
@@ -119,7 +131,11 @@ Story paths are chosen by the user either by entering 'y' or 'n' for yes or no q
 
 Simplicity is at the heart of the basic navigation structure: yes or no, or a number.
 
-## Features
+
+
+## **Features**
+
+
 
 1. Users are greeted with the title logo and introduction to the game. Following the user experience stories as a guide to what's needed in the structure of the game, the intro tells the player what the game is, what their chances of success are, what success entails, whether there will be opponents and how they can pick up points to build their score. The player is also told how to navigate the game/ interact with it. The 'Would you like to play?' question invites them in and informs them of their interative role in the game right from the start.
 
@@ -161,7 +177,11 @@ If used, the character's odd of winning or being tripped up in some way are dict
 
 10. The scoring function was set up, along with an API link to a google scoresheet, to build in the potentiality for the creation of a leaderboard (see below under future features section). The googlesheet has already been set up with an automatic ranking function that orders the players stats by how high their score is/ was.
 
-## Future Features:
+
+
+## **Future Features:**
+
+
 
 * Add a leaderboard and scoresheet to the game. Player is asked for their first name or nick-name as part of the game, as part of the score_end() function, and this is recorded along with their score.
 
@@ -175,7 +195,11 @@ If used, the character's odd of winning or being tripped up in some way are dict
 
 * Give user the option to choose difficulty of game. Easier version would have better odds of winning in the code, but with the same story. This could ease the frustration of it being a little too hard to win.
 
+
+
 ## **Testing (and bugs!)**
+
+
 
 I sent the link for the game to several friends to see if they were coming up against any errors. Numerous errors came up! Most related to one part of the story not leading to another after a user input, or the wrong storyline coming up for the number selected, or to a situation where a loop was created and the same question was being asked of the player again and again or the same text was coming up (see below).
 
@@ -194,7 +218,10 @@ I encountered extensive issues when deploying via Heroku, also. And no one reall
  My code was deployed as it was, unchanged, successfully, using a different Heroku account set up using a different email address. The app was deleted and recreated a number of times in Heroku, too, and this is why my link for the deployed app isn't similar in any way to the name of the game or the Github link for its code. 
 
 
+
 ## **Code Validation**
+
+
 
 I used the PEP8 online code checker, found at (http://pep8online.com/), to check that my Python code was up to standard. I coped and pasted my Python code into the box, and my code passed in so far as there weren't any 'red' warnings, apart from one regarding a simple spacing issue (I needed to add a blank line after a function) that was easily resolved.
 
@@ -221,8 +248,13 @@ My use of matchcase in a Python function was also fine in PEP8, but GitPod didn'
 ![python download issue](images/installIssues.png)
 
 <br>
- 
+
+
+
+
 ## **Deployment**
+
+
 
 The project was deployed using Heroku.
 
@@ -234,7 +266,7 @@ The stages are as follows:
 
 Create an account or log-in to Heroku on www.heroku.com
 
-There are now extra requirements for security, so you may need to download a salesforce password validator app on your phone using googleplay. (This is what I had to do, or Heroku wouldn't allow me to add the buildpacks for Python and Node.Js) 
+There are now extra requirements for security, so you may need to download a salesforce password validator app on your phone using googleplay. (This is what I had to do, or Heroku wouldn't allow me to add the buildpacks for Python and Node.js) 
 
 Press the button where it says you can create a new app.
 
@@ -247,7 +279,7 @@ If you have an api, add another key/ value pair:
 
 CREDS + {cut and paste ALL code from your creds.json file}
 
-Now, on the same page, there's the option to add buildpacks. These need to be built in this specific order: first of all, Python (press save), then Nodejs (press save). Python should appear above Nodejs on the list of added buildpacks.
+Now, on the same page, there's the option to add buildpacks. These need to be built in this specific order: first of all, Python (press save), then Node.js (press save). Python should appear above Node.js on the list of added buildpacks.
 
 Now, go to the 'deploy' page.
 
@@ -259,7 +291,10 @@ You may need to make a change in GitPod and commit & push it (even if it's just 
 
 Press the 'open app' button and you should see your app in all it's glory (or not!). You can get your deployed link here, or it should be in green on the deply page after a few minutes.
 
-## Main technologies used
+
+
+## **Main technologies used**
+
 
 Python - main language 
 (imported Python libraries:
@@ -272,6 +307,8 @@ colorama - external library, requires pip install
 time 
 google.oauth2.service_account)
 
+Node.js
+
 Heroku - for deployment
 
 GitHub/ GitPod - version control
@@ -280,7 +317,11 @@ Google cloud services
 
 Google sheets / Google Drive
 
+
+
 ## **Acknowledgements**
+
+
 
 1. Am I Responsive? (https://amiresponsive.co.uk/) This free site illustrates how your web project looks on different devices in an attractive way.
 
@@ -296,4 +337,4 @@ Google sheets / Google Drive
 
 6. Google Cloud Services
 
-7. Google Sheets
+7. Google Sheets/ Google Drive
