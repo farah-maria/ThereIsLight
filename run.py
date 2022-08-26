@@ -191,7 +191,7 @@ def play_again():
         play_again()
 
 
-def heroine_select():
+"""def heroine_select():
     """ Allows player to choose which heroine they play as."""
     selection = input(
         "\n1. Demeter \n2. Persephone \n3. Athena \n4. Lilith \n5. Roe \
@@ -212,9 +212,8 @@ def heroine_select():
     else:
         slow_read(F"{Fore.RED}Error!")
         slow_read("Only press 1, 2, 3, 4 or 5 and press enter")
-        heroine_select() 
+        heroine_select() """
 
-    """
     match selection:
         case "1":
             return Heroine("Demeter", 80, 80, 2800)
@@ -230,7 +229,7 @@ def heroine_select():
             slow_read(F"{Fore.RED}Error!")
             slow_read("Only press 1, 2, 3, 4 or 5 and press enter")
             heroine_select() 
-    """
+
 
 def score_end(heroine):
     """calculates and returns score at the end"""
