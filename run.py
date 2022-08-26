@@ -218,24 +218,25 @@ def heroine_select():
     Allows player to choose which heroine they play as.
     They are then taken to start of adventure
     """
-    selection = input(
+    correct_input = False
+    while not correct_input:
+        selection = input(
         "\n1. Demeter \n2. Persephone \n3. Athena \n4. Lilith \n5. Roe \
             \n")
-    match selection:
-        case "1":
-            return Heroine("Demeter", 80, 80, 2800)
-        case "2":
-            return Heroine("Persephone", 90, 50, 1500)
-        case "3":
-            return Heroine("Athena", 100, 90, 2000)
-        case "4":
-            return Heroine("Lilith", 75, 40, 3500)
-        case "5":
-            return Heroine("Roe", 100, 95, 3000)
-        case _:
-            slow_read(F"{Fore.RED}Error!")
-            slow_read("Only press 1, 2, 3, 4 or 5 and press enter")
-            heroine_select() 
+        match selection:
+            case "1":
+                return Heroine("Demeter", 80, 80, 2800)
+            case "2":
+                return Heroine("Persephone", 90, 50, 1500)
+            case "3":
+                return Heroine("Athena", 100, 90, 2000)
+            case "4":
+                return Heroine("Lilith", 75, 40, 3500)
+            case "5":
+                return Heroine("Roe", 100, 95, 3000)
+            case _:
+                slow_read(F"{Fore.RED}Error!")
+                slow_read("Only press 1, 2, 3, 4 or 5 and press enter")
     
 
 def score_end(heroine):
