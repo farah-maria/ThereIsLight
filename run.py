@@ -160,21 +160,23 @@ def slow_read(string):
 
 def play_or_not():
     """ player chooses to continue to game or quit """
-    slow_read(F"\n{Fore.GREEN}Would you like to play?")
-    answer = input(F"\n\n{Fore.CYAN}Answer 'y' or 'n':\n")
-    if answer.lower().strip() == "y":
-        slow_read(F"\n{Fore.WHITE}Great!\n")
-        slow_read("Choose which character you want to be...\n")
-        print("")
-        return True
-    elif answer.lower().strip() == "n":
-        print(F"\n{Fore.WHITE}I don't blame you. Bye!\n")
-        return False
-        #exit()
-    else:
-        slow_read(F"\n{Fore.RED}Incorrect input!\n \n")
-        slow_read("Try again. Just one letter and press enter.\n")
-        play_or_not()
+    correct_input = False
+    while not correct_input:
+        slow_read(F"\n{Fore.GREEN}Would you like to play?")
+        answer = input(F"\n\n{Fore.CYAN}Answer 'y' or 'n':\n")
+        if answer.lower().strip() == "y":
+            correct_input = True
+            slow_read(F"\n{Fore.WHITE}Great!\n")
+            slow_read("Choose which character you want to be...\n")
+            print("")
+            return True
+        elif answer.lower().strip() == "n":
+            correct_input = True
+            print(F"\n{Fore.WHITE}I don't blame you. Bye!\n")
+            return False
+        else:
+            slow_read(F"\n{Fore.RED}Incorrect input!\n \n")
+            slow_read("Try again. Just one letter and press enter.\n")
     
 
 def play_again(): 
@@ -597,9 +599,7 @@ while running:
         Schlafly = Enemy("Schlafly", 60, 3000)  # create first enemy
         play_the_game = Bus_Fight(Schlafly)  
         # passes enemy to Bus_Fight and returns if you survived or not
-        if not play_the_game:
-            running = False
-        else:
+        if play_the_game:
             del Schlafly
             perks_select(heroine)
             Trump = Enemy("Trump", 100, 3500)
@@ -609,7 +609,7 @@ while running:
                 treats()
                 Kavanaugh = Enemy("Kavanaugh", 40, 2500)
                 Office(heroine, Kavanaugh)
-    else:
+    else: 
         running = False
         
     # player_name = score_end(heroine)  
