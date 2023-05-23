@@ -14,13 +14,15 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive"
     ]
 
-# *Uncomment if using API* CREDS = Credentials.from_service_account_file('creds.json')
+# *Uncomment lines 19 to 24 if using API* 
+
+# CREDS = Credentials.from_service_account_file('creds.json')
 # SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 # GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 # SHEET = GSPREAD_CLIENT.open('scoresheet')
 
-scores_data = SHEET.worksheet('scores_data')
-data = scores_data.get_all_values()
+# scores_data = SHEET.worksheet('scores_data')
+# data = scores_data.get_all_values()
 
 ##############################################################
 # (pre-story set up of code, & support for some functions
