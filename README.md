@@ -34,7 +34,7 @@ Above is a screenshot of the the opening text, showing the title, the set-up and
 ## **Links**
 
 
-[Live link for game](https://thelaughingheart.herokuapp.com)
+[Live link for game](https://thereislight.herokuapp.com/)
 
 [Link to the GitHub repo](https://github.com/farah-maria/ThereIsLight)
 
